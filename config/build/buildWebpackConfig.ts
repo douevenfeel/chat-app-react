@@ -1,9 +1,10 @@
-import { Configuration } from 'webpack';
+import type { Configuration } from 'webpack';
+
 import { buildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
 import { buildResolvers } from './buildResolvers';
-import { BuildOptions } from './types/buildOptions';
+import type { BuildOptions } from './types/buildOptions';
 
 export const buildWebpackConfig = (options: BuildOptions): Configuration => {
     const { isDev, mode, paths } = options;
