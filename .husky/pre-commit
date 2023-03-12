@@ -4,3 +4,4 @@
 npm run lint:ts:fix
 npm run lint:scss:fix
 npm run test:ui
+npm run test:unit

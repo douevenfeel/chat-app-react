@@ -7,9 +7,22 @@
     stroke: var(--color-text-secondary);
 
     transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+}
+
+.container {
+    display: flex;
+    align-items: center;
 
     &:hover {
-        fill: var(--accent-light-color);
-        stroke: var(--accent-light-color);
+        .icon {
+            fill: var(--accent-light-color);
+            stroke: var(--accent-light-color);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        display: none;
     }
 }

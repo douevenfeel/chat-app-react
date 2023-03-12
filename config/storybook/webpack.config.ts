@@ -24,6 +24,7 @@ export default ({ config }: { config: Configuration }) => {
     config!.resolve!.extensions!.push('.ts', '.tsx');
     config!.module!.rules!.push(buildCssLoader(true));
     config!.plugins!.push(new DefinePlugin({ __IS_DEV__: true }));
+    config!.plugins!.push(new DefinePlugin({ __API__: '""' }));
 
     return config;
 };
