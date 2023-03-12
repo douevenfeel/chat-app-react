@@ -47,10 +47,17 @@
             "rules": {
                 "boundaries/element-types": "off"
             }
+        },
+        {
+            "files": ["*Decorator.*"],
+            "rules": { "boundaries/element-types": "off" }
         }
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
@@ -121,6 +128,7 @@
             }
         ],
         "import/no-named-as-default": "off",
+        "import/namespace": "off",
         "import/order": [
             "error",
             {
