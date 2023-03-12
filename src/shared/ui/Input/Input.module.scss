@@ -1,0 +1,29 @@
+.input {
+    height: 42px;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.clear,
+.primary,
+.secondary {
+    padding: var(--padding-m);
+    color: var(--color-text-primary);
+}
+
+.clear {
+    background: transparent;
+}
+
+.primary {
+    background: var(--color-bg-primary);
+}
+
+.secondary {
+    background: var(--color-bg-secondary);
+}
