@@ -14,6 +14,7 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
 
     return (
         <Button
+            data-testid='themeSwitcher'
             variant='clean'
             onClick={setTheme}
         >

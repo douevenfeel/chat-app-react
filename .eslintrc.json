@@ -43,14 +43,10 @@
             }
         },
         {
-            "files": ["**/*.test.*"],
+            "files": ["*Decorator.*", "**/*.test.*", "ComponentRender.tsx"],
             "rules": {
                 "boundaries/element-types": "off"
             }
-        },
-        {
-            "files": ["*Decorator.*"],
-            "rules": { "boundaries/element-types": "off" }
         }
     ],
     "parser": "@typescript-eslint/parser",

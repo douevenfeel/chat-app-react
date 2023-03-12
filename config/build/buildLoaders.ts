@@ -15,5 +15,16 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
 
     const svgLoader = buildSvgLoader();
 
-    return [svgLoader, cssLoader, tsLoader];
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: [['@babel/preset-env']],
+            },
+        },
+    };
+
+    return [svgLoader, cssLoader, babelLoader, tsLoader];
 };
