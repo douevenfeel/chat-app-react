@@ -1,6 +1,5 @@
 .button {
     cursor: pointer;
-    border-radius: var(--border-radius);
 
     &:focus {
         outline: none;
@@ -26,4 +25,22 @@
 
 .primary.disabled {
     background: var(--linear-gradient-accent-disabled);
+}
+
+.small {
+    height: 30px;
+    padding: var(--padding-s);
+
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-s);
+    line-height: var(--font-line-s);
+}
+
+.medium {
+    height: 42px;
+    padding: var(--padding-m);
+
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-m);
+    line-height: var(--font-line-m);
 }
