@@ -1,0 +1,29 @@
+.button {
+    cursor: pointer;
+    border-radius: var(--border-radius);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.clean {
+    padding: 0;
+
+    color: var(--color-text-primary);
+
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.primary {
+    color: var(--accent-contrast-color);
+    background: var(--linear-gradient-accent);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.primary.disabled {
+    background: var(--linear-gradient-accent-disabled);
+}

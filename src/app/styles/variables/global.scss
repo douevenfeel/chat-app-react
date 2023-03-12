@@ -1,0 +1,42 @@
+:root {
+    --font-family: 'Source Code Pro';
+    --font-size-s: 14px;
+    --font-line-s: 22px;
+    --font-weight-s: 400;
+    --font-size-m: 18px;
+    --font-line-m: 26px;
+    --font-weight-m: 500;
+    --font-size-l: 22px;
+    --font-line-l: 30px;
+    --font-weight-l: 600;
+    --icon-size-s: 24px;
+    --icon-size-m: 32px;
+    --icon-size-l: 48px;
+    --icon-padding-sidebar-desktop: 8px;
+    --icon-padding: 6px;
+    --icon-border-radius: 25%;
+    --sidebar-size: 44px;
+    --border-radius: 8px;
+    --padding-s: 4px 12px;
+    --padding-m: 8px 20px;
+    --padding-l: 12px 28px;
+    --modal-z-index: 10;
+    --overlay-color: #00000080;
+    --color-text-error: #ef4444;
+    --avatar-size: 48px;
+    --color-text-secondary: #808080;
+    --logo-size: 48px;
+    --accent-color: #3b82f6;
+    --accent-light-color: #60a5fa;
+    --accent-dark-color: #2563eb;
+    --accent-contrast-color: #fff;
+    --gradient-from-color: #bfdbfe;
+    --gradient-via-color: #60a5fa;
+    --gradient-to-color: #2563eb;
+    --linear-gradient-accent: linear-gradient(135deg, var(--gradient-via-color) 0%, var(--gradient-to-color) 100%);
+    --linear-gradient-accent-disabled: linear-gradient(
+        135deg,
+        var(--gradient-from-color) 0%,
+        var(--gradient-via-color) 100%
+    );
+}
