@@ -24,11 +24,11 @@ export const loginSlice = createSlice({
     extraReducers(builder) {
         builder
             .addCase(fetchLogin.pending, (state) => {
-                state.error = undefined;
                 state.isLoading = true;
             })
             .addCase(fetchLogin.fulfilled, (state) => {
                 state.isLoading = false;
+                state.error = undefined;
             })
             .addCase(fetchLogin.rejected, (state, action) => {
                 state.isLoading = false;

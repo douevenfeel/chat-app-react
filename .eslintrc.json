@@ -303,6 +303,10 @@
                 "pattern": "pages/*"
             },
             {
+                "type": "layouts",
+                "pattern": "layouts/*"
+            },
+            {
                 "type": "widgets",
                 "pattern": "widgets/*"
             },

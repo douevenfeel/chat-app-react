@@ -1,0 +1,9 @@
+export { registrationReducer } from 'features/Registration/model/slice/registrationSlice';
+export { getRegistrationIsConfirmed } from './model/selectors/getRegistrationIsConfirmed/getRegistrationIsConfirmed';
+export { getRegistrationEmail } from 'features/Registration/model/selectors/getRegistrationEmail/getRegistrationEmail';
+export { getRegistrationSuccessEmail } from './model/selectors/getRegistrationSuccessEmail/getRegistrationSuccessEmail';
+export { RegistrationInfo } from './ui/RegistrationInfo/RegistrationInfo';
+export { RegistrationSchema } from './model/types/RegistrationSchema';
+export { RegistrationEmailForm } from './ui/RegistrationEmailForm/RegistrationEmailForm';
+export { RegistrationCodeForm } from './ui/RegistrationCodeForm/RegistrationCodeForm';
+export { RegistrationProfileForm } from './ui/RegistrationProfileForm/RegistrationProfileForm';

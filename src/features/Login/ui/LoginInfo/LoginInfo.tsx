@@ -20,7 +20,7 @@ export const LoginInfo = memo(function LoginInfo() {
                 tag='p'
                 variant='primary'
             >
-                После регистрации вы получите доступ ко всем возможностям VK ID
+                После регистрации вы получите доступ ко всем возможностям CHAT APP
             </Text>
             <Button
                 size='medium'

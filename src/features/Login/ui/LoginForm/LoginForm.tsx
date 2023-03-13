@@ -41,6 +41,7 @@ export const LoginForm = memo(function LoginForm() {
     return (
         <div className={cls.loginForm}>
             <Input
+                autoFocus
                 placeholder='Почта'
                 value={email}
                 variant='secondary'
@@ -54,7 +55,7 @@ export const LoginForm = memo(function LoginForm() {
                 onChange={onPasswordChange}
             />
             <Button
-                disabled={isLoading || !email || !password}
+                disabled={!email || !password}
                 size='medium'
                 variant='primary'
                 onClick={onLoginClick}

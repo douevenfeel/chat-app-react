@@ -11,10 +11,12 @@ import type { AxiosInstance } from 'axios';
 
 import type { UserSchema } from 'entities/User';
 import type { LoginSchema } from 'features/Login';
+import type { RegistrationSchema } from 'features/Registration';
 
 export interface StateSchema {
     user: UserSchema;
     login?: LoginSchema;
+    registration?: RegistrationSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
