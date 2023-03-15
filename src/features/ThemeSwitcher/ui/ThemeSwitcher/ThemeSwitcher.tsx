@@ -24,7 +24,7 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
                 {theme === 'dark' ? <DarkThemeIcon className={cls.icon} /> : <LightThemeIcon className={cls.icon} />}
                 <Text
                     className={cls.text}
-                    size='medium'
+                    size='small'
                     tag='p'
                     variant='secondary'
                 >

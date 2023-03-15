@@ -1,25 +1,29 @@
-.icon {
-    width: var(--icon-size-m);
-    height: var(--icon-size-m);
-    padding: var(--icon-padding);
-
-    fill: var(--color-text-secondary);
-    stroke: var(--color-text-secondary);
-
-    transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
-}
-
-.container {
+.sidebarItem {
     display: flex;
     align-items: center;
+
+    width: 100%;
+    max-width: 160px;
+
     border-radius: var(--border-radius);
+
     transition: background 0.2s ease-in-out;
+
+    .icon {
+        min-width: var(--icon-size-m);
+        max-width: var(--icon-size-m);
+        height: var(--icon-size-m);
+        padding: var(--icon-padding);
+
+        stroke: var(--color-text-secondary);
+
+        transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+    }
 
     &:hover {
         background: var(--color-bg-secondary);
 
         .icon {
-            fill: var(--accent-light-color);
             stroke: var(--accent-light-color);
         }
     }
@@ -30,7 +34,7 @@
         display: none;
     }
 
-    .container {
+    .sidebarItem {
         width: var(--icon-size-m);
         height: var(--icon-size-m);
         border-radius: 50%;

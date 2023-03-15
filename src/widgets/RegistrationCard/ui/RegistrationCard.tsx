@@ -1,5 +1,8 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
+import { getUserId } from 'entities/User';
 import { RegistrationInfo } from 'features/Registration';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -9,6 +12,11 @@ import cls from './RegistrationCard.module.scss';
 
 export const RegistrationCard = memo(function RegistrationCard() {
     const { form, text } = useRegistrationForm();
+    const navigate = useNavigate();
+    const id = useSelector(getUserId);
+    useEffect(() => {
+        id && navigate(String(id));
+    }, [id, navigate]);
     return (
         <div className={cls.registrationCard}>
             <Text

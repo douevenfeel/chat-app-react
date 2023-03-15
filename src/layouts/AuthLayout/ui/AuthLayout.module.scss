@@ -1,0 +1,25 @@
+.authLayout {
+    display: flex;
+    justify-content: flex-start;
+
+    box-sizing: border-box;
+    width: 100vw;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.page {
+    margin: 0 32px 0 16px;
+}
+
+@media (max-width: 768px) {
+    .authLayout {
+        flex-direction: column;
+        margin-bottom: var(--sidebar-size);
+    }
+
+    .page {
+        margin: 0;
+    }
+}
