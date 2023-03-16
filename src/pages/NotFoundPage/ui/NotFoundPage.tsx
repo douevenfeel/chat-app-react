@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { getUserId } from 'entities/User';
-import { getRouteProfile } from 'shared/const/router';
+import { getRouteLogin, getRouteProfile } from 'shared/const/router';
 import { Button } from 'shared/ui/Button/Button';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -13,7 +13,7 @@ const NotFoundPage = () => {
     const id = useSelector(getUserId);
     const navigate = useNavigate();
     const onHomeClick = useCallback(() => {
-        navigate(getRouteProfile(String(id)));
+        id ? navigate(getRouteProfile(String(id))) : navigate(getRouteLogin());
     }, [id, navigate]);
     return (
         <div className={cls.notFoundPage}>
@@ -37,7 +37,7 @@ const NotFoundPage = () => {
                 variant='primary'
                 onClick={onHomeClick}
             >
-                Моя страница
+                {id ? 'Моя страница' : 'На главную'}
             </Button>
         </div>
     );

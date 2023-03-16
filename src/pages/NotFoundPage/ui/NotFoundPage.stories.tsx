@@ -14,5 +14,8 @@ export default {
 
 const Template: ComponentStory<typeof NotFoundPage> = () => <NotFoundPage />;
 
-export const Default = Template.bind({});
-Default.decorators = [StoreDecorator({})];
+export const Authorized = Template.bind({});
+Authorized.decorators = [StoreDecorator({ user: { data: { id: 1 } } })];
+
+export const NotAuthorized = Template.bind({});
+NotAuthorized.decorators = [StoreDecorator({})];

@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import { AuthLayout } from 'layouts/AuthLayout';
-import { Profile } from 'widgets/Profile/ui/Profile';
+import { Profile } from 'widgets/Profile';
 
 const ProfilePage = memo(function ProfilePage() {
     return (

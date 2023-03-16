@@ -1,19 +1,20 @@
-import type { UserSchema } from '../types/UserSchema';
+import type { ProfileSchema } from '../types/ProfileSchema';
 
-import { userActions, userReducer } from './userSlice';
+import { profileActions, profileReducer } from './profileSlice';
 
-describe('userSlice', () => {
-    test('test set user data', () => {
-        const state: DeepPartial<UserSchema> = { data: undefined };
+describe('profileSlice', () => {
+    test('test set profile data', () => {
+        const state: DeepPartial<ProfileSchema> = { data: undefined };
         expect(
-            userReducer(
-                state as UserSchema,
-                userActions.setData({
+            profileReducer(
+                state as ProfileSchema,
+                profileActions.setData({
                     id: 1,
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
                     avatar: 'purple',
+                    friendStatus: 'add',
                 })
             )
         ).toEqual({
@@ -23,6 +24,7 @@ describe('userSlice', () => {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 avatar: 'purple',
+                friendStatus: 'add',
             },
         });
     });

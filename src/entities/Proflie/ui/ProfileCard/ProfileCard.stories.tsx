@@ -30,41 +30,13 @@ export default {
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
 
-export const Edit = Template.bind({});
-Edit.args = {
+export const UserVariant = Template.bind({});
+UserVariant.args = {
     buttons: [<EditProfile key='editProfile' />],
 };
 
-export const SendMessageAddFriend = Template.bind({});
-SendMessageAddFriend.args = {
-    buttons: [
-        <SendMessage
-            id={1}
-            key='sendMessage'
-        />,
-        <AddFriend
-            id={1}
-            key='addFriend'
-        />,
-    ],
-};
-
-export const SendMessageDeleteFriend = Template.bind({});
-SendMessageDeleteFriend.args = {
-    buttons: [
-        <SendMessage
-            id={1}
-            key='sendMessage'
-        />,
-        <DeleteFriend
-            id={1}
-            key='deleteFriend'
-        />,
-    ],
-};
-
-export const SendMessageAcceptFriendRequest = Template.bind({});
-SendMessageAcceptFriendRequest.args = {
+export const AcceptFriendRequestVariant = Template.bind({});
+AcceptFriendRequestVariant.args = {
     buttons: [
         <SendMessage
             id={1}
@@ -77,8 +49,22 @@ SendMessageAcceptFriendRequest.args = {
     ],
 };
 
-export const SendMessageCancelFriendRequest = Template.bind({});
-SendMessageCancelFriendRequest.args = {
+export const AddFriendVariant = Template.bind({});
+AddFriendVariant.args = {
+    buttons: [
+        <SendMessage
+            id={1}
+            key='sendMessage'
+        />,
+        <AddFriend
+            id={1}
+            key='addFriend'
+        />,
+    ],
+};
+
+export const CancelFriendRequestVariant = Template.bind({});
+CancelFriendRequestVariant.args = {
     buttons: [
         <SendMessage
             id={1}
@@ -87,6 +73,20 @@ SendMessageCancelFriendRequest.args = {
         <CancelFriendRequest
             id={1}
             key='cancelFriendRequest'
+        />,
+    ],
+};
+
+export const DeleteFriendVariant = Template.bind({});
+DeleteFriendVariant.args = {
+    buttons: [
+        <SendMessage
+            id={1}
+            key='sendMessage'
+        />,
+        <DeleteFriend
+            id={1}
+            key='deleteFriend'
         />,
     ],
 };
