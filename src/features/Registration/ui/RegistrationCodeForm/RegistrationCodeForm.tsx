@@ -7,7 +7,7 @@ import { getRegistrationError } from 'features/Registration/model/selectors/getR
 import { getRegistrationIsLoading } from 'features/Registration/model/selectors/getRegistrationIsLoaing/getRegistrationIsLoading';
 import { fetchRegistrationConfirmCode } from 'features/Registration/model/services/fetchRegistrationConfirmCode/fetchRegistrationConfirmCode';
 import { registrationActions } from 'features/Registration/model/slice/registrationSlice';
-import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { Text } from 'shared/ui/Text/Text';

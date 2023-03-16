@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { getUserId } from 'entities/User';
 import { RegistrationInfo } from 'features/Registration';
+import { getRouteProfile } from 'shared/const/router';
 import { Text } from 'shared/ui/Text/Text';
 
 import { useRegistrationForm } from '../lib/hooks/useRegistrationForm/useRegistrationForm';
@@ -15,7 +16,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
     const navigate = useNavigate();
     const id = useSelector(getUserId);
     useEffect(() => {
-        id && navigate(String(id));
+        id && navigate(getRouteProfile(String(id)));
     }, [id, navigate]);
     return (
         <div className={cls.registrationCard}>

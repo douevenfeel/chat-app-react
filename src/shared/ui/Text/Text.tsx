@@ -14,7 +14,7 @@ interface TextProps {
     className?: string;
     children: string;
     tag: TextTag;
-    variant: TextVariant;
+    variant?: TextVariant;
     size: TextSize;
     align?: TextAlign;
     'data-testid'?: string;
@@ -33,7 +33,7 @@ export const Text = memo(function Text({
 
     return (
         <TextTag
-            className={clsx(cls[variant], cls[align], cls[size], className)}
+            className={clsx(cls.text, variant && cls[variant], cls[align], cls[size], className)}
             {...props}
         >
             {children}

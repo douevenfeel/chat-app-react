@@ -17,14 +17,14 @@
 }
 
 .primary {
-    color: var(--accent-contrast-color);
-    background: var(--linear-gradient-accent);
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
     border: none;
     border-radius: var(--border-radius);
 }
 
 .primary.disabled {
-    background: var(--linear-gradient-accent-disabled);
+    background: var(--color-disabled);
 }
 
 .small {

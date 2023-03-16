@@ -33,10 +33,4 @@
     --gradient-from-color: #bfdbfe;
     --gradient-via-color: #60a5fa;
     --gradient-to-color: #2563eb;
-    --linear-gradient-accent: linear-gradient(135deg, var(--gradient-via-color) 0%, var(--gradient-to-color) 100%);
-    --linear-gradient-accent-disabled: linear-gradient(
-        135deg,
-        var(--gradient-from-color) 0%,
-        var(--gradient-via-color) 100%
-    );
 }

@@ -9,7 +9,7 @@ import { getRegistrationLastName } from 'features/Registration/model/selectors/g
 import { getRegistrationPassword } from 'features/Registration/model/selectors/getRegistrationPassword/getRegistrationPassword';
 import { fetchRegistration } from 'features/Registration/model/services/fetchRegistration/fetchRegistration';
 import { registrationActions } from 'features/Registration/model/slice/registrationSlice';
-import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import { Text } from 'shared/ui/Text/Text';
