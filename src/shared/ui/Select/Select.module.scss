@@ -1,0 +1,15 @@
+.select {
+    padding: var(--padding-s);
+
+    color: var(--color-text-primary);
+
+    background: var(--color-bg-secondary);
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+}
+
+.option {
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+}
