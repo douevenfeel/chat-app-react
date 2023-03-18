@@ -13,6 +13,7 @@ interface ComponentRenderOptions {
 
 export const ComponentRender = (component: ReactNode, options: ComponentRenderOptions = {}) => {
     const { route = '/', initialState } = options;
+
     return render(
         <MemoryRouter initialEntries={[route]}>
             <StoreProvider initialState={initialState}>

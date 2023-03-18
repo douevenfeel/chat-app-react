@@ -6,6 +6,7 @@ import { AppRouter } from './providers/AppRouter';
 
 export const App = () => {
     const { theme } = useTheme();
+
     return (
         <div className={clsx('app', `${theme}Theme`)}>
             <AppRouter />

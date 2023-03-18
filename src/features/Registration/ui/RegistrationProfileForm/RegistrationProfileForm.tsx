@@ -56,6 +56,7 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
             password &&
             dispatch(fetchRegistration({ email, firstName, lastName, password }));
     }, [dispatch, email, firstName, lastName, password]);
+
     return (
         <div className={cls.registrationProfileForm}>
             <Input

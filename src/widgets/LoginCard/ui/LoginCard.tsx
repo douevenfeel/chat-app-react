@@ -15,6 +15,7 @@ export const LoginCard = memo(function LoginCard() {
     useEffect(() => {
         id && navigate(getRouteProfile(String(id)));
     }, [id, navigate]);
+
     return (
         <div className={cls.loginCard}>
             <Text

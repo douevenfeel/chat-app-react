@@ -123,8 +123,8 @@
                 ]
             }
         ],
-        "import/no-named-as-default": "off",
         "import/namespace": "off",
+        "import/no-named-as-default": "off",
         "import/order": [
             "error",
             {
@@ -246,6 +246,14 @@
             }
         ],
         "no-unused-vars": "off",
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": "return"
+            }
+        ],
         "prettier/prettier": "error",
         "react-hooks/exhaustive-deps": "error",
         "react-hooks/rules-of-hooks": "error",

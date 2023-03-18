@@ -9,6 +9,7 @@ describe('loginSlice', () => {
             email: 'test@mail.ru',
         });
     });
+
     test('test set password', () => {
         const state: DeepPartial<LoginSchema> = {};
         expect(loginReducer(state as LoginSchema, loginActions.setPassword('qwerty'))).toEqual({

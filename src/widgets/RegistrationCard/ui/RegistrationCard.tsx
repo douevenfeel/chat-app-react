@@ -18,6 +18,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
     useEffect(() => {
         id && navigate(getRouteProfile(String(id)));
     }, [id, navigate]);
+
     return (
         <div className={cls.registrationCard}>
             <Text

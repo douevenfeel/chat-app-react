@@ -8,6 +8,7 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { RegistrationPage } from 'pages/RegistrationPage';
 import {
     getRouteConversation,
+    getRouteConversations,
     getRouteEditProfile,
     getRouteLogin,
     getRouteProfile,
@@ -19,6 +20,7 @@ export const routeConfig: RouteProps[] = [
     { path: getRouteRegistration(), element: <RegistrationPage /> },
     { path: getRouteProfile(':id'), element: <ProfilePage /> },
     { path: getRouteEditProfile(), element: <EditProfilePage /> },
-    { path: getRouteConversation(':id'), element: <ConversationPage /> },
+    { path: getRouteConversations(), element: <ConversationPage /> },
+    { path: getRouteConversation(':id'), element: <EditProfilePage /> },
     { path: '*', element: <NotFoundPage /> },
 ];

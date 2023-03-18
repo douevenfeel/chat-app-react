@@ -2,9 +2,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // eslint-disable-next-line boundaries/element-types
 import type { ThunkConfig } from 'app/providers/StoreProvider';
-import { userActions } from 'entities/User';
 import { LOCAL_STORAGE_ACCESS_TOKEN_KEY } from 'shared/const/localStorage';
 
+// eslint-disable-next-line no-restricted-imports
+import { userActions } from '../../../../../entities/User';
 import type { LoginData } from '../../types/LoginSchema';
 
 interface LoginProps {

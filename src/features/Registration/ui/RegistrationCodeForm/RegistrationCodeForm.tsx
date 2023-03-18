@@ -36,6 +36,7 @@ export const RegistrationCodeForm = memo(function RegistrationCodeForm() {
     const onCodeClick = useCallback(() => {
         email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
     }, [confirmCode, dispatch, email]);
+
     return (
         <div className={cls.registrationCodeForm}>
             <Input

@@ -15,4 +15,4 @@ export default {
 const Template: ComponentStory<typeof Sidebar> = () => <Sidebar />;
 
 export const Default = Template.bind({});
-Default.decorators = [StoreDecorator({})];
+Default.decorators = [StoreDecorator({ user: { data: { id: 1 } } })];

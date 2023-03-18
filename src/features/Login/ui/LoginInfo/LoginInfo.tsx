@@ -12,6 +12,7 @@ export const LoginInfo = memo(function LoginInfo() {
     const onRegistrationClick = useCallback(() => {
         navigate(getRouteRegistration());
     }, [navigate]);
+
     return (
         <div className={cls.loginInfo}>
             <Text

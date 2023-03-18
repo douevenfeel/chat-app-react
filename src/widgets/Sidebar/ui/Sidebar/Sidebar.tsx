@@ -20,6 +20,7 @@ export const Sidebar = memo(function Sidebar() {
             )),
         [sidebarItemsList]
     );
+
     return (
         <div className={cls.sidebar}>
             {itemsList}

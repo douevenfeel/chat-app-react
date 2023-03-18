@@ -10,11 +10,12 @@
     transition: background 0.2s ease-in-out;
 
     .icon {
-        min-width: var(--icon-size-m);
-        max-width: var(--icon-size-m);
-        height: var(--icon-size-m);
+        min-width: var(--icon-size-s);
+        max-width: var(--icon-size-s);
+        height: var(--icon-size-s);
         padding: var(--icon-padding);
 
+        fill: var(--color-text-secondary);
         stroke: var(--color-text-secondary);
 
         transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
@@ -28,6 +29,7 @@
 @media (max-width: 768px) {
     .text {
         display: none;
+        width: 0;
     }
 
     .sidebarItem {

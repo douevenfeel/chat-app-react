@@ -6,6 +6,7 @@ import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 
 export const StyleDecorator = (StoryComponent: Story) => {
     const { theme } = useTheme();
+
     return (
         <div className={clsx('app', `${theme}Theme`)}>
             <StoryComponent />

@@ -28,6 +28,7 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
     const onEmailClick = useCallback(() => {
         email && dispatch(fetchRegistrationConfirmEmail({ email }));
     }, [dispatch, email]);
+
     return (
         <div className={cls.registrationEmailForm}>
             <Input

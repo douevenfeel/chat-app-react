@@ -13,6 +13,7 @@ const initialReducers: ReducersList = {
 
 const LoginPage = memo(function LoginPage() {
     useLazyModuleLoading({ reducers: initialReducers });
+
     return (
         <div className={cls.loginPage}>
             <LoginCard />

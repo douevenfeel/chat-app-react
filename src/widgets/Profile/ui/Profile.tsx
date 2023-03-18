@@ -82,6 +82,7 @@ export const Profile = memo(function Profile() {
     useEffect(() => {
         id && dispatch(fetchProfile(id));
     }, [dispatch, id]);
+
     return (
         <ProfileCard
             buttons={buttons}

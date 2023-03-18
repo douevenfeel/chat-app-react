@@ -1,8 +1,10 @@
 import type { CombinedState, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 
-import { userReducer } from 'entities/User';
 import { $api } from 'shared/api/api';
+
+// eslint-disable-next-line no-restricted-imports
+import { userReducer } from '../../../../entities/User';
 
 import { createReducerManager } from './reducerManager';
 import type { ReduxToolkitStore, StateSchema, ThunkExtraArg } from './StateSchema';

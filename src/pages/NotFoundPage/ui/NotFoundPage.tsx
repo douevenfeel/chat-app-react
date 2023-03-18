@@ -15,6 +15,7 @@ const NotFoundPage = () => {
     const onHomeClick = useCallback(() => {
         id ? navigate(getRouteProfile(String(id))) : navigate(getRouteLogin());
     }, [id, navigate]);
+
     return (
         <div className={cls.notFoundPage}>
             <Text
