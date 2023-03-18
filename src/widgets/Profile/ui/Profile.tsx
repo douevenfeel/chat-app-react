@@ -3,7 +3,7 @@ import { useEffect, memo } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { fetchProfile, ProfileCard, profileReducer } from 'entities/Proflie';
+import { fetchProfile, ProfileCardLarge, profileReducer } from 'entities/Proflie';
 import { AcceptFriendRequest } from 'features/AcceptFriendRequest';
 import { AddFriend } from 'features/AddFriend';
 import { CancelFriendRequest } from 'features/CancelFriendRequest';
@@ -84,7 +84,7 @@ export const Profile = memo(function Profile() {
     }, [dispatch, id]);
 
     return (
-        <ProfileCard
+        <ProfileCardLarge
             buttons={buttons}
             data={data}
         />

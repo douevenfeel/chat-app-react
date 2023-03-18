@@ -69,3 +69,30 @@ OrangeMediumAvatar.args = { avatar: 'orange', size: 'medium' };
 
 export const YellowMediumAvatar = Template.bind({});
 YellowMediumAvatar.args = { avatar: 'yellow', size: 'medium' };
+
+export const GreenLargeAvatar = Template.bind({});
+GreenLargeAvatar.args = { avatar: 'green', size: 'large' };
+
+export const TealLargeAvatar = Template.bind({});
+TealLargeAvatar.args = { avatar: 'teal', size: 'large' };
+
+export const BlueLargeAvatar = Template.bind({});
+BlueLargeAvatar.args = { avatar: 'blue', size: 'large' };
+
+export const IndigoLargeAvatar = Template.bind({});
+IndigoLargeAvatar.args = { avatar: 'indigo', size: 'large' };
+
+export const PurpleLargeAvatar = Template.bind({});
+PurpleLargeAvatar.args = { avatar: 'purple', size: 'large' };
+
+export const PinkLargeAvatar = Template.bind({});
+PinkLargeAvatar.args = { avatar: 'pink', size: 'large' };
+
+export const RedLargeAvatar = Template.bind({});
+RedLargeAvatar.args = { avatar: 'red', size: 'large' };
+
+export const OrangeLargeAvatar = Template.bind({});
+OrangeLargeAvatar.args = { avatar: 'orange', size: 'large' };
+
+export const YellowLargeAvatar = Template.bind({});
+YellowLargeAvatar.args = { avatar: 'yellow', size: 'large' };

@@ -7,7 +7,7 @@ import { Text } from '../Text/Text';
 
 import cls from './Avatar.module.scss';
 
-type AvatarSize = 'small' | 'medium';
+type AvatarSize = 'small' | 'medium' | 'large';
 
 interface AvatarProps {
     className?: string;

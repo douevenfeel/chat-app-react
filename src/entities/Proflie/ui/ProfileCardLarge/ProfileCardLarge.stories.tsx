@@ -8,11 +8,11 @@ import { EditProfile } from 'features/EditProfile';
 import { SendMessage } from 'features/SendMessage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import { ProfileCard } from './ProfileCard';
+import { ProfileCardLarge } from './ProfileCardLarge';
 
 export default {
-    title: 'entities/ProfileCard',
-    component: ProfileCard,
+    title: 'entities/Profile/ProfileCardLarge',
+    component: ProfileCardLarge,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
@@ -26,9 +26,9 @@ export default {
         },
     },
     decorators: [StoreDecorator({})],
-} as ComponentMeta<typeof ProfileCard>;
+} as ComponentMeta<typeof ProfileCardLarge>;
 
-const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+const Template: ComponentStory<typeof ProfileCardLarge> = (args) => <ProfileCardLarge {...args} />;
 
 export const UserVariant = Template.bind({});
 UserVariant.args = {

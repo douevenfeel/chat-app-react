@@ -10,20 +10,32 @@
 }
 
 .small .text {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .medium .text {
-    font-size: 40px;
+    font-size: 36px;
+}
+
+.large .text {
+    font-size: 48px;
 }
 
 .small {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    min-width: 64px;
+    height: 64px;
 }
 
 .medium {
+    width: 92px;
+    min-width: 92px;
+    height: 92px;
+}
+
+.large {
     width: 120px;
+    min-width: 120px;
     height: 120px;
 }
 
