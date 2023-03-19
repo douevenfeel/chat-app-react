@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-// eslint-disable-next-line boundaries/element-types
 import type { ThunkConfig } from 'app/providers/StoreProvider';
 
 import type { ConfirmEmailData } from '../../types/RegistrationSchema';

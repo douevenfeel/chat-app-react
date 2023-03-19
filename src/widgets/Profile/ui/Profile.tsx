@@ -1,29 +1,18 @@
 import type { ReactNode } from 'react';
-import { useEffect, memo } from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 
-import { fetchProfile, ProfileCardLarge, profileReducer } from 'entities/Proflie';
+import { ProfileCardLarge } from 'entities/Proflie';
 import { AcceptFriendRequest } from 'features/AcceptFriendRequest';
 import { AddFriend } from 'features/AddFriend';
 import { CancelFriendRequest } from 'features/CancelFriendRequest';
 import { DeleteFriend } from 'features/DeleteFriend';
 import { EditProfile } from 'features/EditProfile';
 import { SendMessage } from 'features/SendMessage';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
-import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 
 import { getProfileData } from '../model/selectors/getProfileData/getProfileData';
 
-const initialReducers: ReducersList = {
-    profile: profileReducer,
-};
-
 export const Profile = memo(function Profile() {
-    useLazyModuleLoading({ reducers: initialReducers });
-    const dispatch = useAppDispatch();
-    const { id } = useParams();
     const data = useSelector(getProfileData);
     let buttons: ReactNode[] = [];
     switch (data?.friendStatus) {
@@ -79,9 +68,6 @@ export const Profile = memo(function Profile() {
             buttons = [<EditProfile key='editProfile' />];
             break;
     }
-    useEffect(() => {
-        id && dispatch(fetchProfile(id));
-    }, [dispatch, id]);
 
     return (
         <ProfileCardLarge

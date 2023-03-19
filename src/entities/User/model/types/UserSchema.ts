@@ -8,4 +8,10 @@ export interface User {
 
 export interface UserSchema {
     data?: User;
+    isChecked: boolean;
+}
+
+export interface CheckoutData {
+    user: User;
+    accessToken: string;
 }

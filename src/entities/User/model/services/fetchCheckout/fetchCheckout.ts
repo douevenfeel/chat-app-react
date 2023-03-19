@@ -3,20 +3,14 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import type { ThunkConfig } from 'app/providers/StoreProvider';
 import { LOCAL_STORAGE_ACCESS_TOKEN_KEY } from 'shared/const/localStorage';
 
-// eslint-disable-next-line no-restricted-imports
-import { userActions } from '../../../../../entities/User';
-import type { LoginData } from '../../types/LoginSchema';
+import { userActions } from '../../slice/userSlice';
+import type { CheckoutData } from '../../types/UserSchema';
 
-interface LoginProps {
-    email: string;
-    password: string;
-}
-
-export const fetchLogin = createAsyncThunk<LoginData, LoginProps, ThunkConfig<string>>(
-    'loginForm/fetchLogin',
-    async (data, { dispatch, rejectWithValue, extra }) => {
+export const fetchCheckout = createAsyncThunk<CheckoutData, null, ThunkConfig<string>>(
+    'user/fetchCheckout',
+    async (_, { dispatch, rejectWithValue, extra }) => {
         try {
-            const response = await extra.api.post<LoginData>('/auth/login', data).then((response) => response.data);
+            const response = await extra.api.get<CheckoutData>('/auth/checkout').then((response) => response.data);
             if (!response) {
                 throw new Error();
             }
@@ -27,6 +21,8 @@ export const fetchLogin = createAsyncThunk<LoginData, LoginProps, ThunkConfig<st
             return response;
         } catch (error) {
             return rejectWithValue('error');
+        } finally {
+            dispatch(userActions.setIsChecked());
         }
     }
 );

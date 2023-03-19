@@ -1,5 +1,7 @@
 .button {
     cursor: pointer;
+    transition: var(--transition);
+    transition-property: background, color;
 
     &:focus {
         outline: none;

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import type { UserSchema, User } from '../types/UserSchema';
 
-const initialState: UserSchema = {};
+const initialState: UserSchema = { isChecked: false };
 
 export const userSlice = createSlice({
     name: 'user',
@@ -11,6 +11,9 @@ export const userSlice = createSlice({
     reducers: {
         setData: (state, action: PayloadAction<User>) => {
             state.data = action.payload;
+        },
+        setIsChecked: (state) => {
+            state.isChecked = true;
         },
     },
 });

@@ -6,14 +6,18 @@
     fill: var(--color-text-secondary);
     stroke: var(--color-text-secondary);
 
-    transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+    transition: var(--transition);
+    transition-property: fill, stroke;
 }
 
 .container {
     display: flex;
     align-items: center;
+
     border-radius: var(--border-radius);
-    transition: background 0.2s ease-in-out;
+
+    transition: var(--transition);
+    transition-property: background;
 
     &:hover {
         background: var(--color-bg-secondary);

@@ -1,5 +1,3 @@
-import type { RouteProps } from 'react-router-dom';
-
 import { ConversationPage } from 'pages/ConversationPage';
 import { EditProfilePage } from 'pages/EditProfilePage';
 import { LoginPage } from 'pages/LoginPage';
@@ -15,12 +13,14 @@ import {
     getRouteRegistration,
 } from 'shared/const/router';
 
-export const routeConfig: RouteProps[] = [
-    { path: getRouteLogin(), element: <LoginPage /> },
-    { path: getRouteRegistration(), element: <RegistrationPage /> },
-    { path: getRouteProfile(':id'), element: <ProfilePage /> },
-    { path: getRouteEditProfile(), element: <EditProfilePage /> },
-    { path: getRouteConversations(), element: <ConversationPage /> },
-    { path: getRouteConversation(':id'), element: <EditProfilePage /> },
+import type { AppRoute } from '../model/types/AppRoute';
+
+export const routeConfig: AppRoute[] = [
+    { path: getRouteLogin(), element: <LoginPage />, auth: false },
+    { path: getRouteRegistration(), element: <RegistrationPage />, auth: false },
+    { path: getRouteProfile(':id'), element: <ProfilePage />, auth: true },
+    { path: getRouteEditProfile(), element: <EditProfilePage />, auth: true },
+    { path: getRouteConversations(), element: <ConversationPage />, auth: true },
+    { path: getRouteConversation(':id'), element: <ConversationPage />, auth: true },
     { path: '*', element: <NotFoundPage /> },
 ];
