@@ -2,7 +2,7 @@ import { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { fetchProfile, profileReducer } from 'entities/Proflie';
+import { fetchProfile, profileReducer } from 'entities/Profile';
 import { AuthLayout } from 'layouts/AuthLayout';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';

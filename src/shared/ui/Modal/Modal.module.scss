@@ -1,0 +1,13 @@
+.modal {
+    pointer-events: auto;
+    position: fixed;
+    z-index: var(--modal-z-index);
+    inset: 0;
+}
+
+.content {
+    width: 100vw;
+    max-width: var(--modal-max-width);
+    padding: 32px;
+    color: var(--color-text-primary);
+}

@@ -34,8 +34,9 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
             <Input
                 autoFocus
                 placeholder='Почта'
+                size='medium'
                 value={email}
-                variant='secondary'
+                variant='outline'
                 onChange={onEmailChange}
             />
             <Button

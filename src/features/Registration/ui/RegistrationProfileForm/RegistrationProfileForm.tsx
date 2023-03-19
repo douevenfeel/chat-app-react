@@ -61,28 +61,32 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
         <div className={cls.registrationProfileForm}>
             <Input
                 placeholder='Почта'
+                size='medium'
                 value={email}
-                variant='secondary'
+                variant='outline'
                 onChange={onEmailChange}
             />
             <Input
                 autoFocus
                 placeholder='Имя'
+                size='medium'
                 value={firstName}
-                variant='secondary'
+                variant='outline'
                 onChange={onFirstNameChange}
             />
             <Input
                 placeholder='Фамилия'
+                size='medium'
                 value={lastName}
-                variant='secondary'
+                variant='outline'
                 onChange={onLastNameChange}
             />
             <Input
                 placeholder='Пароль'
+                size='medium'
                 type='password'
                 value={password}
-                variant='secondary'
+                variant='outline'
                 onChange={onPasswordChange}
             />
             <Button

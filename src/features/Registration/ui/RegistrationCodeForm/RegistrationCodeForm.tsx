@@ -41,15 +41,17 @@ export const RegistrationCodeForm = memo(function RegistrationCodeForm() {
         <div className={cls.registrationCodeForm}>
             <Input
                 placeholder='Почта'
+                size='medium'
                 value={email}
-                variant='secondary'
+                variant='outline'
                 onChange={onEmailChange}
             />
             <Input
                 autoFocus
                 placeholder='Код подтверждения'
+                size='medium'
                 value={confirmCode}
-                variant='secondary'
+                variant='outline'
                 onChange={onConfirmCodeChange}
             />
             <Button

@@ -1,5 +1,4 @@
 .input {
-    height: 44px;
     border: none;
     border-radius: var(--border-radius);
     outline: none;
@@ -9,10 +8,28 @@
     }
 }
 
+.small {
+    height: 32px;
+    padding: var(--padding-s);
+
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-s);
+    line-height: var(--font-line-s);
+}
+
+.medium {
+    height: 44px;
+    padding: var(--padding-m);
+
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-m);
+    line-height: var(--font-line-m);
+}
+
 .clear,
 .primary,
-.secondary {
-    padding: var(--padding-m);
+.secondary,
+.outline {
     color: var(--color-text-primary);
 }
 
@@ -26,4 +43,10 @@
 
 .secondary {
     background: var(--color-bg-secondary);
+}
+
+.outline {
+    background: transparent;
+    border-bottom: 1px solid var(--color-bg-secondary);
+    border-radius: 0;
 }

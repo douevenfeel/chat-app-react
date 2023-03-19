@@ -3,7 +3,7 @@ import type { UserSchema } from '../types/UserSchema';
 import { userActions, userReducer } from './userSlice';
 
 describe('userSlice', () => {
-    test('test set user data', () => {
+    test('test setData', () => {
         const state: DeepPartial<UserSchema> = { data: undefined };
         expect(
             userReducer(

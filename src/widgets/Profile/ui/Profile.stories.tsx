@@ -1,6 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { profileReducer } from 'entities/Proflie';
+import { profileReducer } from 'entities/Profile';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { Profile } from './Profile';

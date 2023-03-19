@@ -43,15 +43,17 @@ export const LoginForm = memo(function LoginForm() {
             <Input
                 autoFocus
                 placeholder='Почта'
+                size='medium'
                 value={email}
-                variant='secondary'
+                variant='outline'
                 onChange={onEmailChange}
             />
             <Input
                 placeholder='Пароль'
+                size='medium'
                 type='password'
                 value={password}
-                variant='secondary'
+                variant='outline'
                 onChange={onPasswordChange}
             />
             <Button
