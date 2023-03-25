@@ -15,9 +15,10 @@ interface AvatarProps {
     lastName: string;
     avatar: AvatarVariant;
     size: AvatarSize;
+    isOnline?: boolean;
 }
 
-export const Avatar = memo(function Avatar({ className, firstName, lastName, avatar, size }: AvatarProps) {
+export const Avatar = memo(function Avatar({ className, firstName, lastName, avatar, size, isOnline }: AvatarProps) {
     return (
         <div className={clsx(cls.avatar, cls[avatar], cls[size], className)}>
             <Text
@@ -28,6 +29,7 @@ export const Avatar = memo(function Avatar({ className, firstName, lastName, ava
             >
                 {`${firstName[0].toUpperCase()}${lastName[0].toUpperCase()}`}
             </Text>
+            {isOnline && <div className={clsx(cls.online, cls[size])} />}
         </div>
     );
 });

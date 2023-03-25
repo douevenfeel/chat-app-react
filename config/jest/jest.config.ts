@@ -20,6 +20,7 @@ export default {
     globals: {
         __IS_DEV__: true,
         __API__: '',
+        __PROJECT__: 'jest',
     },
 
     // An array of directory names to be searched recursively up from the requiring module's location

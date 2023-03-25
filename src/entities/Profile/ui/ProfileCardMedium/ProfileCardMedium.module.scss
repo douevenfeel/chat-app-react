@@ -9,14 +9,3 @@
     flex-direction: column;
     gap: 4px;
 }
-
-.buttons {
-    display: flex;
-    gap: 4px;
-}
-
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-    }
-}

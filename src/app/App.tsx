@@ -11,7 +11,9 @@ export const App = () => {
     const dispatch = useAppDispatch();
     const { theme } = useTheme();
     useEffect(() => {
-        dispatch(fetchCheckout(null));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchCheckout(null));
+        }
     }, [dispatch]);
 
     return (

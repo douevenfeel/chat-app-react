@@ -22,19 +22,21 @@ export const RegistrationCodeForm = memo(function RegistrationCodeForm() {
     const isLoading = useSelector(getRegistrationIsLoading);
     const onEmailChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setEmail(value));
+            dispatch(registrationActions.setEmail(value.trim()));
         },
         [dispatch]
     );
     const onConfirmCodeChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setConfirmCode(value));
+            dispatch(registrationActions.setConfirmCode(value.trim()));
         },
         [dispatch]
     );
 
     const onCodeClick = useCallback(() => {
-        email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
+        if (__PROJECT__ !== 'storybook') {
+            email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
+        }
     }, [confirmCode, dispatch, email]);
 
     return (

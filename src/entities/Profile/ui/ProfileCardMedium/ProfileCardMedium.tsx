@@ -12,10 +12,10 @@ import cls from './ProfileCardMedium.module.scss';
 
 interface ProfileCardMediumProps {
     data?: Profile;
-    buttons?: ReactNode[];
+    options?: ReactNode;
 }
 
-export const ProfileCardMedium = memo(function ProfileCardMedium({ data, buttons }: ProfileCardMediumProps) {
+export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options }: ProfileCardMediumProps) {
     return (
         <div className={cls.profileCardMedium}>
             {data && (
@@ -36,7 +36,7 @@ export const ProfileCardMedium = memo(function ProfileCardMedium({ data, buttons
                                 {`${data.firstName} ${data.lastName}`}
                             </Text>
                         </AppLink>
-                        {buttons && <div className={cls.buttons}>{buttons.map((button) => button)}</div>}
+                        {options}
                     </div>
                 </>
             )}

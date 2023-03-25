@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 import type { BuildOptions } from './types/buildOptions';
 
-export const buildPlugins = ({ paths, isDev, api }: BuildOptions): WebpackPluginInstance[] => {
+export const buildPlugins = ({ paths, isDev, api, project }: BuildOptions): WebpackPluginInstance[] => {
     const plugins = [
         new HtmlWebpackPlugin({ template: paths.html }),
         new ProgressPlugin(),
@@ -17,6 +17,7 @@ export const buildPlugins = ({ paths, isDev, api }: BuildOptions): WebpackPlugin
         new DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
             __API__: JSON.stringify(api),
+            __PROJECT__: JSON.stringify(project),
         }),
     ];
 

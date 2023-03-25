@@ -16,7 +16,7 @@ export default (env: BuildEnv): Configuration => {
         output: path.resolve(__dirname, 'build'),
         src: path.resolve(__dirname, 'src'),
     };
-    const options: BuildOptions = { isDev, mode, paths, port, api };
+    const options: BuildOptions = { isDev, mode, paths, port, api, project: 'frontend' };
 
     return buildWebpackConfig(options);
 };

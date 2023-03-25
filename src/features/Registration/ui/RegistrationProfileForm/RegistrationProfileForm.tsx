@@ -26,35 +26,37 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
     const isLoading = useSelector(getRegistrationIsLoading);
     const onEmailChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setEmail(value));
+            dispatch(registrationActions.setEmail(value.trim()));
         },
         [dispatch]
     );
     const onFirstNameChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setFirstName(value));
+            dispatch(registrationActions.setFirstName(value.trim()));
         },
         [dispatch]
     );
     const onLastNameChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setLastName(value));
+            dispatch(registrationActions.setLastName(value.trim()));
         },
         [dispatch]
     );
     const onPasswordChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setPassword(value));
+            dispatch(registrationActions.setPassword(value.trim()));
         },
         [dispatch]
     );
 
     const onRegistrationClick = useCallback(() => {
-        email &&
-            firstName &&
-            lastName &&
-            password &&
-            dispatch(fetchRegistration({ email, firstName, lastName, password }));
+        if (__PROJECT__ !== 'storybook') {
+            email &&
+                firstName &&
+                lastName &&
+                password &&
+                dispatch(fetchRegistration({ email, firstName, lastName, password }));
+        }
     }, [dispatch, email, firstName, lastName, password]);
 
     return (

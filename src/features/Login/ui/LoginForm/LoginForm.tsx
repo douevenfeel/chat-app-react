@@ -23,19 +23,21 @@ export const LoginForm = memo(function LoginForm() {
     const error = useSelector(getLoginError);
     const onEmailChange = useCallback(
         (value: string) => {
-            dispatch(loginActions.setEmail(value));
+            dispatch(loginActions.setEmail(value.trim()));
         },
         [dispatch]
     );
     const onPasswordChange = useCallback(
         (value: string) => {
-            dispatch(loginActions.setPassword(value));
+            dispatch(loginActions.setPassword(value.trim()));
         },
         [dispatch]
     );
 
     const onLoginClick = useCallback(() => {
-        email && password && dispatch(fetchLogin({ email, password }));
+        if (__PROJECT__ !== 'storybook') {
+            email && password && dispatch(fetchLogin({ email, password }));
+        }
     }, [dispatch, email, password]);
 
     return (

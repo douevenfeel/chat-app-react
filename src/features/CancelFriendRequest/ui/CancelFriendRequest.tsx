@@ -13,7 +13,9 @@ interface CancelFriendRequestProps {
 export const CancelFriendRequest = memo(function CancelFriendRequest({ className, id }: CancelFriendRequestProps) {
     const dispatch = useAppDispatch();
     const onCancelFriendRequest = useCallback(() => {
-        dispatch(fetchCancelFriendRequest(id));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchCancelFriendRequest(id));
+        }
     }, [dispatch, id]);
 
     return (

@@ -13,7 +13,9 @@ interface DeleteFriendProps {
 export const DeleteFriend = memo(function DeleteFriend({ className, id }: DeleteFriendProps) {
     const dispatch = useAppDispatch();
     const onDeleteFriend = useCallback(() => {
-        dispatch(fetchDeleteFriend(id));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchDeleteFriend(id));
+        }
     }, [dispatch, id]);
 
     return (

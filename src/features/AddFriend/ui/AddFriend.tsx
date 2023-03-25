@@ -13,7 +13,9 @@ interface AddFriendProps {
 export const AddFriend = memo(function AddFriend({ className, id }: AddFriendProps) {
     const dispatch = useAppDispatch();
     const onAddFriend = useCallback(() => {
-        dispatch(fetchAddFriend(id));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchAddFriend(id));
+        }
     }, [dispatch, id]);
 
     return (

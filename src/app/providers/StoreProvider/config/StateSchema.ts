@@ -9,6 +9,7 @@ import type {
 import type { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import type { AxiosInstance } from 'axios';
 
+import type { FriendsSchema } from 'entities/Friends';
 import type { ProfileSchema } from 'entities/Profile';
 import type { UserSchema } from 'entities/User';
 import type { LoginSchema } from 'features/Login';
@@ -19,6 +20,7 @@ export interface StateSchema {
     login?: LoginSchema;
     registration?: RegistrationSchema;
     profile?: ProfileSchema;
+    friends?: FriendsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

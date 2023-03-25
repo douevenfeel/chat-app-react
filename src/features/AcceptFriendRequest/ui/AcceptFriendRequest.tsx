@@ -13,7 +13,9 @@ interface AcceptFriendRequestProps {
 export const AcceptFriendRequest = memo(function AcceptFriendRequest({ className, id }: AcceptFriendRequestProps) {
     const dispatch = useAppDispatch();
     const onAcceptFriendRequest = useCallback(() => {
-        dispatch(fetchAcceptFriendRequest(id));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchAcceptFriendRequest(id));
+        }
     }, [dispatch, id]);
 
     return (

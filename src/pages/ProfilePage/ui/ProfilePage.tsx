@@ -27,7 +27,9 @@ const ProfilePage = memo(function ProfilePage() {
         element = <Profile />;
     }
     useEffect(() => {
-        id && dispatch(fetchProfile(id));
+        if (__PROJECT__ !== 'storybook') {
+            id && dispatch(fetchProfile(id));
+        }
     }, [dispatch, id]);
 
     return <AuthLayout>{element}</AuthLayout>;

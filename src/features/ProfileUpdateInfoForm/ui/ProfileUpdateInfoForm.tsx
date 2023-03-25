@@ -18,18 +18,20 @@ export const ProfileUpdateInfoForm = memo(function ProfileUpdateInfoForm() {
     const lastName = useSelector(getProfileUpdateInfoLastName);
     const onFirstNameChange = useCallback(
         (value: string) => {
-            dispatch(profileActions.setUpdateFirstName(value));
+            dispatch(profileActions.setUpdateFirstName(value.trim()));
         },
         [dispatch]
     );
     const onLastNameChange = useCallback(
         (value: string) => {
-            dispatch(profileActions.setUpdateLastName(value));
+            dispatch(profileActions.setUpdateLastName(value.trim()));
         },
         [dispatch]
     );
     const onSave = useCallback(() => {
-        firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
+        if (__PROJECT__ !== 'storybook') {
+            firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
+        }
     }, [dispatch, firstName, lastName]);
     const onCancel = useCallback(() => {
         dispatch(profileActions.setIsUpdatingInfo(false));

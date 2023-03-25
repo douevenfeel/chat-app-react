@@ -20,13 +20,15 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
     const isLoading = useSelector(getRegistrationIsLoading);
     const onEmailChange = useCallback(
         (value: string) => {
-            dispatch(registrationActions.setEmail(value));
+            dispatch(registrationActions.setEmail(value.trim()));
         },
         [dispatch]
     );
 
     const onEmailClick = useCallback(() => {
-        email && dispatch(fetchRegistrationConfirmEmail({ email }));
+        if (__PROJECT__ !== 'storybook') {
+            email && dispatch(fetchRegistrationConfirmEmail({ email }));
+        }
     }, [dispatch, email]);
 
     return (
