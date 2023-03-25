@@ -19,19 +19,7 @@ export const Profile = memo(function Profile() {
     const isUpdatingInfo = useSelector(getProfileIsUpdatingInfo);
     let options: ReactNode[] = [];
     switch (data?.friendStatus) {
-        case 'accept':
-            options = [
-                <SendMessage
-                    id={Number(data.id)}
-                    key='sendMessage'
-                />,
-                <AcceptFriendRequest
-                    id={Number(data.id)}
-                    key='acceptFriendRequest'
-                />,
-            ];
-            break;
-        case 'add':
+        case 0:
             options = [
                 <SendMessage
                     id={Number(data.id)}
@@ -43,7 +31,7 @@ export const Profile = memo(function Profile() {
                 />,
             ];
             break;
-        case 'cancel':
+        case 1:
             options = [
                 <SendMessage
                     id={Number(data.id)}
@@ -55,7 +43,19 @@ export const Profile = memo(function Profile() {
                 />,
             ];
             break;
-        case 'delete':
+        case 2:
+            options = [
+                <SendMessage
+                    id={Number(data.id)}
+                    key='sendMessage'
+                />,
+                <AcceptFriendRequest
+                    id={Number(data.id)}
+                    key='acceptFriendRequest'
+                />,
+            ];
+            break;
+        case 4:
             options = [
                 <SendMessage
                     id={Number(data.id)}

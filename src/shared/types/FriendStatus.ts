@@ -1,1 +1,1 @@
-export type FriendStatus = 'add' | 'delete' | 'accept' | 'cancel';
+export type FriendStatus = 0 | 1 | 2 | 4;

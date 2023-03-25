@@ -14,7 +14,7 @@ describe('profileSlice', () => {
                     firstName: 'firstName',
                     lastName: 'lastName',
                     avatar: 'purple',
-                    friendStatus: 'add',
+                    friendStatus: 0,
                     onlineInfo: {
                         isOnline: true,
                         lastSeen: '123',
@@ -28,7 +28,7 @@ describe('profileSlice', () => {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 avatar: 'purple',
-                friendStatus: 'add',
+                friendStatus: 0,
                 onlineInfo: {
                     isOnline: true,
                     lastSeen: '123',
