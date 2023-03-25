@@ -1,6 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { profileReducer } from 'entities/Profile';
+import { userReducer } from 'entities/User';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import ProfilePage from './ProfilePage';
@@ -32,8 +33,9 @@ UserVariant.decorators = [
                     },
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -59,8 +61,9 @@ UpdatingEmpty.decorators = [
                 },
                 isUpdatingInfo: true,
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -86,8 +89,9 @@ UpdatingWithData.decorators = [
                 },
                 isUpdatingInfo: true,
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -109,8 +113,9 @@ AcceptFriendRequestVariantOffline.decorators = [
                     friendStatus: 2,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -132,8 +137,9 @@ AcceptFriendRequestVariantOnline.decorators = [
                     friendStatus: 2,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -155,8 +161,9 @@ AddFriendVariantOffline.decorators = [
                     friendStatus: 0,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -178,8 +185,9 @@ AddFriendVariantOnline.decorators = [
                     friendStatus: 0,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -201,8 +209,9 @@ CancelFriendRequestVariantOffline.decorators = [
                     friendStatus: 1,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -224,8 +233,9 @@ CancelFriendRequestVariantOnline.decorators = [
                     friendStatus: 1,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -247,8 +257,9 @@ DeleteFriendVariantOffline.decorators = [
                     friendStatus: 4,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];
 
@@ -270,7 +281,8 @@ DeleteFriendVariantOnline.decorators = [
                     friendStatus: 4,
                 },
             },
+            user: { data: { id: 1 } },
         },
-        { profile: profileReducer }
+        { profile: profileReducer, user: userReducer }
     ),
 ];

@@ -16,7 +16,9 @@ export interface LogoutProps {
 export const Logout = memo(function Logout({ className }: LogoutProps) {
     const dispatch = useAppDispatch();
     const onLogoutClick = useCallback(() => {
-        dispatch(fetchLogout(null));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchLogout(null));
+        }
     }, [dispatch]);
 
     return (

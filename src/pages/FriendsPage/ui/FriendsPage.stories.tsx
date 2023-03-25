@@ -1,6 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { friendsReducer } from 'entities/Friends';
+import { userReducer } from 'entities/User';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import FriendsPage from './FriendsPage';
@@ -58,8 +59,9 @@ FriendsOffline.decorators = [
                     },
                 ],
             },
+            user: { data: { id: 1 } },
         },
-        { friends: friendsReducer }
+        { friends: friendsReducer, user: userReducer }
     ),
 ];
 
@@ -106,8 +108,9 @@ FriendsMixed.decorators = [
                     },
                 ],
             },
+            user: { data: { id: 1 } },
         },
-        { friends: friendsReducer }
+        { friends: friendsReducer, user: userReducer }
     ),
 ];
 
@@ -154,7 +157,8 @@ FriendsOnline.decorators = [
                     },
                 ],
             },
+            user: { data: { id: 1 } },
         },
-        { friends: friendsReducer }
+        { friends: friendsReducer, user: userReducer }
     ),
 ];
