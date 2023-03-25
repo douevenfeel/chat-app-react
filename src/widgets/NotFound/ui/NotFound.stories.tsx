@@ -10,7 +10,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof NotFound>;
 
 const Template: ComponentStory<typeof NotFound> = (args) => <NotFound {...args} />;

@@ -1,6 +1,7 @@
 import { memo } from 'react';
 
-import { loginReducer } from 'features/Login/model/slice/loginSlice';
+import { loginReducer } from 'features/Login';
+import { DefaultLayout } from 'layouts/DefaultLayout';
 import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { LoginCard } from 'widgets/LoginCard';
@@ -15,9 +16,9 @@ const LoginPage = memo(function LoginPage() {
     useLazyModuleLoading({ reducers: initialReducers });
 
     return (
-        <div className={cls.loginPage}>
+        <DefaultLayout className={cls.loginPage}>
             <LoginCard />
-        </div>
+        </DefaultLayout>
     );
 });
 

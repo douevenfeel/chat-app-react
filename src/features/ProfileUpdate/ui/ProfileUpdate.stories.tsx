@@ -1,7 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
 import { ProfileUpdate } from './ProfileUpdate';
 
 export default {
@@ -15,4 +13,3 @@ export default {
 const Template: ComponentStory<typeof ProfileUpdate> = (args) => <ProfileUpdate {...args} />;
 
 export const Default = Template.bind({});
-Default.decorators = [StoreDecorator({})];

@@ -1,7 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
 import ConversationPage from './ConversationPage';
 
 export default {
@@ -15,4 +13,3 @@ export default {
 const Template: ComponentStory<typeof ConversationPage> = () => <ConversationPage />;
 
 export const Default = Template.bind({});
-Default.decorators = [StoreDecorator({})];

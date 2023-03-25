@@ -5,19 +5,17 @@
 
     fill: var(--color-text-secondary);
     stroke: var(--color-text-secondary);
-
-    transition: var(--transition);
-    transition-property: fill, stroke;
 }
 
 .container {
     display: flex;
+    gap: 4px;
     align-items: center;
 
-    border-radius: var(--border-radius);
+    height: 32px;
+    padding: 0 8px;
 
-    transition: var(--transition);
-    transition-property: background;
+    border-radius: var(--border-radius);
 
     &:hover {
         background: var(--color-bg-secondary);
@@ -30,8 +28,9 @@
     }
 
     .container {
-        width: var(--icon-size-m);
-        height: var(--icon-size-m);
+        width: var(--icon-size-s);
+        height: var(--icon-size-s);
+        padding: 0;
         border-radius: 50%;
     }
 }

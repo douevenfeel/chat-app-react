@@ -4,7 +4,6 @@ import { AcceptFriendRequest } from 'features/AcceptFriendRequest';
 import { CancelFriendRequest } from 'features/CancelFriendRequest';
 import { DeleteFriend } from 'features/DeleteFriend';
 import { SendMessage } from 'features/SendMessage';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { ProfileCardMedium } from './ProfileCardMedium';
 
@@ -14,7 +13,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ProfileCardMedium>;
 
 const Template: ComponentStory<typeof ProfileCardMedium> = (args) => <ProfileCardMedium {...args} />;

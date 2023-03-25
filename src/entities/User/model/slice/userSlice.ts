@@ -15,6 +15,7 @@ export const userSlice = createSlice({
         setIsChecked: (state) => {
             state.isChecked = true;
         },
+        logout: () => initialState,
     },
 });
 

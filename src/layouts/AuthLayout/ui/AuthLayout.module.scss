@@ -1,26 +1,34 @@
 .authLayout {
     display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
     justify-content: flex-start;
 
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     max-width: 1080px;
-    margin: 0 auto;
-    padding: 16px;
+    padding: 68px 16px 16px;
 }
 
 .page {
     width: 100%;
-    margin: 0 32px 0 16px;
+    margin-left: var(--sidebar-size);
 }
 
 @media (max-width: 768px) {
-    .authLayout {
+    .container {
         flex-direction: column;
         margin-bottom: var(--sidebar-size);
     }
 
     .page {
         margin: 0;
+    }
+
+    .header {
+        display: none;
     }
 }

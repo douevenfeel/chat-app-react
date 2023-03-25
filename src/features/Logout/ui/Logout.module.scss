@@ -1,0 +1,38 @@
+.logout {
+    cursor: pointer;
+
+    display: flex;
+    gap: 4px;
+    align-items: center;
+
+    padding: 0 12px 0 8px;
+
+    border-radius: var(--border-radius);
+}
+
+.button {
+    padding: 0;
+}
+
+.icon {
+    width: var(--icon-size-s);
+    height: var(--icon-size-s);
+    padding: var(--icon-padding);
+    fill: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .logout {
+        padding: 0;
+    }
+
+    .button {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .logout:hover {
+        background: var(--color-bg-primary);
+    }
+}

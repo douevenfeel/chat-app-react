@@ -1,6 +1,7 @@
 import { memo, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
+import { Logout } from 'features/Logout';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { getSidebarItems } from 'widgets/Sidebar/model/selectors/getSidebarItems/getSidebarItems';
 
@@ -25,6 +26,7 @@ export const Sidebar = memo(function Sidebar() {
         <div className={cls.sidebar}>
             {itemsList}
             <ThemeSwitcher />
+            <Logout className={cls.logout} />
         </div>
     );
 });

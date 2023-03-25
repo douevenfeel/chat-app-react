@@ -1,20 +1,21 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { userReducer } from 'entities/User';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import NotFoundPage from './NotFoundPage';
+import { Header } from './Header';
 
 export default {
-    title: 'pages/NotFoundPage',
-    component: NotFoundPage,
+    title: 'widgets/Header',
+    component: Header,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof NotFoundPage>;
+} as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof NotFoundPage> = () => <NotFoundPage />;
+const Template: ComponentStory<typeof Header> = () => <Header />;
 
 export const Authorized = Template.bind({});
-Authorized.decorators = [StoreDecorator({ user: { data: { id: 1 } } })];
+Authorized.decorators = [StoreDecorator({ user: { data: { id: 1 } } }, { user: userReducer })];
 
 export const NotAuthorized = Template.bind({});

@@ -15,9 +15,9 @@ export const App = () => {
     const isChecked = useSelector(getUserIsChecked);
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchCheckout(null));
+            !isChecked && dispatch(fetchCheckout(null));
         }
-    }, [dispatch]);
+    }, [dispatch, isChecked]);
 
     return <div className={clsx('app', `${theme}Theme`)}>{isChecked && <AppRouter />}</div>;
 };

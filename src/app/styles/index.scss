@@ -10,14 +10,13 @@ body {
     line-height: var(--font-line-m);
 }
 
-.app {
-    width: 100vw;
-    min-height: 100vh;
-
-    color: var(--color-text-primary);
-
-    background: var(--color-bg-primary);
-
+* {
     transition: var(--transition);
-    transition-property: background, color;
+    transition-property: all;
+}
+
+.app {
+    min-height: 100vh;
+    color: var(--color-text-primary);
+    background: var(--color-bg-primary);
 }

@@ -1,0 +1,10 @@
+.defaultLayout {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: none;
+    }
+}

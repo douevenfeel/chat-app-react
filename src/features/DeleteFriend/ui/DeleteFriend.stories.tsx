@@ -1,7 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
 import { DeleteFriend } from './DeleteFriend';
 
 export default {
@@ -18,4 +16,3 @@ export const Default = Template.bind({});
 Default.args = {
     id: 1,
 };
-Default.decorators = [StoreDecorator({})];

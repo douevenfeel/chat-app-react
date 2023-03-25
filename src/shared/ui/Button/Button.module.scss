@@ -1,7 +1,12 @@
 .button {
     cursor: pointer;
-    transition: var(--transition);
-    transition-property: background, color;
+
+    padding: 0;
+
+    color: var(--color-text-primary);
+
+    border: none;
+    outline: none;
 
     &:focus {
         outline: none;
@@ -9,19 +14,11 @@
 }
 
 .clean {
-    padding: 0;
-
-    color: var(--color-text-primary);
-
     background: none;
-    border: none;
-    outline: none;
 }
 
 .primary {
-    color: var(--color-text-primary);
     background: var(--color-bg-secondary);
-    border: none;
     border-radius: var(--border-radius);
 }
 

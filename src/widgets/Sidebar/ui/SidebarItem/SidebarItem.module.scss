@@ -1,26 +1,23 @@
 .sidebarItem {
     display: flex;
+    gap: 4px;
     align-items: center;
 
     width: 100%;
-    max-width: 160px;
+    max-width: var(--sidebar-size);
+    height: 32px;
+    padding: 0 8px;
 
     border-radius: var(--border-radius);
 
-    transition: var(--transition);
-    transition-property: background;
-
     .icon {
+        width: var(--icon-size-s);
         min-width: var(--icon-size-s);
-        max-width: var(--icon-size-s);
         height: var(--icon-size-s);
         padding: var(--icon-padding);
 
         fill: var(--color-text-secondary);
         stroke: var(--color-text-secondary);
-
-        transition: var(--transition);
-        transition-property: fill, stroke;
     }
 
     &:hover {
@@ -29,14 +26,14 @@
 }
 
 @media (max-width: 768px) {
-    .text {
-        display: none;
-        width: 0;
+    .sidebarItem {
+        width: var(--icon-size-s);
+        height: var(--icon-size-s);
+        padding: 0;
+        border-radius: 50%;
     }
 
-    .sidebarItem {
-        width: var(--icon-size-m);
-        height: var(--icon-size-m);
-        border-radius: 50%;
+    .text {
+        display: none;
     }
 }

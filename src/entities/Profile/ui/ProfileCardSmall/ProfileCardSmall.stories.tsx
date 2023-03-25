@@ -1,7 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-
 import { ProfileCardSmall } from './ProfileCardSmall';
 
 export default {
@@ -23,7 +21,6 @@ export default {
             },
         },
     },
-    decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ProfileCardSmall>;
 
 const Template: ComponentStory<typeof ProfileCardSmall> = (args) => <ProfileCardSmall {...args} />;
