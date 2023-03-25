@@ -12,6 +12,7 @@ const initialReducers: ReducersList = {
 
 const FriendsPage = memo(function FriendsPage() {
     useLazyModuleLoading({ reducers: initialReducers });
+
     useEffect(() => {
         document.title = 'Друзья';
     }, []);

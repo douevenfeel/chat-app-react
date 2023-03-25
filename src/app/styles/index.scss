@@ -10,11 +10,6 @@ body {
     line-height: var(--font-line-m);
 }
 
-* {
-    transition: var(--transition);
-    transition-property: background, border, color, fill, stroke, width, height;
-}
-
 .app {
     min-height: 100vh;
     color: var(--color-text-primary);

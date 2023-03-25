@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux';
 
 import { Logout } from 'features/Logout';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
-import { getSidebarItems } from 'widgets/Sidebar/model/selectors/getSidebarItems/getSidebarItems';
 
+import { getSidebarItems } from '../../model/selectors/getSidebarItems/getSidebarItems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 import cls from './Sidebar.module.scss';

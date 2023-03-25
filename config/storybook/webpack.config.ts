@@ -12,6 +12,7 @@ export default ({ config }: { config: Configuration }) => {
         entry: '',
         output: '',
         html: '',
+        favicon: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
     };
     const rules = config!.module!.rules as RuleSetRule[];

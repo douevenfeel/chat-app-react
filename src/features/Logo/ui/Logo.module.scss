@@ -3,10 +3,17 @@
     display: flex;
     gap: 4px;
     align-items: center;
-}
 
-.logoIcon {
-    width: 36px;
-    height: 36px;
-    filter: grayscale(100%);
+    .logoIcon {
+        width: var(--icon-size-m);
+        height: var(--icon-size-m);
+        padding: var(--icon-padding);
+        filter: grayscale(100%);
+    }
+
+    &:hover {
+        .logoIcon {
+            filter: none;
+        }
+    }
 }

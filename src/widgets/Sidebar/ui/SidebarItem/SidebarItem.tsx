@@ -2,7 +2,8 @@ import { memo, useCallback } from 'react';
 
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Text } from 'shared/ui/Text/Text';
-import type { SidebarItemSchema } from 'widgets/Sidebar/model/types/SidebarItemSchema';
+
+import type { SidebarItemSchema } from '../../model/types/SidebarItemSchema';
 
 import cls from './SidebarItem.module.scss';
 

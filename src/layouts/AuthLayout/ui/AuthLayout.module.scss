@@ -10,7 +10,7 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 1080px;
-    padding: 68px 16px 16px;
+    padding: calc(var(--header-size) + 16px) 16px 16px;
 }
 
 .page {

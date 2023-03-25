@@ -13,6 +13,7 @@ export default (env: BuildEnv): Configuration => {
     const paths: BuildPaths = {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         html: path.resolve(__dirname, 'public', 'index.html'),
+        favicon: path.resolve(__dirname, 'public', 'favicon.svg'),
         output: path.resolve(__dirname, 'build'),
         src: path.resolve(__dirname, 'src'),
     };

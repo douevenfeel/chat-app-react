@@ -14,6 +14,7 @@ export const Logo = memo(function Logo() {
     const navigate = useNavigate();
     const onLogoClick = useCallback(() => {
         if (id) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             navigate(getRouteProfile(String(id)));
         } else {
             navigate(getRouteLogin());
@@ -27,7 +28,7 @@ export const Logo = memo(function Logo() {
         >
             <LogoIcon className={cls.logoIcon} />
             <Text
-                size='large'
+                size='medium'
                 tag='h1'
                 variant='primary'
             >
