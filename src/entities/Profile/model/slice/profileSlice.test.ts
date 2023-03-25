@@ -15,6 +15,10 @@ describe('profileSlice', () => {
                     lastName: 'lastName',
                     avatar: 'purple',
                     friendStatus: 'add',
+                    onlineInfo: {
+                        isOnline: true,
+                        lastSeen: '123',
+                    },
                 })
             )
         ).toEqual({
@@ -25,6 +29,10 @@ describe('profileSlice', () => {
                 lastName: 'lastName',
                 avatar: 'purple',
                 friendStatus: 'add',
+                onlineInfo: {
+                    isOnline: true,
+                    lastSeen: '123',
+                },
             },
             isUpdatingInfo: false,
         });

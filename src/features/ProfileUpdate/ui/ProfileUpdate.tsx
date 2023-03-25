@@ -1,6 +1,9 @@
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import { profileActions } from 'entities/Profile';
+import { getUserId } from 'entities/User';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 
@@ -10,9 +13,11 @@ interface ProfileUpdateProps {
 
 export const ProfileUpdate = memo(function ProfileUpdate({ className }: ProfileUpdateProps) {
     const dispatch = useAppDispatch();
+    const id = useSelector(getUserId);
+    const { id: profileId } = useParams();
     const onProfileUpdate = useCallback(() => {
-        dispatch(profileActions.setIsUpdatingInfo(true));
-    }, [dispatch]);
+        id === Number(profileId) && dispatch(profileActions.setIsUpdatingInfo(true));
+    }, [dispatch, id, profileId]);
 
     return (
         <Button

@@ -17,6 +17,10 @@ export default {
             email: 'test@mail.ru',
             firstName: 'firstName',
             lastName: 'lastName',
+            onlineInfo: {
+                isOnline: true,
+                lastSeen: '123',
+            },
         },
     },
     decorators: [StoreDecorator({})],
@@ -24,4 +28,32 @@ export default {
 
 const Template: ComponentStory<typeof ProfileCardSmall> = (args) => <ProfileCardSmall {...args} />;
 
-export const Default = Template.bind({});
+export const Offline = Template.bind({});
+Offline.args = {
+    data: {
+        id: 1,
+        avatar: 'indigo',
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        onlineInfo: {
+            isOnline: false,
+            lastSeen: '123',
+        },
+    },
+};
+
+export const Online = Template.bind({});
+Online.args = {
+    data: {
+        id: 1,
+        avatar: 'indigo',
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        onlineInfo: {
+            isOnline: true,
+            lastSeen: '123',
+        },
+    },
+};

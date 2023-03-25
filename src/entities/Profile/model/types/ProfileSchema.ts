@@ -1,6 +1,11 @@
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
 import type { FriendStatus } from 'shared/types/FriendStatus';
 
+export interface OnlineInfo {
+    isOnline: boolean;
+    lastSeen: string;
+}
+
 export interface Profile {
     id: number;
     email: string;
@@ -8,6 +13,7 @@ export interface Profile {
     lastName: string;
     avatar: AvatarVariant;
     friendStatus?: FriendStatus;
+    onlineInfo: OnlineInfo;
 }
 
 export interface UpdateProfileInfo {

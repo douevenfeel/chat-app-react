@@ -17,164 +17,164 @@ export default {
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
 export const GreenSmallAvatar = Template.bind({});
-GreenSmallAvatar.args = { avatar: 'green', size: 'small' };
+GreenSmallAvatar.args = { avatar: 'green', size: 'small', online: false };
 
 export const GreenSmallAvatarOnline = Template.bind({});
-GreenSmallAvatarOnline.args = { avatar: 'green', size: 'small', isOnline: true };
+GreenSmallAvatarOnline.args = { avatar: 'green', size: 'small', online: true };
 
 export const TealSmallAvatar = Template.bind({});
-TealSmallAvatar.args = { avatar: 'teal', size: 'small' };
+TealSmallAvatar.args = { avatar: 'teal', size: 'small', online: false };
 
 export const TealSmallAvatarOnline = Template.bind({});
-TealSmallAvatarOnline.args = { avatar: 'teal', size: 'small', isOnline: true };
+TealSmallAvatarOnline.args = { avatar: 'teal', size: 'small', online: true };
 
 export const BlueSmallAvatar = Template.bind({});
-BlueSmallAvatar.args = { avatar: 'blue', size: 'small' };
+BlueSmallAvatar.args = { avatar: 'blue', size: 'small', online: false };
 
 export const BlueSmallAvatarOnline = Template.bind({});
-BlueSmallAvatarOnline.args = { avatar: 'blue', size: 'small', isOnline: true };
+BlueSmallAvatarOnline.args = { avatar: 'blue', size: 'small', online: true };
 
 export const IndigoSmallAvatar = Template.bind({});
-IndigoSmallAvatar.args = { avatar: 'indigo', size: 'small' };
+IndigoSmallAvatar.args = { avatar: 'indigo', size: 'small', online: false };
 
 export const IndigoSmallAvatarOnline = Template.bind({});
-IndigoSmallAvatarOnline.args = { avatar: 'indigo', size: 'small', isOnline: true };
+IndigoSmallAvatarOnline.args = { avatar: 'indigo', size: 'small', online: true };
 
 export const PurpleSmallAvatar = Template.bind({});
-PurpleSmallAvatar.args = { avatar: 'purple', size: 'small' };
+PurpleSmallAvatar.args = { avatar: 'purple', size: 'small', online: false };
 
 export const PurpleSmallAvatarOnline = Template.bind({});
-PurpleSmallAvatarOnline.args = { avatar: 'purple', size: 'small', isOnline: true };
+PurpleSmallAvatarOnline.args = { avatar: 'purple', size: 'small', online: true };
 
 export const PinkSmallAvatar = Template.bind({});
-PinkSmallAvatar.args = { avatar: 'pink', size: 'small' };
+PinkSmallAvatar.args = { avatar: 'pink', size: 'small', online: false };
 
 export const PinkSmallAvatarOnline = Template.bind({});
-PinkSmallAvatarOnline.args = { avatar: 'pink', size: 'small', isOnline: true };
+PinkSmallAvatarOnline.args = { avatar: 'pink', size: 'small', online: true };
 
 export const RedSmallAvatar = Template.bind({});
-RedSmallAvatar.args = { avatar: 'red', size: 'small' };
+RedSmallAvatar.args = { avatar: 'red', size: 'small', online: false };
 
 export const RedSmallAvatarOnline = Template.bind({});
-RedSmallAvatarOnline.args = { avatar: 'red', size: 'small', isOnline: true };
+RedSmallAvatarOnline.args = { avatar: 'red', size: 'small', online: true };
 
 export const OrangeSmallAvatar = Template.bind({});
-OrangeSmallAvatar.args = { avatar: 'orange', size: 'small' };
+OrangeSmallAvatar.args = { avatar: 'orange', size: 'small', online: false };
 
 export const OrangeSmallAvatarOnline = Template.bind({});
-OrangeSmallAvatarOnline.args = { avatar: 'orange', size: 'small', isOnline: true };
+OrangeSmallAvatarOnline.args = { avatar: 'orange', size: 'small', online: true };
 
 export const YellowSmallAvatar = Template.bind({});
-YellowSmallAvatar.args = { avatar: 'yellow', size: 'small' };
+YellowSmallAvatar.args = { avatar: 'yellow', size: 'small', online: false };
 
 export const YellowSmallAvatarOnline = Template.bind({});
-YellowSmallAvatarOnline.args = { avatar: 'yellow', size: 'small', isOnline: true };
+YellowSmallAvatarOnline.args = { avatar: 'yellow', size: 'small', online: true };
 
 export const GreenMediumAvatar = Template.bind({});
-GreenMediumAvatar.args = { avatar: 'green', size: 'medium' };
+GreenMediumAvatar.args = { avatar: 'green', size: 'medium', online: false };
 
 export const GreenMediumAvatarOnline = Template.bind({});
-GreenMediumAvatarOnline.args = { avatar: 'green', size: 'medium', isOnline: true };
+GreenMediumAvatarOnline.args = { avatar: 'green', size: 'medium', online: true };
 
 export const TealMediumAvatar = Template.bind({});
-TealMediumAvatar.args = { avatar: 'teal', size: 'medium' };
+TealMediumAvatar.args = { avatar: 'teal', size: 'medium', online: false };
 
 export const TealMediumAvatarOnline = Template.bind({});
-TealMediumAvatarOnline.args = { avatar: 'teal', size: 'medium', isOnline: true };
+TealMediumAvatarOnline.args = { avatar: 'teal', size: 'medium', online: true };
 
 export const BlueMediumAvatar = Template.bind({});
-BlueMediumAvatar.args = { avatar: 'blue', size: 'medium' };
+BlueMediumAvatar.args = { avatar: 'blue', size: 'medium', online: false };
 
 export const BlueMediumAvatarOnline = Template.bind({});
-BlueMediumAvatarOnline.args = { avatar: 'blue', size: 'medium', isOnline: true };
+BlueMediumAvatarOnline.args = { avatar: 'blue', size: 'medium', online: true };
 
 export const IndigoMediumAvatar = Template.bind({});
-IndigoMediumAvatar.args = { avatar: 'indigo', size: 'medium' };
+IndigoMediumAvatar.args = { avatar: 'indigo', size: 'medium', online: false };
 
 export const IndigoMediumAvatarOnline = Template.bind({});
-IndigoMediumAvatarOnline.args = { avatar: 'indigo', size: 'medium', isOnline: true };
+IndigoMediumAvatarOnline.args = { avatar: 'indigo', size: 'medium', online: true };
 
 export const PurpleMediumAvatar = Template.bind({});
-PurpleMediumAvatar.args = { avatar: 'purple', size: 'medium' };
+PurpleMediumAvatar.args = { avatar: 'purple', size: 'medium', online: false };
 
 export const PurpleMediumAvatarOnline = Template.bind({});
-PurpleMediumAvatarOnline.args = { avatar: 'purple', size: 'medium', isOnline: true };
+PurpleMediumAvatarOnline.args = { avatar: 'purple', size: 'medium', online: true };
 
 export const PinkMediumAvatar = Template.bind({});
-PinkMediumAvatar.args = { avatar: 'pink', size: 'medium' };
+PinkMediumAvatar.args = { avatar: 'pink', size: 'medium', online: false };
 
 export const PinkMediumAvatarOnline = Template.bind({});
-PinkMediumAvatarOnline.args = { avatar: 'pink', size: 'medium', isOnline: true };
+PinkMediumAvatarOnline.args = { avatar: 'pink', size: 'medium', online: true };
 
 export const RedMediumAvatar = Template.bind({});
-RedMediumAvatar.args = { avatar: 'red', size: 'medium' };
+RedMediumAvatar.args = { avatar: 'red', size: 'medium', online: false };
 
 export const RedMediumAvatarOnline = Template.bind({});
-RedMediumAvatarOnline.args = { avatar: 'red', size: 'medium', isOnline: true };
+RedMediumAvatarOnline.args = { avatar: 'red', size: 'medium', online: true };
 
 export const OrangeMediumAvatar = Template.bind({});
-OrangeMediumAvatar.args = { avatar: 'orange', size: 'medium' };
+OrangeMediumAvatar.args = { avatar: 'orange', size: 'medium', online: false };
 
 export const OrangeMediumAvatarOnline = Template.bind({});
-OrangeMediumAvatarOnline.args = { avatar: 'orange', size: 'medium', isOnline: true };
+OrangeMediumAvatarOnline.args = { avatar: 'orange', size: 'medium', online: true };
 
 export const YellowMediumAvatar = Template.bind({});
-YellowMediumAvatar.args = { avatar: 'yellow', size: 'medium' };
+YellowMediumAvatar.args = { avatar: 'yellow', size: 'medium', online: false };
 
 export const YellowMediumAvatarOnline = Template.bind({});
-YellowMediumAvatarOnline.args = { avatar: 'yellow', size: 'medium', isOnline: true };
+YellowMediumAvatarOnline.args = { avatar: 'yellow', size: 'medium', online: true };
 
 export const GreenLargeAvatar = Template.bind({});
-GreenLargeAvatar.args = { avatar: 'green', size: 'large' };
+GreenLargeAvatar.args = { avatar: 'green', size: 'large', online: false };
 
 export const GreenLargeAvatarOnline = Template.bind({});
 
-GreenLargeAvatarOnline.args = { avatar: 'green', size: 'large', isOnline: true };
+GreenLargeAvatarOnline.args = { avatar: 'green', size: 'large', online: true };
 
 export const TealLargeAvatar = Template.bind({});
-TealLargeAvatar.args = { avatar: 'teal', size: 'large' };
+TealLargeAvatar.args = { avatar: 'teal', size: 'large', online: false };
 
 export const TealLargeAvatarOnline = Template.bind({});
-TealLargeAvatarOnline.args = { avatar: 'teal', size: 'large', isOnline: true };
+TealLargeAvatarOnline.args = { avatar: 'teal', size: 'large', online: true };
 
 export const BlueLargeAvatar = Template.bind({});
-BlueLargeAvatar.args = { avatar: 'blue', size: 'large' };
+BlueLargeAvatar.args = { avatar: 'blue', size: 'large', online: false };
 
 export const BlueLargeAvatarOnline = Template.bind({});
-BlueLargeAvatarOnline.args = { avatar: 'blue', size: 'large', isOnline: true };
+BlueLargeAvatarOnline.args = { avatar: 'blue', size: 'large', online: true };
 
 export const IndigoLargeAvatar = Template.bind({});
-IndigoLargeAvatar.args = { avatar: 'indigo', size: 'large' };
+IndigoLargeAvatar.args = { avatar: 'indigo', size: 'large', online: false };
 
 export const IndigoLargeAvatarOnline = Template.bind({});
-IndigoLargeAvatarOnline.args = { avatar: 'indigo', size: 'large', isOnline: true };
+IndigoLargeAvatarOnline.args = { avatar: 'indigo', size: 'large', online: true };
 
 export const PurpleLargeAvatar = Template.bind({});
-PurpleLargeAvatar.args = { avatar: 'purple', size: 'large' };
+PurpleLargeAvatar.args = { avatar: 'purple', size: 'large', online: false };
 
 export const PurpleLargeAvatarOnline = Template.bind({});
-PurpleLargeAvatarOnline.args = { avatar: 'purple', size: 'large', isOnline: true };
+PurpleLargeAvatarOnline.args = { avatar: 'purple', size: 'large', online: true };
 
 export const PinkLargeAvatar = Template.bind({});
-PinkLargeAvatar.args = { avatar: 'pink', size: 'large' };
+PinkLargeAvatar.args = { avatar: 'pink', size: 'large', online: false };
 
 export const PinkLargeAvatarOnline = Template.bind({});
-PinkLargeAvatarOnline.args = { avatar: 'pink', size: 'large', isOnline: true };
+PinkLargeAvatarOnline.args = { avatar: 'pink', size: 'large', online: true };
 
 export const RedLargeAvatar = Template.bind({});
-RedLargeAvatar.args = { avatar: 'red', size: 'large' };
+RedLargeAvatar.args = { avatar: 'red', size: 'large', online: false };
 
 export const RedLargeAvatarOnline = Template.bind({});
-RedLargeAvatarOnline.args = { avatar: 'red', size: 'large', isOnline: true };
+RedLargeAvatarOnline.args = { avatar: 'red', size: 'large', online: true };
 
 export const OrangeLargeAvatar = Template.bind({});
-OrangeLargeAvatar.args = { avatar: 'orange', size: 'large' };
+OrangeLargeAvatar.args = { avatar: 'orange', size: 'large', online: false };
 
 export const OrangeLargeAvatarOnline = Template.bind({});
-OrangeLargeAvatarOnline.args = { avatar: 'orange', size: 'large', isOnline: true };
+OrangeLargeAvatarOnline.args = { avatar: 'orange', size: 'large', online: true };
 
 export const YellowLargeAvatar = Template.bind({});
-YellowLargeAvatar.args = { avatar: 'yellow', size: 'large' };
+YellowLargeAvatar.args = { avatar: 'yellow', size: 'large', online: false };
 
 export const YellowLargeAvatarOnline = Template.bind({});
-YellowLargeAvatarOnline.args = { avatar: 'yellow', size: 'large', isOnline: true };
+YellowLargeAvatarOnline.args = { avatar: 'yellow', size: 'large', online: true };

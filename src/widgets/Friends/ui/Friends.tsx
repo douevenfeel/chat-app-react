@@ -16,7 +16,12 @@ export const Friends = memo(function Friends() {
                 <ProfileCardMedium
                     data={profile}
                     key={profile.id}
-                    options={<SendMessage id={profile.id} />}
+                    options={[
+                        <SendMessage
+                            id={profile.id}
+                            key='sendMessage'
+                        />,
+                    ]}
                 />
             ))}
         </div>

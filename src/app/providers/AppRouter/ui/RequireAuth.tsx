@@ -1,9 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
 
-import { getUserId, getUserIsChecked } from 'entities/User';
+import { getUserId } from 'entities/User';
 import { getRouteLogin, getRouteProfile } from 'shared/const/router';
-import { PageLoader } from 'widgets/PageLoader';
 
 interface RequireAuthProps {
     children: JSX.Element;
@@ -12,11 +11,8 @@ interface RequireAuthProps {
 
 export const RequireAuth = ({ children, require }: RequireAuthProps) => {
     const id = useSelector(getUserId);
-    const isChecked = useSelector(getUserIsChecked);
     const location = useLocation();
-    if (!isChecked) {
-        return <PageLoader />;
-    } else if (!id && require) {
+    if (!id && require) {
         return (
             <Navigate
                 replace

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { memo } from 'react';
 
 import { getRouteProfile } from 'shared/const/router';
+import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
@@ -12,10 +13,12 @@ import cls from './ProfileCardMedium.module.scss';
 
 interface ProfileCardMediumProps {
     data?: Profile;
-    options?: ReactNode;
+    options?: ReactNode[];
 }
 
 export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options }: ProfileCardMediumProps) {
+    const { online } = useOnlineStatus(Boolean(data?.onlineInfo.isOnline), data?.onlineInfo.lastSeen);
+
     return (
         <div className={cls.profileCardMedium}>
             {data && (
@@ -24,6 +27,7 @@ export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options
                         avatar={data.avatar}
                         firstName={data.firstName}
                         lastName={data.lastName}
+                        online={online}
                         size='medium'
                     />
                     <div className={cls.profile}>
@@ -36,7 +40,7 @@ export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options
                                 {`${data.firstName} ${data.lastName}`}
                             </Text>
                         </AppLink>
-                        {options}
+                        <div className={cls.buttons}>{options?.map((option) => option)}</div>
                     </div>
                 </>
             )}

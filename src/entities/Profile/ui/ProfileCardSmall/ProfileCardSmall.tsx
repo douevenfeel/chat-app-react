@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -13,6 +14,8 @@ interface ProfileCardSmallProps {
 }
 
 export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }: ProfileCardSmallProps) {
+    const { online } = useOnlineStatus(Boolean(data?.onlineInfo.isOnline), data?.onlineInfo.lastSeen);
+
     return (
         <div
             className={cls.profileCardSmall}
@@ -24,6 +27,7 @@ export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }
                         avatar={data.avatar}
                         firstName={data.firstName}
                         lastName={data.lastName}
+                        online={online}
                         size='small'
                     />
                     <Text

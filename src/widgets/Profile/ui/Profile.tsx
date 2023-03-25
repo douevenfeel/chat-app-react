@@ -78,11 +78,10 @@ export const Profile = memo(function Profile() {
             break;
     }
 
-    return (
+    return data ? (
         <ProfileCardLarge
             data={data}
-            isUpdatingInfo={isUpdatingInfo}
             options={options}
         />
-    );
+    ) : null;
 });

@@ -15,7 +15,7 @@ const FriendsPage = memo(function FriendsPage() {
 
     return (
         <AuthLayout>
-            <Friends/>
+            <Friends />
         </AuthLayout>
     );
 });

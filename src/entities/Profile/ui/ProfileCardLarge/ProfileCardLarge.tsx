@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { memo } from 'react';
 
+import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Text } from 'shared/ui/Text/Text';
 
@@ -9,12 +10,13 @@ import type { Profile } from '../../model/types/ProfileSchema';
 import cls from './ProfileCardLarge.module.scss';
 
 interface ProfileCardLargeProps {
-    data?: Profile;
-    options?: ReactNode[];
-    isUpdatingInfo?: boolean;
+    data: Profile;
+    options: ReactNode[];
 }
 
 export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }: ProfileCardLargeProps) {
+    const { online, lastSeen } = useOnlineStatus(data?.onlineInfo.isOnline, data?.onlineInfo.lastSeen);
+
     return (
         <div className={cls.profileCardLarge}>
             {data && (
@@ -23,6 +25,7 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                         avatar={data.avatar}
                         firstName={data.firstName}
                         lastName={data.lastName}
+                        online={online}
                         size='large'
                     />
 
@@ -33,6 +36,15 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                     >
                         {`${data.firstName} ${data.lastName}`}
                     </Text>
+                    {lastSeen && (
+                        <Text
+                            size='small'
+                            tag='p'
+                            variant='secondary'
+                        >
+                            {lastSeen}
+                        </Text>
+                    )}
                     <div className={cls.buttons}>{options?.map((option) => option)}</div>
                 </>
             )}
