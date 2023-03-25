@@ -72,6 +72,7 @@ export const LoginForm = memo(function LoginForm() {
                     size='medium'
                     tag='p'
                     variant='error'
+                    weight='medium'
                 >
                     {error}
                 </Text>

@@ -28,12 +28,14 @@ const NotFound = memo(function NotFound({ className, withNavigate }: NotFoundPro
                 size='medium'
                 tag='p'
                 variant='secondary'
+                weight='medium'
             >
                 404 ошибка
             </Text>
             <Text
                 size='large'
                 tag='h1'
+                weight='semi'
             >
                 Страница не найдена
             </Text>

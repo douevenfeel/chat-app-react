@@ -13,6 +13,7 @@ export const LoginCard = memo(function LoginCard() {
                 size='large'
                 tag='h1'
                 variant='primary'
+                weight='semi'
             >
                 Chat app
             </Text>
@@ -21,6 +22,7 @@ export const LoginCard = memo(function LoginCard() {
                 size='medium'
                 tag='h2'
                 variant='primary'
+                weight='medium'
             >
                 Вход
             </Text>

@@ -26,6 +26,7 @@ PrimarySmall.args = {
             size='small'
             tag='p'
             variant='primary'
+            weight='normal'
         >
             Моя страница
         </Text>
@@ -39,6 +40,7 @@ PrimaryMedium.args = {
             size='medium'
             tag='p'
             variant='primary'
+            weight='medium'
         >
             Моя страница
         </Text>
@@ -52,6 +54,7 @@ PrimaryLarge.args = {
             size='large'
             tag='p'
             variant='primary'
+            weight='semi'
         >
             Моя страница
         </Text>
@@ -65,6 +68,7 @@ SecondarySmall.args = {
             size='small'
             tag='p'
             variant='secondary'
+            weight='normal'
         >
             Моя страница
         </Text>
@@ -78,6 +82,7 @@ SecondaryMedium.args = {
             size='medium'
             tag='p'
             variant='secondary'
+            weight='medium'
         >
             Моя страница
         </Text>
@@ -91,6 +96,7 @@ SecondaryLarge.args = {
             size='large'
             tag='p'
             variant='secondary'
+            weight='semi'
         >
             Моя страница
         </Text>

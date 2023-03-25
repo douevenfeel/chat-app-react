@@ -17,6 +17,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
                 size='large'
                 tag='h1'
                 variant='primary'
+                weight='semi'
             >
                 Chat app
             </Text>
@@ -25,6 +26,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
                 size='medium'
                 tag='h2'
                 variant='primary'
+                weight='medium'
             >
                 {text}
             </Text>

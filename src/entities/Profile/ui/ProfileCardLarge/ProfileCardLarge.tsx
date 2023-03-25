@@ -28,11 +28,11 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                         online={online}
                         size='large'
                     />
-
                     <Text
                         size='medium'
                         tag='h3'
                         variant='primary'
+                        weight='semi'
                     >
                         {`${data.firstName} ${data.lastName}`}
                     </Text>
@@ -41,6 +41,7 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                             size='small'
                             tag='p'
                             variant='secondary'
+                            weight='normal'
                         >
                             {lastSeen}
                         </Text>

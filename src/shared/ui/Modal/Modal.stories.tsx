@@ -23,6 +23,7 @@ Default.args = {
                 size='medium'
                 tag='p'
                 variant='primary'
+                weight='medium'
             >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis asperiores minus officiis, nam eveniet
                 quibusdam tenetur commodi, fugiat voluptatibus sint provident harum vero voluptas voluptates alias nobis

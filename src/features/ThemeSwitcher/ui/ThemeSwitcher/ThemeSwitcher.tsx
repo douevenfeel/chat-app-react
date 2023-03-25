@@ -27,6 +27,7 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
                     size='small'
                     tag='p'
                     variant='secondary'
+                    weight='normal'
                 >
                     {theme === 'dark' ? 'Темная тема' : 'Светлая тема'}
                 </Text>

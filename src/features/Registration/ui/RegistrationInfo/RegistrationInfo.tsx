@@ -20,6 +20,7 @@ export const RegistrationInfo = memo(function RegistrationInfo() {
                 size='medium'
                 tag='p'
                 variant='primary'
+                weight='medium'
             >
                 После входа вы получите доступ ко всем возможностям CHAT APP
             </Text>

@@ -109,6 +109,7 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
                     size='medium'
                     tag='p'
                     variant='error'
+                    weight='medium'
                 >
                     {error}
                 </Text>

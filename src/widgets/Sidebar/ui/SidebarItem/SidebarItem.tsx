@@ -26,6 +26,7 @@ export const SidebarItem = memo(function SidebarItem({ path, Icon, text }: Sideb
                 size='small'
                 tag='p'
                 variant='secondary'
+                weight='normal'
             >
                 {text}
             </Text>

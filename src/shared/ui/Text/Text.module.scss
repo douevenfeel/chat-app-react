@@ -2,22 +2,35 @@
     color: inherit;
 }
 
-.large {
-    font-size: var(--font-size-l);
-    font-weight: var(--font-weight-l);
-    line-height: var(--font-line-l);
+.smallSize {
+    font-size: var(--font-size-s);
+    line-height: var(--font-line-s);
 }
 
-.medium {
+.mediumSize {
     font-size: var(--font-size-m);
-    font-weight: var(--font-weight-m);
     line-height: var(--font-line-m);
 }
 
-.small {
-    font-size: var(--font-size-s);
-    font-weight: var(--font-weight-s);
-    line-height: var(--font-line-s);
+.largeSize {
+    font-size: var(--font-size-l);
+    line-height: var(--font-line-l);
+}
+
+.normalWeight {
+    font-weight: var(--font-weight-400);
+}
+
+.mediumWeight {
+    font-weight: var(--font-weight-500);
+}
+
+.semiWeight {
+    font-weight: var(--font-weight-600);
+}
+
+.boldWeight {
+    font-weight: var(--font-weight-700);
 }
 
 .primary {

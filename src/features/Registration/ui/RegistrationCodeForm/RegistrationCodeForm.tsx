@@ -74,6 +74,7 @@ export const RegistrationCodeForm = memo(function RegistrationCodeForm() {
                     size='medium'
                     tag='p'
                     variant='error'
+                    weight='medium'
                 >
                     {error}
                 </Text>

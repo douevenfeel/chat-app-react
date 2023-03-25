@@ -36,6 +36,7 @@ export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options
                                 size='medium'
                                 tag='h3'
                                 variant='primary'
+                                weight='medium'
                             >
                                 {`${data.firstName} ${data.lastName}`}
                             </Text>

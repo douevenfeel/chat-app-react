@@ -11,195 +11,260 @@ export default {
     args: {
         children: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, vel.',
         tag: 'p',
+        align: 'left',
     },
 } as ComponentMeta<typeof Text>;
 
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
 
-export const PrimarySmallLeft = Template.bind({});
-PrimarySmallLeft.args = {
+export const PrimarySmallSizeNormalWeight = Template.bind({});
+PrimarySmallSizeNormalWeight.args = {
     variant: 'primary',
-    align: 'left',
     size: 'small',
+    weight: 'normal',
 };
 
-export const PrimarySmallCenter = Template.bind({});
-PrimarySmallCenter.args = {
+export const PrimarySmallSizeMediumWeight = Template.bind({});
+PrimarySmallSizeMediumWeight.args = {
     variant: 'primary',
-    align: 'center',
     size: 'small',
+    weight: 'medium',
 };
 
-export const PrimarySmallRight = Template.bind({});
-PrimarySmallRight.args = {
+export const PrimarySmallSizeSemiWeight = Template.bind({});
+PrimarySmallSizeSemiWeight.args = {
     variant: 'primary',
-    align: 'right',
     size: 'small',
+    weight: 'semi',
 };
 
-export const PrimaryMediumLeft = Template.bind({});
-PrimaryMediumLeft.args = {
+export const PrimarySmallSizeBoldWeight = Template.bind({});
+PrimarySmallSizeBoldWeight.args = {
     variant: 'primary',
-    align: 'left',
-    size: 'medium',
+    size: 'small',
+    weight: 'bold',
 };
 
-export const PrimaryMediumCenter = Template.bind({});
-PrimaryMediumCenter.args = {
+export const PrimaryMediumSizeNormalWeight = Template.bind({});
+PrimaryMediumSizeNormalWeight.args = {
     variant: 'primary',
-    align: 'center',
     size: 'medium',
+    weight: 'normal',
 };
 
-export const PrimaryMediumRight = Template.bind({});
-PrimaryMediumRight.args = {
+export const PrimaryMediumSizeMediumWeight = Template.bind({});
+PrimaryMediumSizeMediumWeight.args = {
     variant: 'primary',
-    align: 'right',
     size: 'medium',
+    weight: 'medium',
 };
 
-export const PrimaryLargeLeft = Template.bind({});
-PrimaryLargeLeft.args = {
+export const PrimaryMediumSizeSemiWeight = Template.bind({});
+PrimaryMediumSizeSemiWeight.args = {
     variant: 'primary',
-    align: 'left',
-    size: 'large',
+    size: 'medium',
+    weight: 'semi',
 };
 
-export const PrimaryLargeCenter = Template.bind({});
-PrimaryLargeCenter.args = {
+export const PrimaryMediumSizeBoldWeight = Template.bind({});
+PrimaryMediumSizeBoldWeight.args = {
     variant: 'primary',
-    align: 'center',
-    size: 'large',
+    size: 'medium',
+    weight: 'bold',
 };
 
-export const PrimaryLargeRight = Template.bind({});
-PrimaryLargeRight.args = {
+export const PrimaryLargeSizeNormalWeight = Template.bind({});
+PrimaryLargeSizeNormalWeight.args = {
     variant: 'primary',
-    align: 'right',
     size: 'large',
+    weight: 'normal',
 };
 
-export const SecondarySmallLeft = Template.bind({});
-SecondarySmallLeft.args = {
+export const PrimaryLargeSizeMediumWeight = Template.bind({});
+PrimaryLargeSizeMediumWeight.args = {
+    variant: 'primary',
+    size: 'large',
+    weight: 'medium',
+};
+
+export const PrimaryLargeSizeSemiWeight = Template.bind({});
+PrimaryLargeSizeSemiWeight.args = {
+    variant: 'primary',
+    size: 'large',
+    weight: 'semi',
+};
+
+export const PrimaryLargeSizeBoldWeight = Template.bind({});
+PrimaryLargeSizeBoldWeight.args = {
+    variant: 'primary',
+    size: 'large',
+    weight: 'bold',
+};
+
+export const SecondarySmallSizeNormalWeight = Template.bind({});
+SecondarySmallSizeNormalWeight.args = {
     variant: 'secondary',
-    align: 'left',
     size: 'small',
+    weight: 'normal',
 };
 
-export const SecondarySmallCenter = Template.bind({});
-SecondarySmallCenter.args = {
+export const SecondarySmallSizeMediumWeight = Template.bind({});
+SecondarySmallSizeMediumWeight.args = {
     variant: 'secondary',
-    align: 'center',
     size: 'small',
+    weight: 'medium',
 };
 
-export const SecondarySmallRight = Template.bind({});
-SecondarySmallRight.args = {
+export const SecondarySmallSizeSemiWeight = Template.bind({});
+SecondarySmallSizeSemiWeight.args = {
     variant: 'secondary',
-    align: 'right',
     size: 'small',
+    weight: 'semi',
 };
 
-export const SecondaryMediumLeft = Template.bind({});
-SecondaryMediumLeft.args = {
+export const SecondarySmallSizeBoldWeight = Template.bind({});
+SecondarySmallSizeBoldWeight.args = {
     variant: 'secondary',
-    align: 'left',
-    size: 'medium',
-};
-
-export const SecondaryMediumCenter = Template.bind({});
-SecondaryMediumCenter.args = {
-    variant: 'secondary',
-    align: 'center',
-    size: 'medium',
-};
-
-export const SecondaryMediumRight = Template.bind({});
-SecondaryMediumRight.args = {
-    variant: 'secondary',
-    align: 'right',
-    size: 'medium',
-};
-export const SecondaryLargeLeft = Template.bind({});
-SecondaryLargeLeft.args = {
-    variant: 'secondary',
-    align: 'left',
-    size: 'large',
-};
-
-export const SecondaryLargeCenter = Template.bind({});
-SecondaryLargeCenter.args = {
-    variant: 'secondary',
-    align: 'center',
-    size: 'large',
-};
-
-export const SecondaryLargeRight = Template.bind({});
-SecondaryLargeRight.args = {
-    variant: 'secondary',
-    align: 'right',
-    size: 'large',
-};
-
-export const ErrorSmallLeft = Template.bind({});
-ErrorSmallLeft.args = {
-    variant: 'error',
-    align: 'left',
     size: 'small',
+    weight: 'bold',
 };
 
-export const ErrorSmallCenter = Template.bind({});
-ErrorSmallCenter.args = {
+export const SecondaryMediumSizeNormalWeight = Template.bind({});
+SecondaryMediumSizeNormalWeight.args = {
+    variant: 'secondary',
+    size: 'medium',
+    weight: 'normal',
+};
+
+export const SecondaryMediumSizeMediumWeight = Template.bind({});
+SecondaryMediumSizeMediumWeight.args = {
+    variant: 'secondary',
+    size: 'medium',
+    weight: 'medium',
+};
+
+export const SecondaryMediumSizeSemiWeight = Template.bind({});
+SecondaryMediumSizeSemiWeight.args = {
+    variant: 'secondary',
+    size: 'medium',
+    weight: 'semi',
+};
+
+export const SecondaryMediumSizeBoldWeight = Template.bind({});
+SecondaryMediumSizeBoldWeight.args = {
+    variant: 'secondary',
+    size: 'medium',
+    weight: 'bold',
+};
+
+export const SecondaryLargeSizeNormalWeight = Template.bind({});
+SecondaryLargeSizeNormalWeight.args = {
+    variant: 'secondary',
+    size: 'large',
+    weight: 'normal',
+};
+
+export const SecondaryLargeSizeMediumWeight = Template.bind({});
+SecondaryLargeSizeMediumWeight.args = {
+    variant: 'secondary',
+    size: 'large',
+    weight: 'medium',
+};
+
+export const SecondaryLargeSizeSemiWeight = Template.bind({});
+SecondaryLargeSizeSemiWeight.args = {
+    variant: 'secondary',
+    size: 'large',
+    weight: 'semi',
+};
+
+export const SecondaryLargeSizeBoldWeight = Template.bind({});
+SecondaryLargeSizeBoldWeight.args = {
+    variant: 'secondary',
+    size: 'large',
+    weight: 'bold',
+};
+
+export const ErrorSmallSizeNormalWeight = Template.bind({});
+ErrorSmallSizeNormalWeight.args = {
     variant: 'error',
-    align: 'center',
     size: 'small',
+    weight: 'normal',
 };
 
-export const ErrorSmallRight = Template.bind({});
-ErrorSmallRight.args = {
+export const ErrorSmallSizeMediumWeight = Template.bind({});
+ErrorSmallSizeMediumWeight.args = {
     variant: 'error',
-    align: 'right',
     size: 'small',
+    weight: 'medium',
 };
 
-export const ErrorMediumLeft = Template.bind({});
-ErrorMediumLeft.args = {
+export const ErrorSmallSizeSemiWeight = Template.bind({});
+ErrorSmallSizeSemiWeight.args = {
     variant: 'error',
-    align: 'left',
+    size: 'small',
+    weight: 'semi',
+};
+
+export const ErrorSmallSizeBoldWeight = Template.bind({});
+ErrorSmallSizeBoldWeight.args = {
+    variant: 'error',
+    size: 'small',
+    weight: 'bold',
+};
+
+export const ErrorMediumSizeNormalWeight = Template.bind({});
+ErrorMediumSizeNormalWeight.args = {
+    variant: 'error',
     size: 'medium',
+    weight: 'normal',
 };
 
-export const ErrorMediumCenter = Template.bind({});
-ErrorMediumCenter.args = {
+export const ErrorMediumSizeMediumWeight = Template.bind({});
+ErrorMediumSizeMediumWeight.args = {
     variant: 'error',
-    align: 'center',
     size: 'medium',
+    weight: 'medium',
 };
 
-export const ErrorMediumRight = Template.bind({});
-ErrorMediumRight.args = {
+export const ErrorMediumSizeSemiWeight = Template.bind({});
+ErrorMediumSizeSemiWeight.args = {
     variant: 'error',
-    align: 'right',
     size: 'medium',
+    weight: 'semi',
 };
 
-export const ErrorLargeLeft = Template.bind({});
-ErrorLargeLeft.args = {
+export const ErrorMediumSizeBoldWeight = Template.bind({});
+ErrorMediumSizeBoldWeight.args = {
     variant: 'error',
-    align: 'left',
-    size: 'large',
+    size: 'medium',
+    weight: 'bold',
 };
 
-export const ErrorLargeCenter = Template.bind({});
-ErrorLargeCenter.args = {
+export const ErrorLargeSizeNormalWeight = Template.bind({});
+ErrorLargeSizeNormalWeight.args = {
     variant: 'error',
-    align: 'center',
     size: 'large',
+    weight: 'normal',
 };
 
-export const ErrorLargeRight = Template.bind({});
-ErrorLargeRight.args = {
+export const ErrorLargeSizeMediumWeight = Template.bind({});
+ErrorLargeSizeMediumWeight.args = {
     variant: 'error',
-    align: 'right',
     size: 'large',
+    weight: 'medium',
+};
+
+export const ErrorLargeSizeSemiWeight = Template.bind({});
+ErrorLargeSizeSemiWeight.args = {
+    variant: 'error',
+    size: 'large',
+    weight: 'semi',
+};
+
+export const ErrorLargeSizeBoldWeight = Template.bind({});
+ErrorLargeSizeBoldWeight.args = {
+    variant: 'error',
+    size: 'large',
+    weight: 'bold',
 };

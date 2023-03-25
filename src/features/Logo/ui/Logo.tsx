@@ -31,6 +31,7 @@ export const Logo = memo(function Logo() {
                 size='medium'
                 tag='h1'
                 variant='primary'
+                weight='medium'
             >
                 CHAT APP
             </Text>
