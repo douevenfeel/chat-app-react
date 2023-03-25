@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getRegistrationEmail } from 'features/Registration/model/selectors/getRegistrationEmail/getRegistrationEmail';
@@ -58,6 +58,10 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
                 dispatch(fetchRegistration({ email, firstName, lastName, password }));
         }
     }, [dispatch, email, firstName, lastName, password]);
+
+    useEffect(() => {
+        document.title = 'Заполните профиль';
+    }, []);
 
     return (
         <div className={cls.registrationProfileForm}>

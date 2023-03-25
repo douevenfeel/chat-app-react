@@ -12,7 +12,7 @@ body {
 
 * {
     transition: var(--transition);
-    transition-property: all;
+    transition-property: background, border, color, fill, stroke, width, height;
 }
 
 .app {

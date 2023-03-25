@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 
 import { friendsReducer } from 'entities/Friends';
 import { AuthLayout } from 'layouts/AuthLayout';
@@ -12,6 +12,9 @@ const initialReducers: ReducersList = {
 
 const FriendsPage = memo(function FriendsPage() {
     useLazyModuleLoading({ reducers: initialReducers });
+    useEffect(() => {
+        document.title = 'Друзья';
+    }, []);
 
     return (
         <AuthLayout>

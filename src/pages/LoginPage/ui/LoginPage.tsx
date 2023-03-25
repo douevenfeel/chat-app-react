@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 
 import { loginReducer } from 'features/Login';
 import { DefaultLayout } from 'layouts/DefaultLayout';
@@ -14,6 +14,9 @@ const initialReducers: ReducersList = {
 
 const LoginPage = memo(function LoginPage() {
     useLazyModuleLoading({ reducers: initialReducers });
+    useEffect(() => {
+        document.title = 'Вход';
+    }, []);
 
     return (
         <DefaultLayout className={cls.loginPage}>

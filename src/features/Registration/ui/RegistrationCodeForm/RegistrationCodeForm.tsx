@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getRegistrationConfirmCode } from 'features/Registration/model/selectors/getRegistrationConfirmCode/getRegistrationConfirmCode';
@@ -38,6 +38,10 @@ export const RegistrationCodeForm = memo(function RegistrationCodeForm() {
             email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
         }
     }, [confirmCode, dispatch, email]);
+
+    useEffect(() => {
+        document.title = 'Введите код подтверждения';
+    }, []);
 
     return (
         <div className={cls.registrationCodeForm}>

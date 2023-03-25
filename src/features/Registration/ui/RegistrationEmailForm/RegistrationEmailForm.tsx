@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getRegistrationEmail } from 'features/Registration/model/selectors/getRegistrationEmail/getRegistrationEmail';
@@ -30,6 +30,10 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
             email && dispatch(fetchRegistrationConfirmEmail({ email }));
         }
     }, [dispatch, email]);
+
+    useEffect(() => {
+        document.title = 'Введите почту';
+    }, []);
 
     return (
         <div className={cls.registrationEmailForm}>

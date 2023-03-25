@@ -9,6 +9,7 @@ import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazy
 import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { NotFound } from 'widgets/NotFound';
 import { Profile } from 'widgets/Profile';
+import { getProfileData } from 'widgets/Profile/model/selectors/getProfileData/getProfileData';
 
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
 
@@ -19,6 +20,7 @@ const ProfilePage = memo(function ProfilePage() {
     useLazyModuleLoading({ reducers: initialReducers });
     const dispatch = useAppDispatch();
     const { id } = useParams();
+    const data = useSelector(getProfileData);
     const error = useSelector(getProfileError);
     let element;
     if (error) {
@@ -31,6 +33,11 @@ const ProfilePage = memo(function ProfilePage() {
             id && dispatch(fetchProfile(id));
         }
     }, [dispatch, id]);
+    useEffect(() => {
+        if (data) {
+            document.title = `${data.firstName} ${data.lastName}`;
+        }
+    }, [data]);
 
     return <AuthLayout>{element}</AuthLayout>;
 });
