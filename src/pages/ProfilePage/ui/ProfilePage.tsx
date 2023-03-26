@@ -30,7 +30,7 @@ const ProfilePage = memo(function ProfilePage() {
     }
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
-            id && dispatch(fetchProfile(id));
+            id && dispatch(fetchProfile(+id));
         }
         if (data) {
             document.title = `${data.firstName} ${data.lastName}`;

@@ -17,7 +17,7 @@ export default {
             lastName: 'lastName',
             onlineInfo: {
                 isOnline: true,
-                lastSeen: '123',
+                lastSeen: String(Date.now()),
             },
         },
     },
@@ -35,7 +35,7 @@ Offline.args = {
         lastName: 'lastName',
         onlineInfo: {
             isOnline: false,
-            lastSeen: '123',
+            lastSeen: String(Date.now()),
         },
     },
 };
@@ -50,7 +50,7 @@ Online.args = {
         lastName: 'lastName',
         onlineInfo: {
             isOnline: true,
-            lastSeen: '123',
+            lastSeen: String(Date.now()),
         },
     },
 };

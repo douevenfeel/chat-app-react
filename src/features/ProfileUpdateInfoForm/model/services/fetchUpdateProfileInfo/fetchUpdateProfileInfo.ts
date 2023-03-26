@@ -1,8 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import type { ThunkConfig } from 'app/providers/StoreProvider';
-import type { Profile, UpdateProfileInfo } from 'entities/Profile';
-import { profileActions } from 'entities/Profile';
+
+// eslint-disable-next-line no-restricted-imports
+import { profileActions } from '../../../../../entities/Profile';
+// eslint-disable-next-line no-restricted-imports
+import type { Profile, UpdateProfileInfo } from '../../../../../entities/Profile';
 
 export const fetchUpdateProfileInfo = createAsyncThunk<Profile, UpdateProfileInfo, ThunkConfig<string>>(
     'updateProfileInfo/fetchUpdateProfileInfo',
