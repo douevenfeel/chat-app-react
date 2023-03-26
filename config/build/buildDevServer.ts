@@ -7,4 +7,5 @@ export const buildDevServer = ({ port }: BuildOptions): DevServerConfiguration =
     open: true,
     hot: true,
     historyApiFallback: true,
+    client: { overlay: false },
 });

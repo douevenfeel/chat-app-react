@@ -32,12 +32,10 @@ const ProfilePage = memo(function ProfilePage() {
         if (__PROJECT__ !== 'storybook') {
             id && dispatch(fetchProfile(id));
         }
-    }, [dispatch, id]);
-    useEffect(() => {
         if (data) {
             document.title = `${data.firstName} ${data.lastName}`;
         }
-    }, [data]);
+    }, [data, dispatch, id]);
 
     return <AuthLayout>{element}</AuthLayout>;
 });
