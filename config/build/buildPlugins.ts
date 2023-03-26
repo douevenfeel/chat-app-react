@@ -1,3 +1,4 @@
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import type { WebpackPluginInstance } from 'webpack';
@@ -21,7 +22,10 @@ export const buildPlugins = ({ paths, isDev, api, project }: BuildOptions): Webp
         }),
     ];
 
-    if (isDev) plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+    if (isDev) {
+        plugins.push(new BundleAnalyzerPlugin({ openAnalyzer: false }));
+        plugins.push(new ReactRefreshWebpackPlugin());
+    }
 
     return plugins;
 };
