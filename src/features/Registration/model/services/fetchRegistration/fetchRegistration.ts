@@ -4,9 +4,9 @@ import type { ThunkConfig } from 'app/providers/StoreProvider';
 import { LOCAL_STORAGE_ACCESS_TOKEN_KEY } from 'shared/const/localStorage';
 
 // eslint-disable-next-line no-restricted-imports
-import type { User } from '../../../../../entities/User';
 // eslint-disable-next-line no-restricted-imports
 import { userActions } from '../../../../../entities/User';
+import type { RegistrationData } from '../../types/RegistrationSchema';
 
 interface RegistrationProps {
     email: string;
@@ -15,7 +15,7 @@ interface RegistrationProps {
     password: string;
 }
 
-export const fetchRegistration = createAsyncThunk<User, RegistrationProps, ThunkConfig<string>>(
+export const fetchRegistration = createAsyncThunk<RegistrationData, RegistrationProps, ThunkConfig<string>>(
     'registrationProfileForm/fetchRegistration',
     async (data, { dispatch, rejectWithValue, extra }) => {
         try {

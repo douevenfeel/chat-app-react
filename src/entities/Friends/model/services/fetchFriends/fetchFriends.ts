@@ -4,9 +4,9 @@ import type { ThunkConfig } from 'app/providers/StoreProvider';
 
 import type { Friend } from '../../types/FriendsSchema';
 
-export const fetchFriends = createAsyncThunk<Friend[], string, ThunkConfig<string>>(
+export const fetchFriends = createAsyncThunk<Friend[], number, ThunkConfig<string>>(
     'friends/fetchFriends',
-    async (id: string, { rejectWithValue, extra }) => {
+    async (id: number, { rejectWithValue, extra }) => {
         try {
             const response = await extra.api.get<Friend[]>(`/friends/${id}`).then((response) => response.data);
             if (!response) {

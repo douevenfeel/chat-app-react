@@ -19,7 +19,7 @@ describe('fetchFriends', () => {
         ];
         const thunk = new TestAsyncThunk(fetchFriends);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
-        const result = await thunk.callThunk('1');
+        const result = await thunk.callThunk(1);
 
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(thunk.api.get).toHaveBeenCalled();
@@ -34,7 +34,7 @@ describe('fetchFriends', () => {
 
         const thunk = new TestAsyncThunk(fetchFriends);
         thunk.api.get.mockRejectedValue(Promise.resolve({ data }));
-        const result = await thunk.callThunk('1');
+        const result = await thunk.callThunk(1);
 
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
         expect(thunk.api.get).toHaveBeenCalled();
