@@ -1,1 +1,1 @@
-export type FriendStatus = 0 | 1 | 2 | 4;
+export type FriendStatus = 'possibleFriend' | 'outcomingRequest' | 'incomingRequest' | 'alreadyFriend';

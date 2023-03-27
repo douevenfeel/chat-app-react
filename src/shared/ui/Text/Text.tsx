@@ -28,17 +28,24 @@ export const Text = memo(function Text({
     className,
     children,
     tag,
-    variant = 'primary',
+    variant,
     align = 'left',
-    size = 'medium',
-    weight = 'normal',
+    size,
+    weight,
     ...props
 }: TextProps) {
     const TextTag = tag;
 
     return (
         <TextTag
-            className={clsx(cls.text, cls[variant], cls[align], cls[`${size}Size`], cls[`${weight}Weight`], className)}
+            className={clsx(
+                cls.text,
+                variant && cls[variant],
+                cls[align],
+                size && cls[`${size}Size`],
+                weight && cls[`${weight}Weight`],
+                className
+            )}
             {...props}
         >
             {children}

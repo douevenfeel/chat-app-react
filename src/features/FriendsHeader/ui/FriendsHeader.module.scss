@@ -1,0 +1,24 @@
+.friendsHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    max-width: 648px;
+    padding: 4px 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.search {
+    display: flex;
+    flex: 1;
+    gap: 8px;
+
+    input {
+        width: 100%;
+    }
+}

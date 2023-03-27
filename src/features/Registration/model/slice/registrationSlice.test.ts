@@ -1,5 +1,4 @@
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
-import type { FriendStatus } from 'shared/types/FriendStatus';
 
 import { fetchRegistration } from '../services/fetchRegistration/fetchRegistration';
 import { fetchRegistrationConfirmCode } from '../services/fetchRegistrationConfirmCode/fetchRegistrationConfirmCode';
@@ -114,7 +113,6 @@ describe('registrationSlice', () => {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 avatar: 'purple' as AvatarVariant,
-                friendStatus: 0 as FriendStatus,
                 onlineInfo: {
                     isOnline: true,
                     lastSeen: String(Date.now()),

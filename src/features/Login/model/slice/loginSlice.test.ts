@@ -1,5 +1,4 @@
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
-import type { FriendStatus } from 'shared/types/FriendStatus';
 
 import { fetchLogin } from '../services/fetchLogin/fetchLogin';
 import type { LoginSchema } from '../types/LoginSchema';
@@ -13,7 +12,6 @@ const data = {
         firstName: 'firstName',
         lastName: 'lastName',
         avatar: 'purple' as AvatarVariant,
-        friendStatus: 0 as FriendStatus,
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),

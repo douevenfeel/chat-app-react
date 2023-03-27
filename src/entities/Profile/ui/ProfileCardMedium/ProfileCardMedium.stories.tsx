@@ -1,6 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { AcceptFriendRequest } from 'features/AcceptFriendRequest';
+import { AddFriend } from 'features/AddFriend';
 import { CancelFriendRequest } from 'features/CancelFriendRequest';
 import { DeleteFriend } from 'features/DeleteFriend';
 import { SendMessage } from 'features/SendMessage';
@@ -59,16 +60,16 @@ DefaultOnline.args = {
     },
 };
 
-export const FriendOffline = Template.bind({});
-FriendOffline.args = {
+export const PossibleFriendOffline = Template.bind({});
+PossibleFriendOffline.args = {
     options: [
         <SendMessage
             id={1}
             key='sendMessage'
         />,
-        <DeleteFriend
+        <AddFriend
             id={1}
-            key='deleteFriend'
+            key='addFriend'
         />,
     ],
     data: {
@@ -84,16 +85,66 @@ FriendOffline.args = {
     },
 };
 
-export const FriendOnline = Template.bind({});
-FriendOnline.args = {
+export const PossibleFriendOnline = Template.bind({});
+PossibleFriendOnline.args = {
     options: [
         <SendMessage
             id={1}
             key='sendMessage'
         />,
-        <DeleteFriend
+        <AddFriend
             id={1}
-            key='deleteFriend'
+            key='addFriend'
+        />,
+    ],
+    data: {
+        id: 1,
+        avatar: 'indigo',
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        onlineInfo: {
+            isOnline: true,
+            lastSeen: String(Date.now()),
+        },
+    },
+};
+
+export const OutcomingRequestOffline = Template.bind({});
+OutcomingRequestOffline.args = {
+    options: [
+        <SendMessage
+            id={1}
+            key='sendMessage'
+        />,
+        <CancelFriendRequest
+            id={1}
+            key='cancelFriendRequest'
+        />,
+    ],
+    data: {
+        id: 1,
+        avatar: 'indigo',
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        onlineInfo: {
+            isOnline: false,
+            lastSeen: String(Date.now() - 300000),
+        },
+    },
+};
+
+export const OutcomingRequestOnline = Template.bind({});
+OutcomingRequestOnline.args = {
+    options: [
+        <SendMessage
+            id={1}
+            key='sendMessage'
+        />,
+        <CancelFriendRequest
+            id={1}
+            key='cancelFriendRequest'
         />,
     ],
     data: {
@@ -159,16 +210,16 @@ IncomingRequestOnline.args = {
     },
 };
 
-export const OutcomingRequestOffline = Template.bind({});
-OutcomingRequestOffline.args = {
+export const AlreadyFriendOffline = Template.bind({});
+AlreadyFriendOffline.args = {
     options: [
         <SendMessage
             id={1}
             key='sendMessage'
         />,
-        <CancelFriendRequest
+        <DeleteFriend
             id={1}
-            key='cancelFriendRequest'
+            key='deleteFriend'
         />,
     ],
     data: {
@@ -184,16 +235,16 @@ OutcomingRequestOffline.args = {
     },
 };
 
-export const OutcomingRequestOnline = Template.bind({});
-OutcomingRequestOnline.args = {
+export const AlreadyFriendOnline = Template.bind({});
+AlreadyFriendOnline.args = {
     options: [
         <SendMessage
             id={1}
             key='sendMessage'
         />,
-        <CancelFriendRequest
+        <DeleteFriend
             id={1}
-            key='cancelFriendRequest'
+            key='deleteFriend'
         />,
     ],
     data: {

@@ -19,7 +19,7 @@ export const Profile = memo(function Profile() {
     const isUpdatingInfo = useSelector(getProfileIsUpdatingInfo);
     let options: ReactNode[] = [];
     switch (data?.friendStatus) {
-        case 0:
+        case 'possibleFriend':
             options = [
                 <SendMessage
                     id={Number(data.id)}
@@ -31,7 +31,7 @@ export const Profile = memo(function Profile() {
                 />,
             ];
             break;
-        case 1:
+        case 'outcomingRequest':
             options = [
                 <SendMessage
                     id={Number(data.id)}
@@ -43,7 +43,7 @@ export const Profile = memo(function Profile() {
                 />,
             ];
             break;
-        case 2:
+        case 'incomingRequest':
             options = [
                 <SendMessage
                     id={Number(data.id)}
@@ -55,7 +55,7 @@ export const Profile = memo(function Profile() {
                 />,
             ];
             break;
-        case 4:
+        case 'alreadyFriend':
             options = [
                 <SendMessage
                     id={Number(data.id)}

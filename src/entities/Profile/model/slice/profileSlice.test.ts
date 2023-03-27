@@ -12,7 +12,7 @@ const data = {
     firstName: 'firstName',
     lastName: 'lastName',
     avatar: 'purple' as AvatarVariant,
-    friendStatus: 0 as FriendStatus,
+    friendStatus: 'possibleFriend' as FriendStatus,
     onlineInfo: {
         isOnline: true,
         lastSeen: String(Date.now()),

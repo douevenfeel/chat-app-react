@@ -91,8 +91,8 @@ UpdatingWithData.decorators = [
     ),
 ];
 
-export const AcceptFriendRequestVariantOffline = Template.bind({});
-AcceptFriendRequestVariantOffline.decorators = [
+export const PossibleFriendVariantOffline = Template.bind({});
+PossibleFriendVariantOffline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -106,7 +106,7 @@ AcceptFriendRequestVariantOffline.decorators = [
                         isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
-                    friendStatus: 2,
+                    friendStatus: 'possibleFriend',
                 },
             },
         },
@@ -114,8 +114,8 @@ AcceptFriendRequestVariantOffline.decorators = [
     ),
 ];
 
-export const AcceptFriendRequestVariantOnline = Template.bind({});
-AcceptFriendRequestVariantOnline.decorators = [
+export const PossibleFriendVariantOnline = Template.bind({});
+PossibleFriendVariantOnline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -129,7 +129,7 @@ AcceptFriendRequestVariantOnline.decorators = [
                         isOnline: true,
                         lastSeen: String(Date.now()),
                     },
-                    friendStatus: 2,
+                    friendStatus: 'possibleFriend',
                 },
             },
         },
@@ -137,8 +137,8 @@ AcceptFriendRequestVariantOnline.decorators = [
     ),
 ];
 
-export const AddFriendVariantOffline = Template.bind({});
-AddFriendVariantOffline.decorators = [
+export const OutcomingFriendRequestVariantOffline = Template.bind({});
+OutcomingFriendRequestVariantOffline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -152,7 +152,7 @@ AddFriendVariantOffline.decorators = [
                         isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
-                    friendStatus: 0,
+                    friendStatus: 'outcomingRequest',
                 },
             },
         },
@@ -160,8 +160,8 @@ AddFriendVariantOffline.decorators = [
     ),
 ];
 
-export const AddFriendVariantOnline = Template.bind({});
-AddFriendVariantOnline.decorators = [
+export const OutcomingFriendRequestVariantOnline = Template.bind({});
+OutcomingFriendRequestVariantOnline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -175,7 +175,7 @@ AddFriendVariantOnline.decorators = [
                         isOnline: true,
                         lastSeen: String(Date.now()),
                     },
-                    friendStatus: 0,
+                    friendStatus: 'outcomingRequest',
                 },
             },
         },
@@ -183,8 +183,8 @@ AddFriendVariantOnline.decorators = [
     ),
 ];
 
-export const CancelFriendRequestVariantOffline = Template.bind({});
-CancelFriendRequestVariantOffline.decorators = [
+export const IncomingFriendRequestVariantOffline = Template.bind({});
+IncomingFriendRequestVariantOffline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -198,7 +198,7 @@ CancelFriendRequestVariantOffline.decorators = [
                         isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
-                    friendStatus: 1,
+                    friendStatus: 'incomingRequest',
                 },
             },
         },
@@ -206,8 +206,8 @@ CancelFriendRequestVariantOffline.decorators = [
     ),
 ];
 
-export const CancelFriendRequestVariantOnline = Template.bind({});
-CancelFriendRequestVariantOnline.decorators = [
+export const IncomingFriendRequestVariantOnline = Template.bind({});
+IncomingFriendRequestVariantOnline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -221,7 +221,7 @@ CancelFriendRequestVariantOnline.decorators = [
                         isOnline: true,
                         lastSeen: String(Date.now()),
                     },
-                    friendStatus: 1,
+                    friendStatus: 'incomingRequest',
                 },
             },
         },
@@ -229,8 +229,8 @@ CancelFriendRequestVariantOnline.decorators = [
     ),
 ];
 
-export const DeleteFriendVariantOffline = Template.bind({});
-DeleteFriendVariantOffline.decorators = [
+export const AlreadyFriendVariantOffline = Template.bind({});
+AlreadyFriendVariantOffline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -244,7 +244,7 @@ DeleteFriendVariantOffline.decorators = [
                         isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
-                    friendStatus: 4,
+                    friendStatus: 'alreadyFriend',
                 },
             },
         },
@@ -252,8 +252,8 @@ DeleteFriendVariantOffline.decorators = [
     ),
 ];
 
-export const DeleteFriendVariantOnline = Template.bind({});
-DeleteFriendVariantOnline.decorators = [
+export const AlreadyFriendVariantOnline = Template.bind({});
+AlreadyFriendVariantOnline.decorators = [
     StoreDecorator(
         {
             profile: {
@@ -267,7 +267,7 @@ DeleteFriendVariantOnline.decorators = [
                         isOnline: true,
                         lastSeen: String(Date.now()),
                     },
-                    friendStatus: 4,
+                    friendStatus: 'alreadyFriend',
                 },
             },
         },

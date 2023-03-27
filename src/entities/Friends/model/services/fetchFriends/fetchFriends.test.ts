@@ -17,7 +17,9 @@ describe('fetchFriends', () => {
                 },
             },
         ];
-        const thunk = new TestAsyncThunk(fetchFriends);
+        const thunk = new TestAsyncThunk(fetchFriends, {
+            friends: { friendStatus: 'alreadyFriend', search: '', section: 'all' },
+        });
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
         const result = await thunk.callThunk(1);
 
@@ -32,7 +34,9 @@ describe('fetchFriends', () => {
             message: 'error',
         };
 
-        const thunk = new TestAsyncThunk(fetchFriends);
+        const thunk = new TestAsyncThunk(fetchFriends, {
+            friends: { friendStatus: 'alreadyFriend', search: '', section: 'all' },
+        });
         thunk.api.get.mockRejectedValue(Promise.resolve({ data }));
         const result = await thunk.callThunk(1);
 
