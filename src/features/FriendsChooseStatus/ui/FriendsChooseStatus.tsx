@@ -33,7 +33,7 @@ export const FriendsChooseStatus = memo(function FriendsChooseStatus({ className
                         variant={friendStatus === 'alreadyFriend' ? 'primary' : 'clean'}
                         onClick={() => onFriendStatusClick('alreadyFriend')}
                     >
-                        Мои друзья {counts?.friends}
+                        Друзья {counts?.friends}
                     </Button>
                     <Button
                         size='small'

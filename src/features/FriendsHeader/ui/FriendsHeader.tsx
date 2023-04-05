@@ -46,7 +46,7 @@ export const FriendsHeader = memo(function FriendsHeader() {
     let text = '';
     switch (friendStatus) {
         case 'alreadyFriend':
-            text = 'Мои друзья';
+            text = 'Друзья';
             break;
 
         case 'outcomingRequest':

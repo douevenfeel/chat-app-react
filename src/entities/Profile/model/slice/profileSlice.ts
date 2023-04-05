@@ -1,6 +1,8 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
+import type { FriendStatus } from 'shared/types/FriendStatus';
+
 import { fetchProfile } from '../services/fetchProfile/fetchProfile';
 import type { ProfileSchema, Profile } from '../types/ProfileSchema';
 
@@ -32,6 +34,11 @@ export const profileSlice = createSlice({
         },
         setUpdateLastName: (state, action: PayloadAction<string>) => {
             state.updateInfoForm.lastName = action.payload;
+        },
+        setDataFriendStatus: (state, action: PayloadAction<FriendStatus>) => {
+            if (state.data) {
+                state.data.friendStatus = action.payload;
+            }
         },
     },
     extraReducers(builder) {

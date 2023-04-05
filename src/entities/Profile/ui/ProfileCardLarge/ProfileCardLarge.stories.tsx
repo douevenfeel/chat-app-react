@@ -1,12 +1,9 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { AcceptFriendRequest } from 'features/AcceptFriendRequest';
-import { AddFriend } from 'features/AddFriend';
-import { CancelFriendRequest } from 'features/CancelFriendRequest';
-import { DeleteFriend } from 'features/DeleteFriend';
 import { ProfileUpdate } from 'features/ProfileUpdate';
 import { ProfileUpdateInfoForm } from 'features/ProfileUpdateInfoForm';
 import { SendMessage } from 'features/SendMessage';
+import { UpdateFriendStatus } from 'features/UpdateFriendStatus';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { profileReducer } from '../../model/slice/profileSlice';
@@ -32,6 +29,7 @@ UserVariant.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: undefined,
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -48,6 +46,7 @@ UpdatingEmpty.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: undefined,
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -64,6 +63,7 @@ UpdatingWithData.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: undefined,
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -84,9 +84,10 @@ PossibleFriendVariantOffline.args = {
             id={1}
             key='sendMessage'
         />,
-        <AddFriend
+        <UpdateFriendStatus
+            friendStatus='possibleFriend'
             id={1}
-            key='addFriend'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -95,6 +96,7 @@ PossibleFriendVariantOffline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'possibleFriend',
         onlineInfo: {
             isOnline: false,
             lastSeen: String(Date.now() - 300000),
@@ -109,9 +111,10 @@ PossibleFriendVariantOnline.args = {
             id={1}
             key='sendMessage'
         />,
-        <AddFriend
+        <UpdateFriendStatus
+            friendStatus='possibleFriend'
             id={1}
-            key='addFriend'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -120,6 +123,7 @@ PossibleFriendVariantOnline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'possibleFriend',
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -134,9 +138,10 @@ OutcomingFriendRequestVariantOffline.args = {
             id={1}
             key='sendMessage'
         />,
-        <CancelFriendRequest
+        <UpdateFriendStatus
+            friendStatus='outcomingRequest'
             id={1}
-            key='cancelFriendRequest'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -145,6 +150,7 @@ OutcomingFriendRequestVariantOffline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'outcomingRequest',
         onlineInfo: {
             isOnline: false,
             lastSeen: String(Date.now() - 300000),
@@ -159,9 +165,10 @@ OutcomingFriendRequestVariantOnline.args = {
             id={1}
             key='sendMessage'
         />,
-        <CancelFriendRequest
+        <UpdateFriendStatus
+            friendStatus='outcomingRequest'
             id={1}
-            key='cancelFriendRequest'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -170,6 +177,7 @@ OutcomingFriendRequestVariantOnline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'outcomingRequest',
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -184,9 +192,10 @@ IncomingFriendRequestVariantOffline.args = {
             id={1}
             key='sendMessage'
         />,
-        <AcceptFriendRequest
+        <UpdateFriendStatus
+            friendStatus='incomingRequest'
             id={1}
-            key='acceptFriendRequest'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -195,6 +204,7 @@ IncomingFriendRequestVariantOffline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'incomingRequest',
         onlineInfo: {
             isOnline: false,
             lastSeen: String(Date.now() - 300000),
@@ -209,9 +219,10 @@ IncomingFriendRequestVariantOnline.args = {
             id={1}
             key='sendMessage'
         />,
-        <AcceptFriendRequest
+        <UpdateFriendStatus
+            friendStatus='incomingRequest'
             id={1}
-            key='acceptFriendRequest'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -220,6 +231,7 @@ IncomingFriendRequestVariantOnline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'incomingRequest',
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),
@@ -234,9 +246,10 @@ AlreadyFriendVariantOffline.args = {
             id={1}
             key='sendMessage'
         />,
-        <DeleteFriend
+        <UpdateFriendStatus
+            friendStatus='alreadyFriend'
             id={1}
-            key='deleteFriend'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -245,6 +258,7 @@ AlreadyFriendVariantOffline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'alreadyFriend',
         onlineInfo: {
             isOnline: false,
             lastSeen: String(Date.now() - 300000),
@@ -259,9 +273,10 @@ AlreadyFriendVariantOnline.args = {
             id={1}
             key='sendMessage'
         />,
-        <DeleteFriend
+        <UpdateFriendStatus
+            friendStatus='alreadyFriend'
             id={1}
-            key='deleteFriend'
+            key='updateFriendStatus'
         />,
     ],
     data: {
@@ -270,6 +285,7 @@ AlreadyFriendVariantOnline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: 'alreadyFriend',
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),

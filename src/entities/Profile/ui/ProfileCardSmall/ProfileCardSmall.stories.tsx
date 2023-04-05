@@ -8,19 +8,6 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    args: {
-        data: {
-            id: 1,
-            avatar: 'indigo',
-            email: 'test@mail.ru',
-            firstName: 'firstName',
-            lastName: 'lastName',
-            onlineInfo: {
-                isOnline: true,
-                lastSeen: String(Date.now()),
-            },
-        },
-    },
 } as ComponentMeta<typeof ProfileCardSmall>;
 
 const Template: ComponentStory<typeof ProfileCardSmall> = (args) => <ProfileCardSmall {...args} />;
@@ -33,6 +20,7 @@ Offline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: undefined,
         onlineInfo: {
             isOnline: false,
             lastSeen: String(Date.now()),
@@ -48,6 +36,7 @@ Online.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
+        friendStatus: undefined,
         onlineInfo: {
             isOnline: true,
             lastSeen: String(Date.now()),

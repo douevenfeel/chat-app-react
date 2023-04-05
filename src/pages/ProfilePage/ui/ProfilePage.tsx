@@ -28,14 +28,14 @@ const ProfilePage = memo(function ProfilePage() {
     } else {
         element = <Profile />;
     }
+    if (data) {
+        document.title = `${data.firstName} ${data.lastName}`;
+    }
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
             id && dispatch(fetchProfile(+id));
         }
-        if (data) {
-            document.title = `${data.firstName} ${data.lastName}`;
-        }
-    }, [data, dispatch, id]);
+    }, [dispatch, id]);
 
     return <AuthLayout>{element}</AuthLayout>;
 });
