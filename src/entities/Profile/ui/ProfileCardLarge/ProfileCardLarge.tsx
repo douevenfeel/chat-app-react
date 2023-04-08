@@ -15,7 +15,7 @@ interface ProfileCardLargeProps {
 }
 
 export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }: ProfileCardLargeProps) {
-    const { online, lastSeen } = useOnlineStatus(data?.onlineInfo.isOnline, data?.onlineInfo.lastSeen);
+    const { online, lastSeen } = useOnlineStatus(data?.onlineInfo.lastSeen);
 
     return (
         <div className={cls.profileCardLarge}>

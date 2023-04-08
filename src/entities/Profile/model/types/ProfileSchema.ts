@@ -2,7 +2,6 @@ import type { AvatarVariant } from 'shared/types/AvatarVariant';
 import type { FriendStatus } from 'shared/types/FriendStatus';
 
 export interface OnlineInfo {
-    isOnline: boolean;
     lastSeen: string;
 }
 

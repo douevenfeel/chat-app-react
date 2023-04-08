@@ -29,3 +29,8 @@ export interface FriendsSchema {
     isLoading: boolean;
     error?: string;
 }
+
+export interface UpdateFriendStatus {
+    id: number;
+    friendStatus: FriendStatus;
+}

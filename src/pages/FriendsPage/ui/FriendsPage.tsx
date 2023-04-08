@@ -2,7 +2,13 @@ import { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import { fetchFriends, friendsReducer, getFriendsFriendStatus, getFriendsSearch } from 'entities/Friends';
+import {
+    fetchFriends,
+    friendsReducer,
+    getFriendsFriendStatus,
+    getFriendsSearch,
+    getFriendsSection,
+} from 'entities/Friends';
 import { FriendsChooseStatus } from 'features/FriendsChooseStatus';
 import { FriendsHeader } from 'features/FriendsHeader';
 import { AuthLayout } from 'layouts/AuthLayout';
@@ -23,12 +29,13 @@ const FriendsPage = memo(function FriendsPage() {
     const { id } = useParams();
     const friendStatus = useSelector(getFriendsFriendStatus);
     const search = useSelector(getFriendsSearch);
+    const section = useSelector(getFriendsSection);
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
             id && dispatch(fetchFriends(+id));
         }
         document.title = 'Друзья';
-    }, [dispatch, id, friendStatus, search]);
+    }, [dispatch, id, friendStatus, search, section]);
 
     return (
         <AuthLayout className={cls.friendsPage}>

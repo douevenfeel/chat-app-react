@@ -26,7 +26,7 @@ PossibleFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'possibleFriend',
                     },
                     {
@@ -34,7 +34,7 @@ PossibleFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'possibleFriend',
                     },
                     {
@@ -42,7 +42,7 @@ PossibleFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'blue',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'possibleFriend',
                     },
                     {
@@ -50,7 +50,7 @@ PossibleFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'red',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'possibleFriend',
                     },
                     {
@@ -58,7 +58,7 @@ PossibleFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'green',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'possibleFriend',
                     },
                 ],
@@ -79,7 +79,7 @@ OutcomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'outcomingRequest',
                     },
                     {
@@ -87,7 +87,7 @@ OutcomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'outcomingRequest',
                     },
                     {
@@ -95,7 +95,7 @@ OutcomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'blue',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'outcomingRequest',
                     },
                     {
@@ -103,7 +103,7 @@ OutcomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'red',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'outcomingRequest',
                     },
                     {
@@ -111,7 +111,7 @@ OutcomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'green',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'outcomingRequest',
                     },
                 ],
@@ -132,7 +132,7 @@ IncomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'incomingRequest',
                     },
                     {
@@ -140,7 +140,7 @@ IncomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'incomingRequest',
                     },
                     {
@@ -148,7 +148,7 @@ IncomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'blue',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'incomingRequest',
                     },
                     {
@@ -156,7 +156,7 @@ IncomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'red',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'incomingRequest',
                     },
                     {
@@ -164,7 +164,7 @@ IncomingRequests.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'green',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'incomingRequest',
                     },
                 ],
@@ -185,7 +185,7 @@ AlreadyFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'alreadyFriend',
                     },
                     {
@@ -193,7 +193,7 @@ AlreadyFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'alreadyFriend',
                     },
                     {
@@ -201,7 +201,7 @@ AlreadyFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'blue',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'alreadyFriend',
                     },
                     {
@@ -209,7 +209,7 @@ AlreadyFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'red',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'alreadyFriend',
                     },
                     {
@@ -217,7 +217,7 @@ AlreadyFriends.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'green',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
                         friendStatus: 'alreadyFriend',
                     },
                 ],
@@ -238,7 +238,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'alreadyFriend',
                     },
                     {
@@ -246,7 +246,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
 
                         friendStatus: 'alreadyFriend',
                     },
@@ -255,7 +255,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'red',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'incomingRequest',
                     },
                     {
@@ -263,7 +263,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'orange',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
 
                         friendStatus: 'incomingRequest',
                     },
@@ -272,7 +272,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'blue',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'outcomingRequest',
                     },
                     {
@@ -280,7 +280,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'yellow',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
 
                         friendStatus: 'outcomingRequest',
                     },
@@ -289,7 +289,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'green',
-                        onlineInfo: { isOnline: true, lastSeen: String(Date.now()) },
+                        onlineInfo: { lastSeen: String(Date.now()) },
                         friendStatus: 'possibleFriend',
                     },
                     {
@@ -297,7 +297,7 @@ Mixed.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'teal',
-                        onlineInfo: { isOnline: false, lastSeen: String(Date.now() - 300000) },
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
 
                         friendStatus: 'possibleFriend',
                     },

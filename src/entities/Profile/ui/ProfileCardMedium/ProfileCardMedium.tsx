@@ -17,7 +17,7 @@ interface ProfileCardMediumProps {
 }
 
 export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options }: ProfileCardMediumProps) {
-    const { online } = useOnlineStatus(Boolean(data?.onlineInfo.isOnline), data?.onlineInfo.lastSeen);
+    const { online } = useOnlineStatus(data?.onlineInfo.lastSeen);
 
     return (
         <div className={cls.profileCardMedium}>

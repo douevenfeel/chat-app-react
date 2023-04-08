@@ -31,7 +31,6 @@ UserVariant.args = {
         lastName: 'lastName',
         friendStatus: undefined,
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -48,7 +47,6 @@ UpdatingEmpty.args = {
         lastName: 'lastName',
         friendStatus: undefined,
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -65,7 +63,6 @@ UpdatingWithData.args = {
         lastName: 'lastName',
         friendStatus: undefined,
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -98,7 +95,6 @@ PossibleFriendVariantOffline.args = {
         lastName: 'lastName',
         friendStatus: 'possibleFriend',
         onlineInfo: {
-            isOnline: false,
             lastSeen: String(Date.now() - 300000),
         },
     },
@@ -125,7 +121,6 @@ PossibleFriendVariantOnline.args = {
         lastName: 'lastName',
         friendStatus: 'possibleFriend',
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -152,7 +147,6 @@ OutcomingFriendRequestVariantOffline.args = {
         lastName: 'lastName',
         friendStatus: 'outcomingRequest',
         onlineInfo: {
-            isOnline: false,
             lastSeen: String(Date.now() - 300000),
         },
     },
@@ -179,7 +173,6 @@ OutcomingFriendRequestVariantOnline.args = {
         lastName: 'lastName',
         friendStatus: 'outcomingRequest',
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -206,7 +199,6 @@ IncomingFriendRequestVariantOffline.args = {
         lastName: 'lastName',
         friendStatus: 'incomingRequest',
         onlineInfo: {
-            isOnline: false,
             lastSeen: String(Date.now() - 300000),
         },
     },
@@ -233,7 +225,6 @@ IncomingFriendRequestVariantOnline.args = {
         lastName: 'lastName',
         friendStatus: 'incomingRequest',
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },
@@ -260,7 +251,6 @@ AlreadyFriendVariantOffline.args = {
         lastName: 'lastName',
         friendStatus: 'alreadyFriend',
         onlineInfo: {
-            isOnline: false,
             lastSeen: String(Date.now() - 300000),
         },
     },
@@ -287,7 +277,6 @@ AlreadyFriendVariantOnline.args = {
         lastName: 'lastName',
         friendStatus: 'alreadyFriend',
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },

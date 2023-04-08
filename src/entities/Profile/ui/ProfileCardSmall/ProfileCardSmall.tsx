@@ -14,7 +14,7 @@ interface ProfileCardSmallProps {
 }
 
 export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }: ProfileCardSmallProps) {
-    const { online } = useOnlineStatus(Boolean(data?.onlineInfo.isOnline), data?.onlineInfo.lastSeen);
+    const { online } = useOnlineStatus(data?.onlineInfo.lastSeen);
 
     return (
         <div

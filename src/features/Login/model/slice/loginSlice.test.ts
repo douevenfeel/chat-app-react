@@ -13,7 +13,6 @@ const data = {
         lastName: 'lastName',
         avatar: 'purple' as AvatarVariant,
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },

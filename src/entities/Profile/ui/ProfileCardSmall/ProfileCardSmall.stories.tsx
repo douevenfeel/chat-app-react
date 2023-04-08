@@ -22,8 +22,7 @@ Offline.args = {
         lastName: 'lastName',
         friendStatus: undefined,
         onlineInfo: {
-            isOnline: false,
-            lastSeen: String(Date.now()),
+            lastSeen: String(Date.now() - 300000),
         },
     },
 };
@@ -38,7 +37,6 @@ Online.args = {
         lastName: 'lastName',
         friendStatus: undefined,
         onlineInfo: {
-            isOnline: true,
             lastSeen: String(Date.now()),
         },
     },

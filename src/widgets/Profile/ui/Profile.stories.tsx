@@ -27,7 +27,6 @@ UserVariant.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                 },
@@ -49,7 +48,6 @@ UpdatingEmpty.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                 },
@@ -76,7 +74,6 @@ UpdatingWithData.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                 },
@@ -103,7 +100,6 @@ PossibleFriendVariantOffline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
                     friendStatus: 'possibleFriend',
@@ -126,7 +122,6 @@ PossibleFriendVariantOnline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                     friendStatus: 'possibleFriend',
@@ -149,7 +144,6 @@ OutcomingFriendRequestVariantOffline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
                     friendStatus: 'outcomingRequest',
@@ -172,7 +166,6 @@ OutcomingFriendRequestVariantOnline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                     friendStatus: 'outcomingRequest',
@@ -195,7 +188,6 @@ IncomingFriendRequestVariantOffline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
                     friendStatus: 'incomingRequest',
@@ -218,7 +210,6 @@ IncomingFriendRequestVariantOnline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                     friendStatus: 'incomingRequest',
@@ -241,7 +232,6 @@ AlreadyFriendVariantOffline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: false,
                         lastSeen: String(Date.now() - 300000),
                     },
                     friendStatus: 'alreadyFriend',
@@ -264,7 +254,6 @@ AlreadyFriendVariantOnline.decorators = [
                     firstName: 'firstName',
                     lastName: 'lastName',
                     onlineInfo: {
-                        isOnline: true,
                         lastSeen: String(Date.now()),
                     },
                     friendStatus: 'alreadyFriend',

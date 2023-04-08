@@ -12,7 +12,6 @@ describe('fetchCheckout', () => {
             avatar: 'purple',
             friendStatus: 0,
             onlineInfo: {
-                isOnline: true,
                 lastSeen: String(Date.now()),
             },
         };

@@ -12,7 +12,6 @@ describe('fetchFriends', () => {
                 lastName: 'lastName',
                 avatar: 'purple',
                 onlineInfo: {
-                    isOnline: true,
                     lastSeen: String(Date.now()),
                 },
             },

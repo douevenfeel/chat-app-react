@@ -14,7 +14,6 @@ const data = {
     avatar: 'purple' as AvatarVariant,
     friendStatus: 'possibleFriend' as FriendStatus,
     onlineInfo: {
-        isOnline: true,
         lastSeen: String(Date.now()),
     },
 };

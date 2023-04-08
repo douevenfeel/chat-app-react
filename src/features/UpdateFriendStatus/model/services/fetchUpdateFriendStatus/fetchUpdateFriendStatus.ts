@@ -1,6 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import type { ThunkConfig } from 'app/providers/StoreProvider';
+import { friendsActions } from 'entities/Friends';
 import { profileActions } from 'entities/Profile';
 
 import type { UpdateFriendStatusData, UpdateFriendStatusSchema } from '../../types/UpdateFriendStatusSchema';
@@ -19,6 +20,8 @@ export const fetchUpdateFriendStatus = createAsyncThunk<
         }
         if (data.location === 'profile') {
             dispatch(profileActions.setDataFriendStatus(response.friendStatus));
+        } else {
+            dispatch(friendsActions.setUpdatedFriendStatus(response));
         }
 
         return response;

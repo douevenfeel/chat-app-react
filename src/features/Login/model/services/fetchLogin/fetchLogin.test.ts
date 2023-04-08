@@ -11,7 +11,6 @@ describe('fetchLogin', () => {
             lastName: 'lastName',
             avatar: 'indigo',
             onlineInfo: {
-                isOnline: true,
                 lastSeen: String(Date.now()),
             },
         };
