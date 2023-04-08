@@ -35,7 +35,7 @@ export const profileSlice = createSlice({
         setUpdateLastName: (state, action: PayloadAction<string>) => {
             state.updateInfoForm.lastName = action.payload;
         },
-        setDataFriendStatus: (state, action: PayloadAction<FriendStatus>) => {
+        setUpdatedFriendStatus: (state, action: PayloadAction<FriendStatus>) => {
             if (state.data) {
                 state.data.friendStatus = action.payload;
             }

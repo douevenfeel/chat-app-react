@@ -12,6 +12,36 @@ export default {
 
 const Template: ComponentStory<typeof FriendItem> = (args) => <FriendItem {...args} />;
 
+export const DefaultOffline = Template.bind({});
+DefaultOffline.args = {
+    profile: {
+        id: 1,
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        avatar: 'indigo',
+
+        onlineInfo: {
+            lastSeen: String(Date.now() - 300000),
+        },
+    },
+};
+
+export const DefaultOnline = Template.bind({});
+DefaultOnline.args = {
+    profile: {
+        id: 1,
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        avatar: 'indigo',
+
+        onlineInfo: {
+            lastSeen: String(Date.now()),
+        },
+    },
+};
+
 export const PossibleFriendOffline = Template.bind({});
 PossibleFriendOffline.args = {
     profile: {

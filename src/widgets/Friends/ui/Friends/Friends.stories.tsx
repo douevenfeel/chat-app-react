@@ -15,6 +15,54 @@ export default {
 
 const Template: ComponentStory<typeof Friends> = () => <Friends />;
 
+export const Default = Template.bind({});
+Default.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [
+                    {
+                        id: 1,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'indigo',
+                        onlineInfo: { lastSeen: String(Date.now()) },
+                    },
+                    {
+                        id: 2,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'purple',
+                        onlineInfo: { lastSeen: String(Date.now()) },
+                    },
+                    {
+                        id: 3,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'blue',
+                        onlineInfo: { lastSeen: String(Date.now()) },
+                    },
+                    {
+                        id: 4,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'red',
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
+                    },
+                    {
+                        id: 5,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'green',
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
+                    },
+                ],
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
 export const PossibleFriends = Template.bind({});
 PossibleFriends.decorators = [
     StoreDecorator(

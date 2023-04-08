@@ -381,3 +381,34 @@ Mixed.decorators = [
         { friends: friendsReducer, user: userReducer }
     ),
 ];
+
+export const Default = Template.bind({});
+Default.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [
+                    {
+                        id: 1,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'indigo',
+                        onlineInfo: { lastSeen: String(Date.now()) },
+                    },
+                    {
+                        id: 2,
+                        firstName: 'firstName',
+                        lastName: 'lastName',
+                        avatar: 'purple',
+                        onlineInfo: { lastSeen: String(Date.now() - 300000) },
+                    },
+                ],
+                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
+                friendStatus: 'alreadyFriend',
+                section: 'all',
+            },
+            user: { data: { id: 1 } },
+        },
+        { friends: friendsReducer, user: userReducer }
+    ),
+];

@@ -11,7 +11,7 @@ export interface Profile {
     firstName: string;
     lastName: string;
     avatar: AvatarVariant;
-    friendStatus: FriendStatus | undefined;
+    friendStatus?: FriendStatus;
     onlineInfo: OnlineInfo;
 }
 

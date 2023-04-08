@@ -29,7 +29,6 @@ UserVariant.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        friendStatus: undefined,
         onlineInfo: {
             lastSeen: String(Date.now()),
         },
@@ -45,7 +44,6 @@ UpdatingEmpty.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        friendStatus: undefined,
         onlineInfo: {
             lastSeen: String(Date.now()),
         },
@@ -61,7 +59,6 @@ UpdatingWithData.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        friendStatus: undefined,
         onlineInfo: {
             lastSeen: String(Date.now()),
         },

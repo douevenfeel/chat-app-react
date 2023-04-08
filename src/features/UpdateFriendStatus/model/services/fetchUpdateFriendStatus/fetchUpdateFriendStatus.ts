@@ -19,7 +19,7 @@ export const fetchUpdateFriendStatus = createAsyncThunk<
             throw new Error();
         }
         if (data.location === 'profile') {
-            dispatch(profileActions.setDataFriendStatus(response.friendStatus));
+            dispatch(profileActions.setUpdatedFriendStatus(response.friendStatus));
         } else {
             dispatch(friendsActions.setUpdatedFriendStatus(response));
         }

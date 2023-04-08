@@ -20,7 +20,6 @@ Offline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        friendStatus: undefined,
         onlineInfo: {
             lastSeen: String(Date.now() - 300000),
         },
@@ -35,7 +34,6 @@ Online.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        friendStatus: undefined,
         onlineInfo: {
             lastSeen: String(Date.now()),
         },
