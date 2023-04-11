@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import type { SidebarItemSchema } from '../../model/types/SidebarItemSchema';
 
@@ -21,7 +21,7 @@ export const SidebarItem = memo(function SidebarItem({ path, Icon, text }: Sideb
             onClick={onLinkClick}
         >
             <Icon className={cls.icon} />
-            <Text
+            <Typography
                 className={cls.text}
                 size='small'
                 tag='p'
@@ -29,7 +29,7 @@ export const SidebarItem = memo(function SidebarItem({ path, Icon, text }: Sideb
                 weight='normal'
             >
                 {text}
-            </Text>
+            </Typography>
         </AppLink>
     );
 });

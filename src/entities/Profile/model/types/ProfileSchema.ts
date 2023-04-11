@@ -1,10 +1,6 @@
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
 import type { FriendStatus } from 'shared/types/FriendStatus';
 
-export interface OnlineInfo {
-    lastSeen: string;
-}
-
 export interface Profile {
     id: number;
     email: string;
@@ -12,7 +8,7 @@ export interface Profile {
     lastName: string;
     avatar: AvatarVariant;
     friendStatus?: FriendStatus;
-    onlineInfo: OnlineInfo;
+    lastSeen: string;
 }
 
 export interface UpdateProfileInfo {

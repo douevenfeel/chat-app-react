@@ -12,9 +12,7 @@ const data = {
         firstName: 'firstName',
         lastName: 'lastName',
         avatar: 'purple' as AvatarVariant,
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
     accessToken: 'qwerty',
 };

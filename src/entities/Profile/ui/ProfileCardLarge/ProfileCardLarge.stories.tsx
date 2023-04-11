@@ -29,9 +29,7 @@ UserVariant.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -44,9 +42,7 @@ UpdatingEmpty.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -59,9 +55,7 @@ UpdatingWithData.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 UpdatingWithData.decorators = [
@@ -91,9 +85,7 @@ PossibleFriendVariantOffline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'possibleFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -117,9 +109,7 @@ PossibleFriendVariantOnline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'possibleFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -143,9 +133,7 @@ OutcomingFriendRequestVariantOffline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'outcomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -169,9 +157,7 @@ OutcomingFriendRequestVariantOnline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'outcomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -195,9 +181,7 @@ IncomingFriendRequestVariantOffline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'incomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -221,9 +205,7 @@ IncomingFriendRequestVariantOnline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'incomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -247,9 +229,7 @@ AlreadyFriendVariantOffline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'alreadyFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -273,8 +253,6 @@ AlreadyFriendVariantOnline.args = {
         firstName: 'firstName',
         lastName: 'lastName',
         friendStatus: 'alreadyFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };

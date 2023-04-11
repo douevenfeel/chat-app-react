@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { getUserId } from 'entities/User';
 import LogoIcon from 'shared/assets/icons/logo.svg';
 import { getRouteLogin, getRouteProfile } from 'shared/const/router';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './Logo.module.scss';
 
@@ -27,14 +27,14 @@ export const Logo = memo(function Logo() {
             onClick={onLogoClick}
         >
             <LogoIcon className={cls.logoIcon} />
-            <Text
+            <Typography
                 size='medium'
                 tag='h1'
                 variant='primary'
                 weight='medium'
             >
                 CHAT APP
-            </Text>
+            </Typography>
         </div>
     );
 });

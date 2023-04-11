@@ -14,7 +14,7 @@ import type { FriendsSection } from 'entities/Friends';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './FriendsHeader.module.scss';
 
@@ -64,7 +64,7 @@ export const FriendsHeader = memo(function FriendsHeader() {
 
     return (
         <div className={cls.friendsHeader}>
-            <Text
+            <Typography
                 align='center'
                 size='medium'
                 tag='h1'
@@ -72,7 +72,7 @@ export const FriendsHeader = memo(function FriendsHeader() {
                 weight='semi'
             >
                 {text}
-            </Text>
+            </Typography>
             {friendStatus == 'alreadyFriend' && (
                 <div className={cls.buttons}>
                     <Button

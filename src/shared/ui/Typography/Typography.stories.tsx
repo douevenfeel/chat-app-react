@@ -1,10 +1,10 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Text } from './Text';
+import { Typography } from './Typography';
 
 export default {
-    title: 'shared/Text',
-    component: Text,
+    title: 'shared/Typography',
+    component: Typography,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
@@ -13,9 +13,9 @@ export default {
         tag: 'p',
         align: 'left',
     },
-} as ComponentMeta<typeof Text>;
+} as ComponentMeta<typeof Typography>;
 
-const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />;
+const Template: ComponentStory<typeof Typography> = (args) => <Typography {...args} />;
 
 export const PrimarySmallSizeNormalWeight = Template.bind({});
 PrimarySmallSizeNormalWeight.args = {

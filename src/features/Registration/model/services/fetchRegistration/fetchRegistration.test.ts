@@ -11,9 +11,7 @@ describe('fetchRegistration', () => {
             lastName: 'lastName',
             avatar: 'purple',
             friendStatus: 0,
-            onlineInfo: {
-                lastSeen: String(Date.now()),
-            },
+            lastSeen: String(Date.now()),
         };
         const callData = { email: 'test@mail.ru', firstName: 'firstName', lastName: 'lastName', password: 'qwerty' };
         const thunk = new TestAsyncThunk(fetchRegistration);

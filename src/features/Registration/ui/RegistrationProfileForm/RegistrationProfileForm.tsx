@@ -12,7 +12,7 @@ import { registrationActions } from 'features/Registration/model/slice/registrat
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './RegistrationProfileForm.module.scss';
 
@@ -104,7 +104,7 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
                 Зарегистрироваться
             </Button>
             {error && (
-                <Text
+                <Typography
                     align='center'
                     size='medium'
                     tag='p'
@@ -112,7 +112,7 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
                     weight='medium'
                 >
                     {error}
-                </Text>
+                </Typography>
             )}
         </div>
     );

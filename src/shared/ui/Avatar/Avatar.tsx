@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
 
-import { Text } from '../Text/Text';
+import { Typography } from '../Typography/Typography';
 
 import cls from './Avatar.module.scss';
 
@@ -21,12 +21,12 @@ interface AvatarProps {
 export const Avatar = memo(function Avatar({ className, firstName, lastName, avatar, size, online }: AvatarProps) {
     return (
         <div className={clsx(cls.avatar, cls[avatar], cls[size], className)}>
-            <Text
+            <Typography
                 className={cls.text}
                 tag='p'
             >
                 {`${firstName[0].toUpperCase()}${lastName[0].toUpperCase()}`}
-            </Text>
+            </Typography>
             {online && <div className={clsx(cls.online, cls[size])} />}
         </div>
     );

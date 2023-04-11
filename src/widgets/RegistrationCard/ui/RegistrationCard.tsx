@@ -1,7 +1,7 @@
 import { memo } from 'react';
 
 import { RegistrationInfo } from 'features/Registration';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import { useRegistrationForm } from '../lib/hooks/useRegistrationForm/useRegistrationForm';
 
@@ -12,7 +12,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
 
     return (
         <div className={cls.registrationCard}>
-            <Text
+            <Typography
                 align='center'
                 size='large'
                 tag='h1'
@@ -20,8 +20,8 @@ export const RegistrationCard = memo(function RegistrationCard() {
                 weight='semi'
             >
                 Chat app
-            </Text>
-            <Text
+            </Typography>
+            <Typography
                 align='center'
                 size='medium'
                 tag='h2'
@@ -29,7 +29,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
                 weight='medium'
             >
                 {text}
-            </Text>
+            </Typography>
             {form}
             <RegistrationInfo />
         </div>

@@ -11,9 +11,7 @@ describe('fetchFriends', () => {
                 firstName: 'firstName',
                 lastName: 'lastName',
                 avatar: 'purple',
-                onlineInfo: {
-                    lastSeen: String(Date.now()),
-                },
+                lastSeen: String(Date.now()),
             },
         ];
         const thunk = new TestAsyncThunk(fetchFriends, {

@@ -15,9 +15,7 @@ const data: FriendsData = {
             lastName: 'lastName',
             avatar: 'purple' as AvatarVariant,
             friendStatus: 'possibleFriend',
-            onlineInfo: {
-                lastSeen: String(Date.now()),
-            },
+            lastSeen: String(Date.now()),
         },
         {
             id: 2,
@@ -26,9 +24,7 @@ const data: FriendsData = {
             lastName: 'lastName',
             avatar: 'indigo' as AvatarVariant,
             friendStatus: 'possibleFriend',
-            onlineInfo: {
-                lastSeen: String(Date.now() - 3000000),
-            },
+            lastSeen: String(Date.now() - 3000000),
         },
     ],
 };

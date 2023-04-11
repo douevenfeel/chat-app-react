@@ -5,7 +5,7 @@ import { fetchLogin } from 'features/Login/model/services/fetchLogin/fetchLogin'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import { getLoginEmail } from '../../model/selectors/getLoginEmail/getLoginEmail';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
@@ -67,7 +67,7 @@ export const LoginForm = memo(function LoginForm() {
                 Войти
             </Button>
             {error && (
-                <Text
+                <Typography
                     align='center'
                     size='medium'
                     tag='p'
@@ -75,7 +75,7 @@ export const LoginForm = memo(function LoginForm() {
                     weight='medium'
                 >
                     {error}
-                </Text>
+                </Typography>
             )}
         </div>
     );

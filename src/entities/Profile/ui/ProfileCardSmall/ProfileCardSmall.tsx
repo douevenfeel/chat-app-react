@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import type { Profile } from '../../model/types/ProfileSchema';
 
@@ -14,7 +14,7 @@ interface ProfileCardSmallProps {
 }
 
 export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }: ProfileCardSmallProps) {
-    const { online } = useOnlineStatus(data?.onlineInfo.lastSeen);
+    const { online } = useOnlineStatus(data?.lastSeen);
 
     return (
         <div
@@ -30,14 +30,14 @@ export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }
                         online={online}
                         size='small'
                     />
-                    <Text
+                    <Typography
                         size='small'
                         tag='p'
                         variant='primary'
                         weight='normal'
                     >
                         {data.firstName}
-                    </Text>
+                    </Typography>
                 </>
             )}
         </div>

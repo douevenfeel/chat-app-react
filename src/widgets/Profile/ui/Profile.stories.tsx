@@ -26,9 +26,7 @@ UserVariant.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                 },
             },
         },
@@ -47,9 +45,7 @@ UpdatingEmpty.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                 },
                 updateInfoForm: {
                     firstName: '',
@@ -73,9 +69,7 @@ UpdatingWithData.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                 },
                 updateInfoForm: {
                     firstName: 'firstName',
@@ -99,9 +93,7 @@ PossibleFriendVariantOffline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now() - 300000),
-                    },
+                    lastSeen: String(Date.now() - 300000),
                     friendStatus: 'possibleFriend',
                 },
             },
@@ -121,9 +113,7 @@ PossibleFriendVariantOnline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                     friendStatus: 'possibleFriend',
                 },
             },
@@ -143,9 +133,7 @@ OutcomingFriendRequestVariantOffline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now() - 300000),
-                    },
+                    lastSeen: String(Date.now() - 300000),
                     friendStatus: 'outcomingRequest',
                 },
             },
@@ -165,9 +153,7 @@ OutcomingFriendRequestVariantOnline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                     friendStatus: 'outcomingRequest',
                 },
             },
@@ -187,9 +173,7 @@ IncomingFriendRequestVariantOffline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now() - 300000),
-                    },
+                    lastSeen: String(Date.now() - 300000),
                     friendStatus: 'incomingRequest',
                 },
             },
@@ -209,9 +193,7 @@ IncomingFriendRequestVariantOnline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                     friendStatus: 'incomingRequest',
                 },
             },
@@ -231,9 +213,7 @@ AlreadyFriendVariantOffline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now() - 300000),
-                    },
+                    lastSeen: String(Date.now() - 300000),
                     friendStatus: 'alreadyFriend',
                 },
             },
@@ -253,9 +233,7 @@ AlreadyFriendVariantOnline.decorators = [
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
-                    onlineInfo: {
-                        lastSeen: String(Date.now()),
-                    },
+                    lastSeen: String(Date.now()),
                     friendStatus: 'alreadyFriend',
                 },
             },

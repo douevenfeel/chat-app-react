@@ -11,9 +11,7 @@ describe('fetchProfile', () => {
             lastName: 'lastName',
             avatar: 'purple',
             friendStatus: 0,
-            onlineInfo: {
-                lastSeen: String(Date.now()),
-            },
+            lastSeen: String(Date.now()),
         };
         const thunk = new TestAsyncThunk(fetchProfile);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));

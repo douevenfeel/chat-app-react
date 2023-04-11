@@ -20,9 +20,7 @@ Offline.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -34,8 +32,6 @@ Online.args = {
         email: 'test@mail.ru',
         firstName: 'firstName',
         lastName: 'lastName',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };

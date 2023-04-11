@@ -13,9 +13,7 @@ const data = {
     lastName: 'lastName',
     avatar: 'purple' as AvatarVariant,
     friendStatus: 'possibleFriend' as FriendStatus,
-    onlineInfo: {
-        lastSeen: String(Date.now()),
-    },
+    lastSeen: String(Date.now()),
 };
 
 describe('profileSlice', () => {

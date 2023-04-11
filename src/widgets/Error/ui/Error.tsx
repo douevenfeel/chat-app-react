@@ -3,7 +3,7 @@ import { memo, useCallback } from 'react';
 
 import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { Button } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './Error.module.scss';
 
@@ -19,21 +19,21 @@ const Error = memo(function Error({ className }: ErrorProps) {
 
     return (
         <div className={clsx(cls.error, 'app', `${theme}Theme`, className)}>
-            <Text
+            <Typography
                 size='medium'
                 tag='p'
                 variant='secondary'
                 weight='medium'
             >
                 500 ошибка
-            </Text>
-            <Text
+            </Typography>
+            <Typography
                 size='large'
                 tag='h1'
                 weight='semi'
             >
                 Произошла непредвиденная ошибка
-            </Text>
+            </Typography>
             <Button
                 size='medium'
                 variant='primary'

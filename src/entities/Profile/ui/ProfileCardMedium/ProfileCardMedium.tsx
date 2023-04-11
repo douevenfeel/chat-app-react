@@ -5,7 +5,7 @@ import { getRouteProfile } from 'shared/const/router';
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import type { Profile } from '../../model/types/ProfileSchema';
 
@@ -17,7 +17,7 @@ interface ProfileCardMediumProps {
 }
 
 export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options }: ProfileCardMediumProps) {
-    const { online } = useOnlineStatus(data?.onlineInfo.lastSeen);
+    const { online } = useOnlineStatus(data?.lastSeen);
 
     return (
         <div className={cls.profileCardMedium}>
@@ -32,14 +32,14 @@ export const ProfileCardMedium = memo(function ProfileCardMedium({ data, options
                     />
                     <div className={cls.profile}>
                         <AppLink to={getRouteProfile(String(data.id))}>
-                            <Text
+                            <Typography
                                 size='medium'
                                 tag='h3'
                                 variant='primary'
                                 weight='medium'
                             >
                                 {`${data.firstName} ${data.lastName}`}
-                            </Text>
+                            </Typography>
                         </AppLink>
                         <div className={cls.buttons}>{options?.map((option) => option)}</div>
                     </div>

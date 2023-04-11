@@ -4,7 +4,7 @@ import DarkThemeIcon from 'shared/assets/icons/theme-dark.svg';
 import LightThemeIcon from 'shared/assets/icons/theme-light.svg';
 import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { Button } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './ThemeSwitcher.module.scss';
 
@@ -22,7 +22,7 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
         >
             <div className={cls.container}>
                 {theme === 'dark' ? <DarkThemeIcon className={cls.icon} /> : <LightThemeIcon className={cls.icon} />}
-                <Text
+                <Typography
                     className={cls.text}
                     size='small'
                     tag='p'
@@ -30,7 +30,7 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
                     weight='normal'
                 >
                     {theme === 'dark' ? 'Темная тема' : 'Светлая тема'}
-                </Text>
+                </Typography>
             </div>
         </Button>
     );

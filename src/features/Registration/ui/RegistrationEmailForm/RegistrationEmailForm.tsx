@@ -9,7 +9,7 @@ import { registrationActions } from 'features/Registration/model/slice/registrat
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './RegistrationEmailForm.module.scss';
 
@@ -54,7 +54,7 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
                 Продолжить
             </Button>
             {error && (
-                <Text
+                <Typography
                     align='center'
                     size='medium'
                     tag='p'
@@ -62,7 +62,7 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
                     weight='medium'
                 >
                     {error}
-                </Text>
+                </Typography>
             )}
         </div>
     );

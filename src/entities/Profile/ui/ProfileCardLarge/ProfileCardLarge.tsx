@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import type { Profile } from '../../model/types/ProfileSchema';
 
@@ -15,7 +15,7 @@ interface ProfileCardLargeProps {
 }
 
 export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }: ProfileCardLargeProps) {
-    const { online, lastSeen } = useOnlineStatus(data?.onlineInfo.lastSeen);
+    const { online, lastSeen } = useOnlineStatus(data?.lastSeen);
 
     return (
         <div className={cls.profileCardLarge}>
@@ -28,23 +28,23 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                         online={online}
                         size='large'
                     />
-                    <Text
+                    <Typography
                         size='medium'
                         tag='h3'
                         variant='primary'
                         weight='semi'
                     >
                         {`${data.firstName} ${data.lastName}`}
-                    </Text>
+                    </Typography>
                     {lastSeen && (
-                        <Text
+                        <Typography
                             size='small'
                             tag='p'
                             variant='secondary'
                             weight='normal'
                         >
                             {lastSeen}
-                        </Text>
+                        </Typography>
                     )}
                     <div className={cls.buttons}>{options?.map((option) => option)}</div>
                 </>

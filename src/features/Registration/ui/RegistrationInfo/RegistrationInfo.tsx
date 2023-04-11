@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { getRouteLogin } from 'shared/const/router';
 import { Button } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './RegistrationInfo.module.scss';
 
@@ -15,7 +15,7 @@ export const RegistrationInfo = memo(function RegistrationInfo() {
 
     return (
         <div className={cls.registrationInfo}>
-            <Text
+            <Typography
                 align='center'
                 size='medium'
                 tag='p'
@@ -23,7 +23,7 @@ export const RegistrationInfo = memo(function RegistrationInfo() {
                 weight='medium'
             >
                 После входа вы получите доступ ко всем возможностям CHAT APP
-            </Text>
+            </Typography>
             <Button
                 size='medium'
                 variant='primary'

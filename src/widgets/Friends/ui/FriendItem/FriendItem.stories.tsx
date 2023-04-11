@@ -21,9 +21,7 @@ DefaultOffline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
 
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -36,9 +34,7 @@ DefaultOnline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
 
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -51,9 +47,7 @@ PossibleFriendOffline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'possibleFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -66,9 +60,7 @@ PossibleFriendOnline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'possibleFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -81,9 +73,7 @@ OutcomingRequestOffline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'outcomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -96,9 +86,7 @@ OutcomingRequestOnline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'outcomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -111,9 +99,7 @@ IncomingRequestOffline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'incomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -126,9 +112,7 @@ IncomingRequestOnline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'incomingRequest',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };
 
@@ -141,9 +125,7 @@ AlreadyFriendOffline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'alreadyFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now() - 300000),
-        },
+        lastSeen: String(Date.now() - 300000),
     },
 };
 
@@ -156,8 +138,6 @@ AlreadyFriendOnline.args = {
         lastName: 'lastName',
         avatar: 'indigo',
         friendStatus: 'alreadyFriend',
-        onlineInfo: {
-            lastSeen: String(Date.now()),
-        },
+        lastSeen: String(Date.now()),
     },
 };

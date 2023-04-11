@@ -13,7 +13,7 @@ interface UpdateFriendStatusProps {
     friendStatus: FriendStatus;
 }
 
-const friendStatusText = {
+const friendStatusTypography = {
     possibleFriend: 'Добавить в друзья',
     outcomingRequest: 'Отменить заявку',
     incomingRequest: 'Принять заявку',
@@ -41,7 +41,7 @@ export const UpdateFriendStatus = memo(function UpdateFriendStatus({
             variant='primary'
             onClick={onUpdateFriendStatus}
         >
-            {friendStatusText[friendStatus]}
+            {friendStatusTypography[friendStatus]}
         </Button>
     );
 });

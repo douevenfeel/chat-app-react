@@ -11,9 +11,7 @@ describe('fetchCheckout', () => {
             lastName: 'lastName',
             avatar: 'purple',
             friendStatus: 0,
-            onlineInfo: {
-                lastSeen: String(Date.now()),
-            },
+            lastSeen: String(Date.now()),
         };
         const thunk = new TestAsyncThunk(fetchCheckout);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));

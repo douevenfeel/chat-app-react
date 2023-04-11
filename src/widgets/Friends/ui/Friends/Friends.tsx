@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getFriendsData } from 'entities/Friends';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import { FriendItem } from '../FriendItem/FriendItem';
 
@@ -21,13 +21,13 @@ export const Friends = memo(function Friends() {
                     />
                 ))
             ) : (
-                <Text
+                <Typography
                     align='center'
                     tag='p'
                     variant='primary'
                 >
                     Ни одного друга не найдено
-                </Text>
+                </Typography>
             )}
         </div>
     );

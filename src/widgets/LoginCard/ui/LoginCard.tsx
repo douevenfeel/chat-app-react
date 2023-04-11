@@ -1,14 +1,14 @@
 import { memo } from 'react';
 
 import { LoginForm, LoginInfo } from 'features/Login';
-import { Text } from 'shared/ui/Text/Text';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './LoginCard.module.scss';
 
 export const LoginCard = memo(function LoginCard() {
     return (
         <div className={cls.loginCard}>
-            <Text
+            <Typography
                 align='center'
                 size='large'
                 tag='h1'
@@ -16,8 +16,8 @@ export const LoginCard = memo(function LoginCard() {
                 weight='semi'
             >
                 Chat app
-            </Text>
-            <Text
+            </Typography>
+            <Typography
                 align='center'
                 size='medium'
                 tag='h2'
@@ -25,7 +25,7 @@ export const LoginCard = memo(function LoginCard() {
                 weight='medium'
             >
                 Вход
-            </Text>
+            </Typography>
             <LoginForm />
             <LoginInfo />
         </div>
