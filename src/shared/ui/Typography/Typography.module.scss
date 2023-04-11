@@ -2,6 +2,11 @@
     color: inherit;
 }
 
+.extraSmallSize {
+    font-size: var(--font-size-xs);
+    line-height: var(--font-line-xs);
+}
+
 .smallSize {
     font-size: var(--font-size-s);
     line-height: var(--font-line-s);
@@ -15,6 +20,11 @@
 .largeSize {
     font-size: var(--font-size-l);
     line-height: var(--font-line-l);
+}
+
+.extraLargeSize {
+    font-size: var(--font-size-xl);
+    line-height: var(--font-line-xl);
 }
 
 .normalWeight {

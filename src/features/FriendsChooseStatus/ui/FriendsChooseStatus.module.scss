@@ -6,3 +6,11 @@
     width: 200px;
     min-width: 200px;
 }
+
+@media (max-width: 768px) {
+    .friendsChooseStatus {
+        flex-flow: row wrap;
+        justify-content: center;
+        width: auto;
+    }
+}

@@ -36,6 +36,7 @@ export const UpdateFriendStatus = memo(function UpdateFriendStatus({
 
     return (
         <Button
+            overflowY
             className={className}
             size='small'
             variant='primary'

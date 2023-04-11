@@ -1,7 +1,7 @@
 .profileCardMedium {
     display: flex;
-    gap: 16px;
-    align-items: center;
+    gap: 12px;
+    align-items: flex-start;
 }
 
 .profile {
@@ -12,5 +12,5 @@
 
 .buttons {
     display: flex;
-    gap: 8px;
+    gap: 4px;
 }

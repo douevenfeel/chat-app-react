@@ -28,7 +28,7 @@ const Error = memo(function Error({ className }: ErrorProps) {
                 500 ошибка
             </Typography>
             <Typography
-                size='large'
+                size='extraLarge'
                 tag='h1'
                 weight='semi'
             >

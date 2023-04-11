@@ -28,7 +28,7 @@ AllFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'indigo',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
@@ -36,7 +36,7 @@ AllFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'purple',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 3,
@@ -44,7 +44,7 @@ AllFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'blue',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 4,
@@ -52,7 +52,7 @@ AllFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'red',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 5,
@@ -60,7 +60,7 @@ AllFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'green',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                 ],
                 friendStatus: 'alreadyFriend',
@@ -85,7 +85,7 @@ OnlineFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'indigo',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
@@ -93,7 +93,7 @@ OnlineFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'purple',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 3,
@@ -101,7 +101,7 @@ OnlineFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'blue',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 4,
@@ -109,7 +109,7 @@ OnlineFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'red',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 5,
@@ -117,7 +117,7 @@ OnlineFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'green',
                         friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                 ],
                 section: 'online',
@@ -142,7 +142,7 @@ Outcoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'indigo',
                         friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
@@ -150,7 +150,7 @@ Outcoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'purple',
                         friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 3,
@@ -158,7 +158,7 @@ Outcoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'blue',
                         friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 4,
@@ -166,7 +166,7 @@ Outcoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'red',
                         friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 5,
@@ -174,7 +174,7 @@ Outcoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'green',
                         friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                 ],
                 friendStatus: 'outcomingRequest',
@@ -198,7 +198,7 @@ Incoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'indigo',
                         friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
@@ -206,7 +206,7 @@ Incoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'purple',
                         friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 3,
@@ -214,7 +214,7 @@ Incoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'blue',
                         friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 4,
@@ -222,7 +222,7 @@ Incoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'red',
                         friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 5,
@@ -230,7 +230,7 @@ Incoming.decorators = [
                         lastName: 'lastName',
                         avatar: 'green',
                         friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                 ],
                 friendStatus: 'incomingRequest',
@@ -254,7 +254,7 @@ PossibleFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'indigo',
                         friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
@@ -262,7 +262,7 @@ PossibleFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'purple',
                         friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 3,
@@ -270,7 +270,7 @@ PossibleFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'blue',
                         friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 4,
@@ -278,7 +278,7 @@ PossibleFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'red',
                         friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                     {
                         id: 5,
@@ -286,7 +286,7 @@ PossibleFriends.decorators = [
                         lastName: 'lastName',
                         avatar: 'green',
                         friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                 ],
                 friendStatus: 'possibleFriend',
@@ -389,14 +389,14 @@ Default.decorators = [
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'indigo',
-                        lastSeen: String(Date.now())
+                        lastSeen: String(Date.now()),
                     },
                     {
                         id: 2,
                         firstName: 'firstName',
                         lastName: 'lastName',
                         avatar: 'purple',
-                        lastSeen: String(Date.now() - 300000)
+                        lastSeen: String(Date.now() - 300000),
                     },
                 ],
                 counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },

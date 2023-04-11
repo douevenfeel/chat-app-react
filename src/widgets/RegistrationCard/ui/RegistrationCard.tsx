@@ -14,7 +14,7 @@ export const RegistrationCard = memo(function RegistrationCard() {
         <div className={cls.registrationCard}>
             <Typography
                 align='center'
-                size='large'
+                size='extraLarge'
                 tag='h1'
                 variant='primary'
                 weight='semi'

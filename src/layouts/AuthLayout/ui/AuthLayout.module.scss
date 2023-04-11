@@ -21,8 +21,7 @@
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        margin-bottom: var(--sidebar-size);
-        padding: 16px 16px var(--sidebar-size-mobile);
+        padding: 8px 8px var(--sidebar-size-mobile);
     }
 
     .page {

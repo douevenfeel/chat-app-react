@@ -45,6 +45,9 @@ UpdatingEmpty.args = {
         lastSeen: String(Date.now()),
     },
 };
+UpdatingEmpty.decorators = [
+    StoreDecorator({ profile: { updateInfoForm: { firstName: '', lastName: '' } } }, { profile: profileReducer }),
+];
 
 export const UpdatingWithData = Template.bind({});
 UpdatingWithData.args = {

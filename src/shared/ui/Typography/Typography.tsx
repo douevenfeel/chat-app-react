@@ -7,7 +7,7 @@ type TypographyTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
 type TypographyVariant = 'primary' | 'secondary' | 'error';
 
-type TypographySize = 'small' | 'medium' | 'large';
+type TypographySize = 'extraSmall' | 'small' | 'medium' | 'large' | 'extraLarge';
 
 type TypographyWeight = 'normal' | 'medium' | 'semi' | 'bold';
 

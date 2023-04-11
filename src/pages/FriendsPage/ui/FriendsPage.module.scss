@@ -10,3 +10,10 @@
     gap: 8px;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .friendsPage {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}

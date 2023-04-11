@@ -19,6 +19,20 @@ export default {
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
 
+export const PrimaryExtraSmall = Template.bind({});
+PrimaryExtraSmall.args = {
+    children: (
+        <Typography
+            size='extraSmall'
+            tag='p'
+            variant='primary'
+            weight='normal'
+        >
+            Моя страница
+        </Typography>
+    ),
+};
+
 export const PrimarySmall = Template.bind({});
 PrimarySmall.args = {
     children: (
@@ -61,6 +75,34 @@ PrimaryLarge.args = {
     ),
 };
 
+export const PrimaryExtraLarge = Template.bind({});
+PrimaryExtraLarge.args = {
+    children: (
+        <Typography
+            size='extraLarge'
+            tag='p'
+            variant='primary'
+            weight='semi'
+        >
+            Моя страница
+        </Typography>
+    ),
+};
+
+export const SecondaryExtraSmall = Template.bind({});
+SecondaryExtraSmall.args = {
+    children: (
+        <Typography
+            size='extraSmall'
+            tag='p'
+            variant='secondary'
+            weight='normal'
+        >
+            Моя страница
+        </Typography>
+    ),
+};
+
 export const SecondarySmall = Template.bind({});
 SecondarySmall.args = {
     children: (
@@ -94,6 +136,20 @@ SecondaryLarge.args = {
     children: (
         <Typography
             size='large'
+            tag='p'
+            variant='secondary'
+            weight='semi'
+        >
+            Моя страница
+        </Typography>
+    ),
+};
+
+export const SecondaryExtraLarge = Template.bind({});
+SecondaryExtraLarge.args = {
+    children: (
+        <Typography
+            size='extraLarge'
             tag='p'
             variant='secondary'
             weight='semi'

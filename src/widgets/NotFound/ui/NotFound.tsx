@@ -33,7 +33,7 @@ const NotFound = memo(function NotFound({ className, withNavigate }: NotFoundPro
                 404 ошибка
             </Typography>
             <Typography
-                size='large'
+                size='extraLarge'
                 tag='h1'
                 weight='semi'
             >

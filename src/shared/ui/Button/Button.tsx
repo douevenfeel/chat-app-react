@@ -13,12 +13,28 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant: ButtonVariant;
     size?: ButtonSize;
     className?: string;
+    overflowY?: boolean;
 }
 
-export const Button = memo(function Button({ children, variant, size, className, disabled, ...props }: ButtonProps) {
+export const Button = memo(function Button({
+    children,
+    variant,
+    size,
+    className,
+    disabled,
+    overflowY,
+    ...props
+}: ButtonProps) {
     return (
         <button
-            className={clsx(cls.button, cls[variant], size && cls[size], disabled && cls.disabled, className)}
+            className={clsx(
+                cls.button,
+                cls[variant],
+                size && cls[size],
+                disabled && cls.disabled,
+                overflowY && cls.overflowY,
+                className
+            )}
             {...props}
         >
             {children}

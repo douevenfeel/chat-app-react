@@ -31,7 +31,7 @@ export const ProfileCardSmall = memo(function ProfileCardSmall({ data, onClick }
                         size='small'
                     />
                     <Typography
-                        size='small'
+                        size='extraSmall'
                         tag='p'
                         variant='primary'
                         weight='normal'
