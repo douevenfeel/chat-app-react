@@ -1,15 +1,4 @@
-import type { AvatarVariant } from 'shared/types/AvatarVariant';
-import type { FriendStatus } from 'shared/types/FriendStatus';
-
-export interface Profile {
-    id: number;
-    email: string;
-    firstName: string;
-    lastName: string;
-    avatar: AvatarVariant;
-    friendStatus?: FriendStatus;
-    lastSeen: string;
-}
+import type { User } from 'shared/types/User';
 
 export interface UpdateProfileInfo {
     firstName: string;
@@ -17,7 +6,7 @@ export interface UpdateProfileInfo {
 }
 
 export interface ProfileSchema {
-    data?: Profile;
+    data?: User;
     updateInfoForm: UpdateProfileInfo;
     isLoading: boolean;
     isUpdatingInfo: boolean;

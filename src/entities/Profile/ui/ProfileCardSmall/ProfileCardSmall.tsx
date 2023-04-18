@@ -1,15 +1,14 @@
 import { memo } from 'react';
 
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
+import type { User } from 'shared/types/User';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Typography } from 'shared/ui/Typography/Typography';
-
-import type { Profile } from '../../model/types/ProfileSchema';
 
 import cls from './ProfileCardSmall.module.scss';
 
 interface ProfileCardSmallProps {
-    data?: Profile;
+    data?: User;
     onClick?: () => void;
 }
 

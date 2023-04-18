@@ -1,13 +1,13 @@
 import { memo } from 'react';
 
-import type { Profile } from 'entities/Profile';
 import { ProfileCardMedium } from 'entities/Profile';
 import { SendMessage } from 'features/SendMessage';
 import { UpdateFriendStatus } from 'features/UpdateFriendStatus';
 import type { FriendStatus } from 'shared/types/FriendStatus';
+import type { User } from 'shared/types/User';
 
 interface FriendItemProps {
-    profile: Profile;
+    profile: User;
 }
 
 export const FriendItem = memo(function FriendItem({ profile }: FriendItemProps) {

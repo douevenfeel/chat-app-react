@@ -42,6 +42,7 @@ export const friendsSlice = createSlice({
                 state.error = undefined;
                 state.data = action.payload.friends;
                 state.counts = action.payload.counts;
+                state.profile = action.payload.profile;
             })
             .addCase(fetchFriends.rejected, (state, action) => {
                 state.isLoading = false;

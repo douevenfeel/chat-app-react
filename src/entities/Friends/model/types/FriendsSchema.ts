@@ -1,5 +1,5 @@
-import type { Profile } from 'entities/Profile';
 import type { FriendStatus } from 'shared/types/FriendStatus';
+import type { User } from 'shared/types/User';
 
 export interface OnlineInfo {
     isOnline: boolean;
@@ -7,8 +7,9 @@ export interface OnlineInfo {
 }
 
 export interface FriendsData {
-    friends: Profile[];
+    friends: User[];
     counts: Counts;
+    profile: User;
 }
 
 export interface Counts {
@@ -21,8 +22,9 @@ export interface Counts {
 export type FriendsSection = 'all' | 'online';
 
 export interface FriendsSchema {
-    data?: Profile[];
+    data?: User[];
     counts?: Counts;
+    profile?: User;
     search: string;
     friendStatus?: FriendStatus;
     section: FriendsSection;

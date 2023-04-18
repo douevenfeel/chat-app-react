@@ -7,7 +7,7 @@ import { Typography } from '../Typography/Typography';
 
 import cls from './Avatar.module.scss';
 
-type AvatarSize = 'small' | 'medium' | 'large';
+type AvatarSize = 'extraSmall' | 'small' | 'medium' | 'large';
 
 interface AvatarProps {
     className?: string;

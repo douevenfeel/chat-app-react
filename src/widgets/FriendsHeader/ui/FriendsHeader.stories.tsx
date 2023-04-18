@@ -6,7 +6,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { FriendsHeader } from './FriendsHeader';
 
 export default {
-    title: 'features/FriendsHeader',
+    title: 'widgets/FriendsHeader',
     component: FriendsHeader,
     argTypes: {
         backgroundColor: { control: 'color' },

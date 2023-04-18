@@ -1,10 +1,4 @@
-export interface User {
-    id: number;
-    email: string;
-    firstName: string;
-    lastName: string;
-    avatar: string;
-}
+import type { User } from 'shared/types/User';
 
 export interface UserSchema {
     data?: User;

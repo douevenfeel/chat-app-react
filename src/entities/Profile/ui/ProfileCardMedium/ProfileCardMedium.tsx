@@ -3,16 +3,15 @@ import { memo } from 'react';
 
 import { getRouteProfile } from 'shared/const/router';
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
+import type { User } from 'shared/types/User';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Typography } from 'shared/ui/Typography/Typography';
 
-import type { Profile } from '../../model/types/ProfileSchema';
-
 import cls from './ProfileCardMedium.module.scss';
 
 interface ProfileCardMediumProps {
-    data?: Profile;
+    data?: User;
     options?: ReactNode[];
 }
 

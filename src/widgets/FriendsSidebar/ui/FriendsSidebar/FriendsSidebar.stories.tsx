@@ -3,17 +3,17 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 import { friendsReducer } from 'entities/Friends';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
-import { FriendsChooseStatus } from './FriendsChooseStatus';
+import { FriendsSidebar } from './FriendsSidebar';
 
 export default {
-    title: 'features/FriendsChooseStatus',
-    component: FriendsChooseStatus,
+    title: 'widgets/FriendsSidebar',
+    component: FriendsSidebar,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof FriendsChooseStatus>;
+} as ComponentMeta<typeof FriendsSidebar>;
 
-const Template: ComponentStory<typeof FriendsChooseStatus> = (args) => <FriendsChooseStatus {...args} />;
+const Template: ComponentStory<typeof FriendsSidebar> = (args) => <FriendsSidebar {...args} />;
 
 export const Friends = Template.bind({});
 Friends.decorators = [
@@ -22,6 +22,14 @@ Friends.decorators = [
             friends: {
                 friendStatus: 'alreadyFriend',
                 counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
+                profile: {
+                    id: 1,
+                    email: 'test@mail.ru',
+                    firstName: 'firstName',
+                    lastName: 'lastName',
+                    avatar: 'purple',
+                    lastSeen: String(Date.now()),
+                },
             },
         },
         { friends: friendsReducer }
@@ -35,6 +43,14 @@ OutcomingRequests.decorators = [
             friends: {
                 friendStatus: 'outcomingRequest',
                 counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
+                profile: {
+                    id: 1,
+                    email: 'test@mail.ru',
+                    firstName: 'firstName',
+                    lastName: 'lastName',
+                    avatar: 'purple',
+                    lastSeen: String(Date.now()),
+                },
             },
         },
         { friends: friendsReducer }
@@ -48,6 +64,14 @@ IncomingRequests.decorators = [
             friends: {
                 friendStatus: 'incomingRequest',
                 counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
+                profile: {
+                    id: 1,
+                    email: 'test@mail.ru',
+                    firstName: 'firstName',
+                    lastName: 'lastName',
+                    avatar: 'purple',
+                    lastSeen: String(Date.now()),
+                },
             },
         },
         { friends: friendsReducer }
@@ -61,6 +85,14 @@ PossibleFriends.decorators = [
             friends: {
                 friendStatus: 'possibleFriend',
                 counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
+                profile: {
+                    id: 1,
+                    email: 'test@mail.ru',
+                    firstName: 'firstName',
+                    lastName: 'lastName',
+                    avatar: 'purple',
+                    lastSeen: String(Date.now()),
+                },
             },
         },
         { friends: friendsReducer }
