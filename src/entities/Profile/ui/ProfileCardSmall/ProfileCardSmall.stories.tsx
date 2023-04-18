@@ -1,5 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { user as data, lastSeen } from 'shared/config/storybook/const/data';
+
 import { ProfileCardSmall } from './ProfileCardSmall';
 
 export default {
@@ -13,25 +15,7 @@ export default {
 const Template: ComponentStory<typeof ProfileCardSmall> = (args) => <ProfileCardSmall {...args} />;
 
 export const Offline = Template.bind({});
-Offline.args = {
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        lastSeen: String(Date.now() - 300000),
-    },
-};
+Offline.args = { data: { ...data, lastSeen: lastSeen(false) } };
 
 export const Online = Template.bind({});
-Online.args = {
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        lastSeen: String(Date.now()),
-    },
-};
+Online.args = { data };

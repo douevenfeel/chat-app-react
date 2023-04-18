@@ -1,5 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { user as data, lastSeen } from 'shared/config/storybook/const/data';
+
 import { NavigateToProfile } from './NavigateToProfile';
 
 export default {
@@ -14,20 +16,9 @@ const Template: ComponentStory<typeof NavigateToProfile> = (args) => <NavigateTo
 
 export const Offline = Template.bind({});
 Offline.args = {
-    id: 1,
-    email: 'test@mail.ru',
-    firstName: 'firstName',
-    lastName: 'lastName',
-    avatar: 'purple',
-    lastSeen: String(Date.now() - 300000),
+    ...data,
+    lastSeen: lastSeen(false),
 };
 
 export const Online = Template.bind({});
-Online.args = {
-    id: 1,
-    email: 'test@mail.ru',
-    firstName: 'firstName',
-    lastName: 'lastName',
-    avatar: 'purple',
-    lastSeen: String(Date.now()),
-};
+Online.args = data;

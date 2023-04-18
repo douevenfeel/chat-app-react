@@ -1,7 +1,8 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { UpdateFriendStatus } from './UpdateFriendStatus';
+import { id } from 'shared/config/storybook/const/data';
 
+import { UpdateFriendStatus } from './UpdateFriendStatus';
 export default {
     title: 'features/UpdateFriendStatus',
     component: UpdateFriendStatus,
@@ -13,25 +14,13 @@ export default {
 const Template: ComponentStory<typeof UpdateFriendStatus> = (args) => <UpdateFriendStatus {...args} />;
 
 export const PossibleFriend = Template.bind({});
-PossibleFriend.args = {
-    id: 1,
-    friendStatus: 'possibleFriend',
-};
+PossibleFriend.args = { id, friendStatus: 'possibleFriend' };
 
 export const OutcomingRequest = Template.bind({});
-OutcomingRequest.args = {
-    id: 1,
-    friendStatus: 'outcomingRequest',
-};
+OutcomingRequest.args = { id, friendStatus: 'outcomingRequest' };
 
 export const IncomingRequest = Template.bind({});
-IncomingRequest.args = {
-    id: 1,
-    friendStatus: 'incomingRequest',
-};
+IncomingRequest.args = { id, friendStatus: 'incomingRequest' };
 
 export const AlreadyFriend = Template.bind({});
-AlreadyFriend.args = {
-    id: 1,
-    friendStatus: 'alreadyFriend',
-};
+AlreadyFriend.args = { id, friendStatus: 'alreadyFriend' };

@@ -21,12 +21,14 @@ export interface Counts {
 
 export type FriendsSection = 'all' | 'online';
 
+export type FriendsFriendStatus = Exclude<FriendStatus, 'possibleFriend'>;
+
 export interface FriendsSchema {
     data?: User[];
     counts?: Counts;
     profile?: User;
     search: string;
-    friendStatus?: FriendStatus;
+    friendStatus?: FriendsFriendStatus;
     section: FriendsSection;
     isLoading: boolean;
     error?: string;

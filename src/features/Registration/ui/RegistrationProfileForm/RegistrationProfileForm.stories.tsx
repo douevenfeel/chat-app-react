@@ -1,6 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { registrationReducer } from 'features/Registration/model/slice/registrationSlice';
+import { email, firstName, lastName, password, error } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { RegistrationProfileForm } from './RegistrationProfileForm';
@@ -20,24 +21,13 @@ Default.decorators = [StoreDecorator({ registration: {} }, { registration: regis
 
 export const WithData = Template.bind({});
 WithData.decorators = [
-    StoreDecorator(
-        { registration: { email: 'test@mail.ru', firstName: 'firstName', lastName: 'lastName', password: 'qwerty' } },
-        { registration: registrationReducer }
-    ),
+    StoreDecorator({ registration: { email, firstName, lastName, password } }, { registration: registrationReducer }),
 ];
 
 export const WithError = Template.bind({});
 WithError.decorators = [
     StoreDecorator(
-        {
-            registration: {
-                email: 'test@mail.ru',
-                firstName: 'firstName',
-                lastName: 'lastName',
-                password: 'qwerty',
-                error: 'error',
-            },
-        },
+        { registration: { email, firstName, lastName, password, error } },
         { registration: registrationReducer }
     ),
 ];

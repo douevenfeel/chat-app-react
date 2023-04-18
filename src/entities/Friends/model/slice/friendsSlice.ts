@@ -1,10 +1,14 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
-import type { FriendStatus } from 'shared/types/FriendStatus';
-
 import { fetchFriends } from '../services/fetchFriends/fetchFriends';
-import type { FriendsData, FriendsSchema, FriendsSection, UpdateFriendStatus } from '../types/FriendsSchema';
+import type {
+    FriendsData,
+    FriendsFriendStatus,
+    FriendsSchema,
+    FriendsSection,
+    UpdateFriendStatus,
+} from '../types/FriendsSchema';
 
 const initialState: FriendsSchema = { isLoading: false, search: '', friendStatus: 'alreadyFriend', section: 'all' };
 
@@ -12,7 +16,7 @@ export const friendsSlice = createSlice({
     name: 'friends',
     initialState,
     reducers: {
-        setFriendStatus: (state, action: PayloadAction<FriendStatus>) => {
+        setFriendStatus: (state, action: PayloadAction<FriendsFriendStatus>) => {
             state.friendStatus = action.payload;
             state.data = [];
             state.search = '';

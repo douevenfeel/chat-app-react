@@ -18,7 +18,6 @@ export const NavigateToProfile = memo(function NavigateToProfile(props: Navigate
         navigate(getRouteProfile(String(props.id)));
     }, [navigate, props.id]);
 
-    // TODO поменять size на extraSmall
     return (
         <div
             className={cls.navigateToProfile}
@@ -34,13 +33,13 @@ export const NavigateToProfile = memo(function NavigateToProfile(props: Navigate
             />
             <div>
                 <Typography
-                    size='small'
+                    size='extraSmall'
                     tag='h3'
                     variant='primary'
                     weight='normal'
                 >{`${props.firstName} ${props.lastName}`}</Typography>
                 <Typography
-                    size='small'
+                    size='extraSmall'
                     tag='p'
                     variant='secondary'
                     weight='normal'

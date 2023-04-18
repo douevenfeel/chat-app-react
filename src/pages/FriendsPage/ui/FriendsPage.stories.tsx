@@ -2,7 +2,9 @@ import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { friendsReducer } from 'entities/Friends';
 import { userReducer } from 'entities/User';
+import { user as profile, counts } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import type { User } from 'shared/types/User';
 
 import FriendsPage from './FriendsPage';
 
@@ -16,91 +18,22 @@ export default {
 
 const Template: ComponentStory<typeof FriendsPage> = () => <FriendsPage />;
 
+const data: DeepPartial<User>[] = [
+    { ...profile },
+    { ...profile, id: 2 },
+    { ...profile, id: 3 },
+    { ...profile, id: 4 },
+    { ...profile, id: 5 },
+];
+
 export const AllFriends = Template.bind({});
 AllFriends.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                ],
-                friendStatus: 'alreadyFriend',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
+            friends: { data, friendStatus: 'alreadyFriend', section: 'all', counts, profile },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyAllFriends = Template.bind({});
-EmptyAllFriends.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'alreadyFriend',
-                section: 'all',
-                counts: { friends: 0, onlineFriends: 0, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-        },
-        { friends: friendsReducer }
     ),
 ];
 
@@ -108,21 +41,7 @@ export const EmptyAllFriendsSearch = Template.bind({});
 EmptyAllFriendsSearch.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [],
-                friendStatus: 'alreadyFriend',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                search: 'search',
-            },
+            friends: { data: [], friendStatus: 'alreadyFriend', section: 'all', counts, profile, search: 'search' },
         },
         { friends: friendsReducer }
     ),
@@ -132,86 +51,8 @@ export const OnlineFriends = Template.bind({});
 OnlineFriends.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        friendStatus: 'alreadyFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                ],
-                section: 'online',
-                friendStatus: 'alreadyFriend',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyOnlineFriends = Template.bind({});
-EmptyOnlineFriends.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'alreadyFriend',
-                section: 'online',
-                counts: { friends: 12, onlineFriends: 0, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
+            friends: { data, section: 'online', friendStatus: 'alreadyFriend', counts, profile },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),
@@ -221,22 +62,8 @@ export const EmptyOnlineFriendsSearch = Template.bind({});
 EmptyOnlineFriendsSearch.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [],
-                friendStatus: 'alreadyFriend',
-                section: 'online',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                search: 'search',
-            },
-            user: { data: { id: 1 } },
+            friends: { data: [], friendStatus: 'alreadyFriend', section: 'online', counts, profile, search: 'search' },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),
@@ -246,85 +73,8 @@ export const OutcomingRequests = Template.bind({});
 OutcomingRequests.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        friendStatus: 'outcomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                ],
-                friendStatus: 'outcomingRequest',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyOutcomingRequests = Template.bind({});
-EmptyOutcomingRequests.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'outcomingRequest',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 0, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
+            friends: { data, friendStatus: 'outcomingRequest', counts, profile },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),
@@ -334,22 +84,8 @@ export const EmptyOutcomingRequestsSearch = Template.bind({});
 EmptyOutcomingRequestsSearch.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [],
-                friendStatus: 'outcomingRequest',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                search: 'search',
-            },
-            user: { data: { id: 1 } },
+            friends: { data: [], friendStatus: 'outcomingRequest', section: 'all', counts, profile, search: 'search' },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),
@@ -359,85 +95,8 @@ export const IncomingRequests = Template.bind({});
 IncomingRequests.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        friendStatus: 'incomingRequest',
-                        lastSeen: String(Date.now()),
-                    },
-                ],
-                friendStatus: 'incomingRequest',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyIncomingRequests = Template.bind({});
-EmptyIncomingRequests.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'incomingRequest',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 0 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
+            friends: { data, friendStatus: 'incomingRequest', counts, profile },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),
@@ -447,262 +106,8 @@ export const EmptyIncomingRequestsSearch = Template.bind({});
 EmptyIncomingRequestsSearch.decorators = [
     StoreDecorator(
         {
-            friends: {
-                data: [],
-                friendStatus: 'incomingRequest',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                search: 'search',
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const PossibleFriends = Template.bind({});
-PossibleFriends.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        friendStatus: 'possibleFriend',
-                        lastSeen: String(Date.now()),
-                    },
-                ],
-                friendStatus: 'possibleFriend',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyPossibleFriends = Template.bind({});
-EmptyPossibleFriends.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'possibleFriend',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const EmptyPossibleFriendsSearch = Template.bind({});
-EmptyPossibleFriendsSearch.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [],
-                friendStatus: 'possibleFriend',
-                section: 'all',
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                search: 'search',
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const Mixed = Template.bind({});
-Mixed.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        lastSeen: String(Date.now()),
-                        friendStatus: 'alreadyFriend',
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        lastSeen: String(Date.now() - 300000),
-                        friendStatus: 'alreadyFriend',
-                    },
-                    {
-                        id: 3,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'red',
-                        lastSeen: String(Date.now()),
-                        friendStatus: 'incomingRequest',
-                    },
-                    {
-                        id: 4,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'orange',
-                        lastSeen: String(Date.now() - 300000),
-                        friendStatus: 'incomingRequest',
-                    },
-                    {
-                        id: 5,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'blue',
-                        lastSeen: String(Date.now()),
-                        friendStatus: 'outcomingRequest',
-                    },
-                    {
-                        id: 6,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'yellow',
-                        lastSeen: String(Date.now() - 300000),
-                        friendStatus: 'outcomingRequest',
-                    },
-                    {
-                        id: 7,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'green',
-                        lastSeen: String(Date.now()),
-                        friendStatus: 'possibleFriend',
-                    },
-                    {
-                        id: 8,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'teal',
-                        lastSeen: String(Date.now() - 300000),
-                        friendStatus: 'possibleFriend',
-                    },
-                ],
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                friendStatus: 'possibleFriend',
-            },
-            user: { data: { id: 1 } },
-        },
-        { friends: friendsReducer, user: userReducer }
-    ),
-];
-
-export const Default = Template.bind({});
-Default.decorators = [
-    StoreDecorator(
-        {
-            friends: {
-                data: [
-                    {
-                        id: 1,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'indigo',
-                        lastSeen: String(Date.now()),
-                    },
-                    {
-                        id: 2,
-                        firstName: 'firstName',
-                        lastName: 'lastName',
-                        avatar: 'purple',
-                        lastSeen: String(Date.now() - 300000),
-                    },
-                ],
-                counts: { friends: 12, onlineFriends: 6, outcomingRequests: 3, incomingRequests: 1 },
-                profile: {
-                    id: 1,
-                    email: 'test@mail.ru',
-                    firstName: 'firstName',
-                    lastName: 'lastName',
-                    avatar: 'purple',
-                    lastSeen: String(Date.now()),
-                },
-                friendStatus: 'alreadyFriend',
-                section: 'all',
-            },
-            user: { data: { id: 1 } },
+            friends: { data: [], friendStatus: 'incomingRequest', section: 'all', counts, profile, search: 'search' },
+            user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
     ),

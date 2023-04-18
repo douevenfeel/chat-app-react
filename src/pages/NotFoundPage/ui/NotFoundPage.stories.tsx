@@ -1,5 +1,6 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { user as data } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import NotFoundPage from './NotFoundPage';
@@ -15,6 +16,6 @@ export default {
 const Template: ComponentStory<typeof NotFoundPage> = () => <NotFoundPage />;
 
 export const Authorized = Template.bind({});
-Authorized.decorators = [StoreDecorator({ user: { data: { id: 1 } } })];
+Authorized.decorators = [StoreDecorator({ user: { data } })];
 
 export const NotAuthorized = Template.bind({});

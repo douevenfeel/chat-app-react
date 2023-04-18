@@ -1,7 +1,7 @@
-import type { FriendStatus } from 'shared/types/FriendStatus';
+import type { FriendsFriendStatus } from 'entities/Friends';
 
 export interface FriendsSidebarSchema {
     title: string;
     count: number;
-    value: FriendStatus;
+    value: FriendsFriendStatus;
 }

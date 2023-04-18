@@ -1,5 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
+import { firstName, lastName } from 'shared/config/storybook/const/data';
+
 import { Avatar } from './Avatar';
 
 export default {
@@ -9,8 +11,8 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-        firstName: 'a',
-        lastName: 'b',
+        firstName,
+        lastName,
     },
 } as ComponentMeta<typeof Avatar>;
 

@@ -3,14 +3,24 @@
     flex-direction: column;
     gap: 4px;
 
-    width: 280px;
-    min-width: 280px;
+    width: 240px;
+    min-width: 240px;
+}
+
+.friendsStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 @media (max-width: 768px) {
-    .friendsChooseStatus {
-        flex-flow: row wrap;
-        justify-content: center;
+    .friendsSidebar {
+        align-items: center;
         width: auto;
+    }
+
+    .friendsStatus {
+        flex-direction: row;
+        justify-content: center;
     }
 }

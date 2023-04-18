@@ -14,9 +14,6 @@ export const Friends = memo(function Friends() {
     const friendStatus = useSelector(getFriendsFriendStatus);
     let text;
     switch (friendStatus) {
-        case 'possibleFriend':
-            text = 'Ни одного пользователя не найдено';
-            break;
         case 'outcomingRequest':
             text = 'Нет исходящих заявок';
             break;

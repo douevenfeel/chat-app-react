@@ -40,7 +40,7 @@ export const FriendsSidebar = memo(function FriendsSidebar({ className }: Friend
     return (
         <div className={clsx(cls.friendsSidebar, className)}>
             <NavigateToProfile {...profile} />
-            {itemsList}
+            <div className={cls.friendsStatus}>{itemsList}</div>
         </div>
     );
 });

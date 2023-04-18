@@ -1,6 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { profileReducer } from 'entities/Profile';
+import { firstName, lastName } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { ProfileUpdateInfoForm } from './ProfileUpdateInfoForm';
@@ -22,8 +23,5 @@ Empty.decorators = [
 
 export const WithData = Template.bind({});
 WithData.decorators = [
-    StoreDecorator(
-        { profile: { updateInfoForm: { firstName: 'firstName', lastName: 'lastName' } } },
-        { profile: profileReducer }
-    ),
+    StoreDecorator({ profile: { updateInfoForm: { firstName, lastName } } }, { profile: profileReducer }),
 ];

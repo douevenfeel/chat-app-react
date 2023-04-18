@@ -19,6 +19,8 @@ export default {
 
 const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />;
 
+const text = 'Моя страница';
+
 export const PrimaryExtraSmall = Template.bind({});
 PrimaryExtraSmall.args = {
     children: (
@@ -28,7 +30,7 @@ PrimaryExtraSmall.args = {
             variant='primary'
             weight='normal'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -42,7 +44,7 @@ PrimarySmall.args = {
             variant='primary'
             weight='normal'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -56,7 +58,7 @@ PrimaryMedium.args = {
             variant='primary'
             weight='medium'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -70,7 +72,7 @@ PrimaryLarge.args = {
             variant='primary'
             weight='semi'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -84,7 +86,7 @@ PrimaryExtraLarge.args = {
             variant='primary'
             weight='semi'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -98,7 +100,7 @@ SecondaryExtraSmall.args = {
             variant='secondary'
             weight='normal'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -112,7 +114,7 @@ SecondarySmall.args = {
             variant='secondary'
             weight='normal'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -126,7 +128,7 @@ SecondaryMedium.args = {
             variant='secondary'
             weight='medium'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -140,7 +142,7 @@ SecondaryLarge.args = {
             variant='secondary'
             weight='semi'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };
@@ -154,7 +156,7 @@ SecondaryExtraLarge.args = {
             variant='secondary'
             weight='semi'
         >
-            Моя страница
+            {text}
         </Typography>
     ),
 };

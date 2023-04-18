@@ -4,6 +4,7 @@ import { ProfileUpdate } from 'features/ProfileUpdate';
 import { ProfileUpdateInfoForm } from 'features/ProfileUpdateInfoForm';
 import { SendMessage } from 'features/SendMessage';
 import { UpdateFriendStatus } from 'features/UpdateFriendStatus';
+import { user as data, firstName, lastName, lastSeen } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { profileReducer } from '../../model/slice/profileSlice';
@@ -21,241 +22,144 @@ export default {
 const Template: ComponentStory<typeof ProfileCardLarge> = (args) => <ProfileCardLarge {...args} />;
 
 export const UserVariant = Template.bind({});
-UserVariant.args = {
-    options: [<ProfileUpdate key='profileUpdate' />],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        lastSeen: String(Date.now()),
-    },
-};
+UserVariant.args = { options: [<ProfileUpdate key='profileUpdate' />], data };
 
 export const UpdatingEmpty = Template.bind({});
-UpdatingEmpty.args = {
-    options: [<ProfileUpdateInfoForm key='profileUpdateInfoForm' />],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        lastSeen: String(Date.now()),
-    },
-};
+UpdatingEmpty.args = { options: [<ProfileUpdateInfoForm key='profileUpdateInfoForm' />], data };
 UpdatingEmpty.decorators = [
     StoreDecorator({ profile: { updateInfoForm: { firstName: '', lastName: '' } } }, { profile: profileReducer }),
 ];
 
 export const UpdatingWithData = Template.bind({});
-UpdatingWithData.args = {
-    options: [<ProfileUpdateInfoForm key='profileUpdateInfoForm' />],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        lastSeen: String(Date.now()),
-    },
-};
+UpdatingWithData.args = { options: [<ProfileUpdateInfoForm key='profileUpdateInfoForm' />], data };
 UpdatingWithData.decorators = [
-    StoreDecorator(
-        { profile: { updateInfoForm: { firstName: 'firstName', lastName: 'lastName' } } },
-        { profile: profileReducer }
-    ),
+    StoreDecorator({ profile: { updateInfoForm: { firstName, lastName } } }, { profile: profileReducer }),
 ];
 
 export const PossibleFriendVariantOffline = Template.bind({});
 PossibleFriendVariantOffline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='possibleFriend'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'possibleFriend',
-        lastSeen: String(Date.now() - 300000),
-    },
+    data: { ...data, lastSeen: lastSeen(false) },
 };
 
 export const PossibleFriendVariantOnline = Template.bind({});
 PossibleFriendVariantOnline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='possibleFriend'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'possibleFriend',
-        lastSeen: String(Date.now()),
-    },
+    data,
 };
 
 export const OutcomingFriendRequestVariantOffline = Template.bind({});
 OutcomingFriendRequestVariantOffline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='outcomingRequest'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'outcomingRequest',
-        lastSeen: String(Date.now() - 300000),
-    },
+    data: { ...data, lastSeen: lastSeen(false) },
 };
 
 export const OutcomingFriendRequestVariantOnline = Template.bind({});
 OutcomingFriendRequestVariantOnline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='outcomingRequest'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'outcomingRequest',
-        lastSeen: String(Date.now()),
-    },
+    data,
 };
 
 export const IncomingFriendRequestVariantOffline = Template.bind({});
 IncomingFriendRequestVariantOffline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='incomingRequest'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'incomingRequest',
-        lastSeen: String(Date.now() - 300000),
-    },
+    data: { ...data, lastSeen: lastSeen(false) },
 };
 
 export const IncomingFriendRequestVariantOnline = Template.bind({});
 IncomingFriendRequestVariantOnline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='incomingRequest'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'incomingRequest',
-        lastSeen: String(Date.now()),
-    },
+    data,
 };
 
 export const AlreadyFriendVariantOffline = Template.bind({});
 AlreadyFriendVariantOffline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='alreadyFriend'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'alreadyFriend',
-        lastSeen: String(Date.now() - 300000),
-    },
+    data: { ...data, lastSeen: lastSeen(false) },
 };
 
 export const AlreadyFriendVariantOnline = Template.bind({});
 AlreadyFriendVariantOnline.args = {
     options: [
         <SendMessage
-            id={1}
+            id={data.id}
             key='sendMessage'
         />,
         <UpdateFriendStatus
             friendStatus='alreadyFriend'
-            id={1}
+            id={data.id}
             key='updateFriendStatus'
         />,
     ],
-    data: {
-        id: 1,
-        avatar: 'indigo',
-        email: 'test@mail.ru',
-        firstName: 'firstName',
-        lastName: 'lastName',
-        friendStatus: 'alreadyFriend',
-        lastSeen: String(Date.now()),
-    },
+    data,
 };

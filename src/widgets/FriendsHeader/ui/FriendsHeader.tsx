@@ -56,10 +56,6 @@ export const FriendsHeader = memo(function FriendsHeader() {
         case 'incomingRequest':
             text = 'Входящие заявки';
             break;
-
-        case 'possibleFriend':
-            text = 'Поиск друзей';
-            break;
     }
 
     return (
