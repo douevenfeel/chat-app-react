@@ -1,7 +1,9 @@
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createSlice } from '@reduxjs/toolkit';
 
-import type { UserSchema, User } from '../types/UserSchema';
+import type { User } from 'shared/types/User';
+
+import type { UserSchema } from '../types/UserSchema';
 
 const initialState: UserSchema = { isChecked: false };
 

@@ -5,6 +5,7 @@ import { userActions, userReducer } from './userSlice';
 describe('userSlice', () => {
     test('test setData', () => {
         const state: DeepPartial<UserSchema> = { data: undefined };
+        const lastSeen = String(Date.now());
         expect(
             userReducer(
                 state as UserSchema,
@@ -13,6 +14,7 @@ describe('userSlice', () => {
                     email: 'test@mail.ru',
                     firstName: 'firstName',
                     lastName: 'lastName',
+                    lastSeen,
                     avatar: 'purple',
                 })
             )
@@ -22,6 +24,7 @@ describe('userSlice', () => {
                 email: 'test@mail.ru',
                 firstName: 'firstName',
                 lastName: 'lastName',
+                lastSeen,
                 avatar: 'purple',
             },
         });

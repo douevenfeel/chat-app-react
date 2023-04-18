@@ -1,4 +1,4 @@
-import type { User } from 'entities/User';
+import type { User } from 'shared/types/User';
 
 export interface RegistrationSchema {
     email: string;

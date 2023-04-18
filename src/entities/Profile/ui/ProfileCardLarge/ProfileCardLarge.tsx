@@ -2,15 +2,14 @@ import type { ReactNode } from 'react';
 import { memo } from 'react';
 
 import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
+import type { User } from 'shared/types/User';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Typography } from 'shared/ui/Typography/Typography';
-
-import type { Profile } from '../../model/types/ProfileSchema';
 
 import cls from './ProfileCardLarge.module.scss';
 
 interface ProfileCardLargeProps {
-    data: Profile;
+    data: User;
     options: ReactNode[];
 }
 
