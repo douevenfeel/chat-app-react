@@ -8,8 +8,8 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { NotFound } from 'widgets/NotFound';
-import { Profile } from 'widgets/Profile';
-import { getProfileData } from 'widgets/Profile/model/selectors/getProfileData/getProfileData';
+import { Profile, getProfileData } from 'widgets/Profile';
+import { ProfileSections } from 'widgets/ProfileSections';
 
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
 
@@ -26,7 +26,12 @@ const ProfilePage = memo(function ProfilePage() {
     if (error) {
         element = <NotFound />;
     } else {
-        element = <Profile />;
+        element = (
+            <>
+                <Profile />
+                <ProfileSections />
+            </>
+        );
     }
     if (data) {
         document.title = `${data.firstName} ${data.lastName}`;
