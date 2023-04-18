@@ -116,6 +116,19 @@ PossibleFriends.decorators = [
     ),
 ];
 
+export const EmptyPossibleFriends = Template.bind({});
+EmptyPossibleFriends.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'possibleFriend',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
 export const OutcomingRequests = Template.bind({});
 OutcomingRequests.decorators = [
     StoreDecorator(
@@ -163,6 +176,33 @@ OutcomingRequests.decorators = [
                         friendStatus: 'outcomingRequest',
                     },
                 ],
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyOutcomingRequests = Template.bind({});
+EmptyOutcomingRequests.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'outcomingRequest',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyOutcomingRequestsSearch = Template.bind({});
+EmptyOutcomingRequestsSearch.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'outcomingRequest',
+                search: 'search',
             },
         },
         { friends: friendsReducer }
@@ -222,6 +262,33 @@ IncomingRequests.decorators = [
     ),
 ];
 
+export const EmptyIncomingRequests = Template.bind({});
+EmptyIncomingRequests.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'incomingRequest',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyIncomingRequestsSearch = Template.bind({});
+EmptyIncomingRequestsSearch.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'incomingRequest',
+                search: 'search',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
 export const AlreadyFriends = Template.bind({});
 AlreadyFriends.decorators = [
     StoreDecorator(
@@ -269,6 +336,64 @@ AlreadyFriends.decorators = [
                         friendStatus: 'alreadyFriend',
                     },
                 ],
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyAlreadyFriends = Template.bind({});
+EmptyAlreadyFriends.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'alreadyFriend',
+                section: 'all',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyAlreadyFriendsSearch = Template.bind({});
+EmptyAlreadyFriendsSearch.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'alreadyFriend',
+                section: 'all',
+                search: 'search',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyAlreadyFriendsOnline = Template.bind({});
+EmptyAlreadyFriendsOnline.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'alreadyFriend',
+                section: 'online',
+            },
+        },
+        { friends: friendsReducer }
+    ),
+];
+
+export const EmptyAlreadyFriendsOnlineSearch = Template.bind({});
+EmptyAlreadyFriendsOnlineSearch.decorators = [
+    StoreDecorator(
+        {
+            friends: {
+                data: [],
+                friendStatus: 'alreadyFriend',
+                section: 'online',
+                search: 'search',
             },
         },
         { friends: friendsReducer }

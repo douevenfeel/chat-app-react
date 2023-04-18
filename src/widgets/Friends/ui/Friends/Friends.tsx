@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getFriendsData, getFriendsFriendStatus } from 'entities/Friends';
+import { getFriendsData, getFriendsFriendStatus, getFriendsIsLoading } from 'entities/Friends';
 import { Typography } from 'shared/ui/Typography/Typography';
 
 import { FriendItem } from '../FriendItem/FriendItem';
@@ -10,6 +10,7 @@ import cls from './Friends.module.scss';
 
 export const Friends = memo(function Friends() {
     const data = useSelector(getFriendsData);
+    const isLoading = useSelector(getFriendsIsLoading);
     const friendStatus = useSelector(getFriendsFriendStatus);
     let text;
     switch (friendStatus) {
@@ -25,6 +26,9 @@ export const Friends = memo(function Friends() {
         case 'alreadyFriend':
             text = 'Ни одного друга не найдено';
             break;
+    }
+    if (isLoading) {
+        return <></>;
     }
 
     return (

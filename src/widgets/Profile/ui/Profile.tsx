@@ -16,6 +16,7 @@ export const Profile = memo(function Profile() {
     const data = useSelector(getProfileData);
     const isUpdatingInfo = useSelector(getProfileIsUpdatingInfo);
     let options: ReactNode[] = [];
+
     if (data && data.friendStatus) {
         options = [
             <SendMessage

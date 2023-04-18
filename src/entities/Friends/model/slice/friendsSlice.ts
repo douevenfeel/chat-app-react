@@ -14,6 +14,7 @@ export const friendsSlice = createSlice({
     reducers: {
         setFriendStatus: (state, action: PayloadAction<FriendStatus>) => {
             state.friendStatus = action.payload;
+            state.data = [];
             state.search = '';
         },
         setSearch: (state, action: PayloadAction<string>) => {

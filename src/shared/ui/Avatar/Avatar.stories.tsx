@@ -16,6 +16,60 @@ export default {
 
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
 
+export const GreenExtraSmallAvatar = Template.bind({});
+GreenExtraSmallAvatar.args = { avatar: 'green', size: 'extraSmall', online: false };
+
+export const GreenExtraSmallAvatarOnline = Template.bind({});
+GreenExtraSmallAvatarOnline.args = { avatar: 'green', size: 'extraSmall', online: true };
+
+export const TealExtraSmallAvatar = Template.bind({});
+TealExtraSmallAvatar.args = { avatar: 'teal', size: 'extraSmall', online: false };
+
+export const TealExtraSmallAvatarOnline = Template.bind({});
+TealExtraSmallAvatarOnline.args = { avatar: 'teal', size: 'extraSmall', online: true };
+
+export const BlueExtraSmallAvatar = Template.bind({});
+BlueExtraSmallAvatar.args = { avatar: 'blue', size: 'extraSmall', online: false };
+
+export const BlueExtraSmallAvatarOnline = Template.bind({});
+BlueExtraSmallAvatarOnline.args = { avatar: 'blue', size: 'extraSmall', online: true };
+
+export const IndigoExtraSmallAvatar = Template.bind({});
+IndigoExtraSmallAvatar.args = { avatar: 'indigo', size: 'extraSmall', online: false };
+
+export const IndigoExtraSmallAvatarOnline = Template.bind({});
+IndigoExtraSmallAvatarOnline.args = { avatar: 'indigo', size: 'extraSmall', online: true };
+
+export const PurpleExtraSmallAvatar = Template.bind({});
+PurpleExtraSmallAvatar.args = { avatar: 'purple', size: 'extraSmall', online: false };
+
+export const PurpleExtraSmallAvatarOnline = Template.bind({});
+PurpleExtraSmallAvatarOnline.args = { avatar: 'purple', size: 'extraSmall', online: true };
+
+export const PinkExtraSmallAvatar = Template.bind({});
+PinkExtraSmallAvatar.args = { avatar: 'pink', size: 'extraSmall', online: false };
+
+export const PinkExtraSmallAvatarOnline = Template.bind({});
+PinkExtraSmallAvatarOnline.args = { avatar: 'pink', size: 'extraSmall', online: true };
+
+export const RedExtraSmallAvatar = Template.bind({});
+RedExtraSmallAvatar.args = { avatar: 'red', size: 'extraSmall', online: false };
+
+export const RedExtraSmallAvatarOnline = Template.bind({});
+RedExtraSmallAvatarOnline.args = { avatar: 'red', size: 'extraSmall', online: true };
+
+export const OrangeExtraSmallAvatar = Template.bind({});
+OrangeExtraSmallAvatar.args = { avatar: 'orange', size: 'extraSmall', online: false };
+
+export const OrangeExtraSmallAvatarOnline = Template.bind({});
+OrangeExtraSmallAvatarOnline.args = { avatar: 'orange', size: 'extraSmall', online: true };
+
+export const YellowExtraSmallAvatar = Template.bind({});
+YellowExtraSmallAvatar.args = { avatar: 'yellow', size: 'extraSmall', online: false };
+
+export const YellowExtraSmallAvatarOnline = Template.bind({});
+YellowExtraSmallAvatarOnline.args = { avatar: 'yellow', size: 'extraSmall', online: true };
+
 export const GreenSmallAvatar = Template.bind({});
 GreenSmallAvatar.args = { avatar: 'green', size: 'small', online: false };
 

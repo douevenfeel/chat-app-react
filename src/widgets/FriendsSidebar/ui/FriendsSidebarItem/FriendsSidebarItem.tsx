@@ -20,8 +20,8 @@ export const FriendsSidebarItem = memo(function FriendsSidebarItem({
 }: FriendsSidebarItemProps) {
     const dispatch = useAppDispatch();
     const onFriendStatusClick = useCallback(() => {
-        dispatch(friendsActions.setFriendStatus(value));
-    }, [dispatch, value]);
+        !isActive && dispatch(friendsActions.setFriendStatus(value));
+    }, [dispatch, isActive, value]);
 
     return (
         <Button

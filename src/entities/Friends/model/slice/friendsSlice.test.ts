@@ -42,6 +42,7 @@ describe('friendsSlice', () => {
     test('test setFriendStatus', () => {
         const state: DeepPartial<FriendsSchema> = { friendStatus: 'alreadyFriend' };
         expect(friendsReducer(state as FriendsSchema, friendsActions.setFriendStatus('incomingRequest'))).toEqual({
+            data: [],
             friendStatus: 'incomingRequest',
             search: '',
         });
