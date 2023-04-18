@@ -16,6 +16,7 @@ import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useL
 import { Friends } from 'widgets/Friends';
 import { FriendsHeader } from 'widgets/FriendsHeader';
 import { FriendsSidebar } from 'widgets/FriendsSidebar';
+import { getFriendsProfile } from 'widgets/FriendsSidebar/model/selectors/getFriendsProfile/getFriendsProfile';
 
 import cls from './FriendsPage.module.scss';
 
@@ -30,12 +31,13 @@ const FriendsPage = memo(function FriendsPage() {
     const friendStatus = useSelector(getFriendsFriendStatus);
     const search = useSelector(getFriendsSearch);
     const section = useSelector(getFriendsSection);
+    const profile = useSelector(getFriendsProfile);
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
             id && dispatch(fetchFriends(+id));
         }
-        document.title = 'Друзья';
-    }, [dispatch, id, friendStatus, search, section]);
+        document.title = `Друзья ${profile?.firstName} ${profile?.lastName}`;
+    }, [dispatch, id, friendStatus, search, section, profile?.firstName, profile?.lastName]);
 
     return (
         <AuthLayout className={cls.friendsPage}>
