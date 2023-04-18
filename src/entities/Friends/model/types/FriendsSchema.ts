@@ -9,6 +9,7 @@ export interface OnlineInfo {
 export interface FriendsData {
     friends: User[];
     counts: Counts;
+    profile: User;
 }
 
 export interface Counts {
@@ -23,6 +24,7 @@ export type FriendsSection = 'all' | 'online';
 export interface FriendsSchema {
     data?: User[];
     counts?: Counts;
+    profile?: User;
     search: string;
     friendStatus?: FriendStatus;
     section: FriendsSection;

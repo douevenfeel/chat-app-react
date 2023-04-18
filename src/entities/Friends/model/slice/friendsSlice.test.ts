@@ -27,6 +27,15 @@ const data: FriendsData = {
             lastSeen: String(Date.now() - 3000000),
         },
     ],
+    profile: {
+        id: 1,
+        email: 'test@mail.ru',
+        firstName: 'firstName',
+        lastName: 'lastName',
+        avatar: 'purple' as AvatarVariant,
+        friendStatus: 'possibleFriend',
+        lastSeen: String(Date.now()),
+    },
 };
 
 describe('friendsSlice', () => {
@@ -70,6 +79,7 @@ describe('friendsSlice', () => {
             error: undefined,
             data: data.friends,
             counts: data.counts,
+            profile: data.profile,
         });
     });
 });
