@@ -44,14 +44,15 @@ describe('friendsSlice', () => {
         expect(friendsReducer(state as FriendsSchema, friendsActions.setFriendStatus('incomingRequest'))).toEqual({
             data: [],
             friendStatus: 'incomingRequest',
-            search: '',
+            q: '',
+            section: 'all',
         });
     });
 
-    test('test setSearch', () => {
-        const state: DeepPartial<FriendsSchema> = { search: '' };
-        expect(friendsReducer(state as FriendsSchema, friendsActions.setSearch('firstName'))).toEqual({
-            search: 'firstName',
+    test('test setQ', () => {
+        const state: DeepPartial<FriendsSchema> = { q: '' };
+        expect(friendsReducer(state as FriendsSchema, friendsActions.setQ('firstName'))).toEqual({
+            q: 'firstName',
         });
     });
 

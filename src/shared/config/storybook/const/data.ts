@@ -2,7 +2,7 @@ import type { AvatarVariant } from 'shared/types/AvatarVariant';
 import type { User } from 'shared/types/User';
 
 export const id = 1;
-export const avatar: AvatarVariant = 'red';
+export const avatar: AvatarVariant = 'blue';
 export const confirmCode = 'a1b2c3';
 export const email = 'test@mail.ru';
 export const successEmail = email;

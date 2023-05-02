@@ -27,7 +27,7 @@ export interface FriendsSchema {
     data?: User[];
     counts?: Counts;
     profile?: User;
-    search: string;
+    q: string;
     friendStatus?: FriendsFriendStatus;
     section: FriendsSection;
     isLoading: boolean;

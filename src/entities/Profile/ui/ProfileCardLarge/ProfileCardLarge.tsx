@@ -33,7 +33,7 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                         variant='primary'
                         weight='semi'
                     >
-                        {`${data.firstName} ${data.lastName}`}
+                        {data.firstName} {data.lastName}
                     </Typography>
                     {lastSeen && (
                         <Typography

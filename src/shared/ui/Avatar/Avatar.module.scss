@@ -10,6 +10,10 @@
     border-radius: 50%;
 }
 
+.text {
+    user-select: none;
+}
+
 .extraSmall .text {
     font-size: 12px;
 }

@@ -11,6 +11,7 @@ import type { AxiosInstance } from 'axios';
 
 import type { FriendsSchema } from 'entities/Friends';
 import type { ProfileSchema } from 'entities/Profile';
+import type { SearchSchema } from 'entities/Search';
 import type { UserSchema } from 'entities/User';
 import type { LoginSchema } from 'features/Login';
 import type { RegistrationSchema } from 'features/Registration';
@@ -21,6 +22,7 @@ export interface StateSchema {
     registration?: RegistrationSchema;
     profile?: ProfileSchema;
     friends?: FriendsSchema;
+    search?: SearchSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import type { ReactNode } from 'react';
 import { memo } from 'react';
 
 import cls from './Typography.module.scss';
@@ -15,7 +16,7 @@ type TypographyAlign = 'left' | 'center' | 'right';
 
 interface TypographyProps {
     className?: string;
-    children: string;
+    children: string | ReactNode;
     tag: TypographyTag;
     variant?: TypographyVariant;
     size?: TypographySize;

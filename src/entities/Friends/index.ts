@@ -1,6 +1,6 @@
 export { getFriendsSection } from './model/selectors/getFriendsSection/getFriendsSection';
 export { getFriendsCounts } from './model/selectors/getFriendsCounts/getFriendsCounts';
-export { getFriendsSearch } from './model/selectors/getFriendsSearch/getFriendsSearch';
+export { getFriendsQ } from './model/selectors/getFriendsQ/getFriendsQ';
 export { getFriendsFriendStatus } from './model/selectors/getFriendsFriendStatus/getFriendsFriendStatus';
 export { fetchFriends } from './model/services/fetchFriends/fetchFriends';
 export { getFriendsError } from './model/selectors/getFriendsError/getFriendsError';

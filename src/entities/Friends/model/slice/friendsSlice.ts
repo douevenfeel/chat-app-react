@@ -10,7 +10,7 @@ import type {
     UpdateFriendStatus,
 } from '../types/FriendsSchema';
 
-const initialState: FriendsSchema = { isLoading: false, search: '', friendStatus: 'alreadyFriend', section: 'all' };
+const initialState: FriendsSchema = { isLoading: false, q: '', friendStatus: 'alreadyFriend', section: 'all' };
 
 export const friendsSlice = createSlice({
     name: 'friends',
@@ -19,10 +19,11 @@ export const friendsSlice = createSlice({
         setFriendStatus: (state, action: PayloadAction<FriendsFriendStatus>) => {
             state.friendStatus = action.payload;
             state.data = [];
-            state.search = '';
+            state.q = '';
+            state.section = 'all';
         },
-        setSearch: (state, action: PayloadAction<string>) => {
-            state.search = action.payload;
+        setQ: (state, action: PayloadAction<string>) => {
+            state.q = action.payload;
         },
         setSection: (state, action: PayloadAction<FriendsSection>) => {
             state.section = action.payload;

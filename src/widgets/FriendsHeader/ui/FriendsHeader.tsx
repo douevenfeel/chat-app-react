@@ -7,27 +7,27 @@ import {
     friendsActions,
     getFriendsCounts,
     getFriendsFriendStatus,
-    getFriendsSearch,
+    getFriendsQ,
     getFriendsSection,
 } from 'entities/Friends';
 import type { FriendsSection } from 'entities/Friends';
+import { SearchForm } from 'entities/Search';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
-import { Input } from 'shared/ui/Input/Input';
 import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './FriendsHeader.module.scss';
 
 export const FriendsHeader = memo(function FriendsHeader() {
     const dispatch = useAppDispatch();
-    const search = useSelector(getFriendsSearch);
+    const q = useSelector(getFriendsQ);
     const friendStatus = useSelector(getFriendsFriendStatus);
     const section = useSelector(getFriendsSection);
     const counts = useSelector(getFriendsCounts);
     const { id } = useParams();
     const onSearchChange = useCallback(
         (value: string) => {
-            dispatch(friendsActions.setSearch(value));
+            dispatch(friendsActions.setQ(value));
         },
         [dispatch]
     );
@@ -87,22 +87,11 @@ export const FriendsHeader = memo(function FriendsHeader() {
                     </Button>
                 </div>
             )}
-            <div className={cls.search}>
-                <Input
-                    placeholder='Введите запрос'
-                    size='small'
-                    value={search}
-                    variant='outline'
-                    onChange={onSearchChange}
-                />
-                <Button
-                    size='small'
-                    variant='primary'
-                    onClick={onSearchClick}
-                >
-                    Поиск
-                </Button>
-            </div>
+            <SearchForm
+                q={q}
+                onSearchChange={onSearchChange}
+                onSearchClick={onSearchClick}
+            />
         </div>
     );
 });

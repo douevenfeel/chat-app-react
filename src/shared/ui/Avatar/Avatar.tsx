@@ -25,7 +25,8 @@ export const Avatar = memo(function Avatar({ className, firstName, lastName, ava
                 className={cls.text}
                 tag='p'
             >
-                {`${firstName[0].toUpperCase()}${lastName[0].toUpperCase()}`}
+                {firstName[0].toUpperCase()}
+                {lastName[0].toUpperCase()}
             </Typography>
             {online && <div className={clsx(cls.online, cls[size])} />}
         </div>

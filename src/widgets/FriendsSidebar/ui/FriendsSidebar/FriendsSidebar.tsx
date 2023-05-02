@@ -18,7 +18,6 @@ interface FriendsSidebarProps {
 export const FriendsSidebar = memo(function FriendsSidebar({ className }: FriendsSidebarProps) {
     const friendStatus = useSelector(getFriendsFriendStatus);
     const profile = useSelector(getFriendsProfile);
-
     const friendsSidebarItems = useSelector(getFriendsSidebarItems);
     const itemsList = useMemo(
         () =>

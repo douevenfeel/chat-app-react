@@ -37,7 +37,9 @@ export const NavigateToProfile = memo(function NavigateToProfile(props: Navigate
                     tag='h3'
                     variant='primary'
                     weight='normal'
-                >{`${props.firstName} ${props.lastName}`}</Typography>
+                >
+                    {props.firstName} {props.lastName}
+                </Typography>
                 <Typography
                     size='extraSmall'
                     tag='p'

@@ -13,16 +13,6 @@
     justify-content: center;
 }
 
-.search {
-    display: flex;
-    flex: 1;
-    gap: 8px;
-
-    input {
-        width: 100%;
-    }
-}
-
 @media (max-width: 768px) {
     .friendsHeader {
         width: 100%;

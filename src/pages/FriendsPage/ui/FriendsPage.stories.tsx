@@ -41,7 +41,7 @@ export const EmptyAllFriendsSearch = Template.bind({});
 EmptyAllFriendsSearch.decorators = [
     StoreDecorator(
         {
-            friends: { data: [], friendStatus: 'alreadyFriend', section: 'all', counts, profile, search: 'search' },
+            friends: { data: [], friendStatus: 'alreadyFriend', section: 'all', counts, profile, q: 'search' },
         },
         { friends: friendsReducer }
     ),
@@ -62,7 +62,7 @@ export const EmptyOnlineFriendsSearch = Template.bind({});
 EmptyOnlineFriendsSearch.decorators = [
     StoreDecorator(
         {
-            friends: { data: [], friendStatus: 'alreadyFriend', section: 'online', counts, profile, search: 'search' },
+            friends: { data: [], friendStatus: 'alreadyFriend', section: 'online', counts, profile, q: 'search' },
             user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
@@ -84,7 +84,7 @@ export const EmptyOutcomingRequestsSearch = Template.bind({});
 EmptyOutcomingRequestsSearch.decorators = [
     StoreDecorator(
         {
-            friends: { data: [], friendStatus: 'outcomingRequest', section: 'all', counts, profile, search: 'search' },
+            friends: { data: [], friendStatus: 'outcomingRequest', section: 'all', counts, profile, q: 'search' },
             user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }
@@ -106,7 +106,7 @@ export const EmptyIncomingRequestsSearch = Template.bind({});
 EmptyIncomingRequestsSearch.decorators = [
     StoreDecorator(
         {
-            friends: { data: [], friendStatus: 'incomingRequest', section: 'all', counts, profile, search: 'search' },
+            friends: { data: [], friendStatus: 'incomingRequest', section: 'all', counts, profile, q: 'search' },
             user: { data: profile },
         },
         { friends: friendsReducer, user: userReducer }

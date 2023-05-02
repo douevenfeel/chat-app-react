@@ -1,0 +1,15 @@
+.searchSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 240px;
+    min-width: 240px;
+}
+
+@media (max-width: 768px) {
+    .searchSidebar {
+        align-items: center;
+        width: auto;
+    }
+}
