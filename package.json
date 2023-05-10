@@ -4,16 +4,16 @@
     "description": "",
     "main": "webpack.config.js",
     "scripts": {
-        "start": "webpack serve --env port=3000 --env api=http://localhost:5000",
-        "build:development": "webpack --env mode=development",
-        "build:production": "webpack --env mode=production",
-        "lint:ts": "pnpx eslint **/*.{ts,tsx}",
-        "lint:ts:fix": "pnpx eslint **/*.{ts,tsx} --fix",
-        "lint:scss": "pnpx stylelint **/*.scss",
-        "lint:scss:fix": "pnpx stylelint **/*.scss --fix",
-        "prettier": "pnpx prettier --write .",
-        "test:unit": "pnpx jest --config ./config/jest/jest.config.ts",
-        "chromatic": "pnpx chromatic --project-token=886d3a7b806e",
+        "start": "npx webpack serve --env port=3000 --env api=http://localhost:5000",
+        "build:development": "npx webpack --env mode=development",
+        "build:production": "npx webpack --env mode=production",
+        "lint:ts": "npx eslint **/*.{ts,tsx}",
+        "lint:ts:fix": "npx eslint **/*.{ts,tsx} --fix",
+        "lint:scss": "npx stylelint **/*.scss",
+        "lint:scss:fix": "npx stylelint **/*.scss --fix",
+        "prettier": "npx prettier --write .",
+        "test:unit": "npx jest --config ./config/jest/jest.config.ts",
+        "chromatic": "npx chromatic --project-token=886d3a7b806e",
         "storybook": "start-storybook -p 6006 -c ./config/storybook",
         "storybook:build": "build-storybook -c ./config/storybook",
         "prepare": "husky install"
@@ -95,7 +95,5 @@
         "react-dom": "^18.2.0",
         "react-redux": "^8.0.5",
         "react-router-dom": "^6.9.0"
-    },
-    "readme": "ERROR: No README data found!",
-    "_id": "chat-app-react@1.0.0"
+    }
 }

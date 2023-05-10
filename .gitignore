@@ -4,4 +4,4 @@ node_modules/
 
 build-storybook.log
 
-/storybook-static
+storybook-static/
