@@ -1,4 +1,5 @@
-import { memo, useCallback } from 'react';
+import type { FormEvent } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { profileActions } from 'entities/Profile';
@@ -12,7 +13,7 @@ import { fetchUpdateProfileInfo } from '../model/services/fetchUpdateProfileInfo
 
 import cls from './ProfileUpdateInfoForm.module.scss';
 
-export const ProfileUpdateInfoForm = memo(function ProfileUpdateInfoForm() {
+export const ProfileUpdateInfoForm = () => {
     const dispatch = useAppDispatch();
     const firstName = useSelector(getProfileUpdateInfoFirstName);
     const lastName = useSelector(getProfileUpdateInfoLastName);
@@ -28,17 +29,24 @@ export const ProfileUpdateInfoForm = memo(function ProfileUpdateInfoForm() {
         },
         [dispatch]
     );
-    const onSave = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
-        }
-    }, [dispatch, firstName, lastName]);
-    const onCancel = useCallback(() => {
+    const onSubmit = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
+            }
+        },
+        [dispatch, firstName, lastName]
+    );
+    const onCancelClick = useCallback(() => {
         dispatch(profileActions.setIsUpdatingInfo(false));
     }, [dispatch]);
 
     return (
-        <div className={cls.profileUpdateInfoForm}>
+        <form
+            className={cls.profileUpdateInfoForm}
+            onSubmit={onSubmit}
+        >
             <Input
                 autoFocus
                 placeholder='Имя'
@@ -57,18 +65,19 @@ export const ProfileUpdateInfoForm = memo(function ProfileUpdateInfoForm() {
             <Button
                 disabled={!firstName || !lastName}
                 size='small'
+                type='submit'
                 variant='primary'
-                onClick={onSave}
             >
                 Сохранить
             </Button>
             <Button
                 size='small'
+                type='reset'
                 variant='primary'
-                onClick={onCancel}
+                onClick={onCancelClick}
             >
                 Отменить
             </Button>
-        </div>
+        </form>
     );
-});
+};

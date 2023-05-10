@@ -2,7 +2,6 @@ import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getRouteProfile } from 'shared/const/router';
-import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
 import type { User } from 'shared/types/User';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Typography } from 'shared/ui/Typography/Typography';
@@ -11,12 +10,17 @@ import cls from './NavigateToProfile.module.scss';
 
 type NavigateToProfileProps = User;
 
-export const NavigateToProfile = memo(function NavigateToProfile(props: NavigateToProfileProps) {
-    const { online } = useOnlineStatus(props.lastSeen);
+export const NavigateToProfile = memo(function NavigateToProfile({
+    avatar,
+    firstName,
+    id,
+    lastName,
+    lastSeen,
+}: NavigateToProfileProps) {
     const navigate = useNavigate();
     const onProfileClick = useCallback(() => {
-        navigate(getRouteProfile(String(props.id)));
-    }, [navigate, props.id]);
+        navigate(getRouteProfile(String(id)));
+    }, [navigate, id]);
 
     return (
         <div
@@ -24,11 +28,11 @@ export const NavigateToProfile = memo(function NavigateToProfile(props: Navigate
             onClick={onProfileClick}
         >
             <Avatar
-                avatar={props.avatar}
-                firstName={props.firstName}
-                key={props.id}
-                lastName={props.lastName}
-                online={online}
+                avatar={avatar}
+                firstName={firstName}
+                key={id}
+                lastName={lastName}
+                lastSeen={lastSeen}
                 size='extraSmall'
             />
             <div>
@@ -38,7 +42,7 @@ export const NavigateToProfile = memo(function NavigateToProfile(props: Navigate
                     variant='primary'
                     weight='normal'
                 >
-                    {props.firstName} {props.lastName}
+                    {firstName} {lastName}
                 </Typography>
                 <Typography
                     size='extraSmall'

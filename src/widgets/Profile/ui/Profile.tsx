@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { ProfileCardLarge } from 'entities/Profile';
@@ -12,7 +11,7 @@ import type { FriendStatus } from 'shared/types/FriendStatus';
 import { getProfileData } from '../model/selectors/getProfileData/getProfileData';
 import { getProfileIsUpdatingInfo } from '../model/selectors/getProfileIsUpdatingInfo/getProfileIsUpdatingInfo';
 
-export const Profile = memo(function Profile() {
+export const Profile = () => {
     const data = useSelector(getProfileData);
     const isUpdatingInfo = useSelector(getProfileIsUpdatingInfo);
     let options: ReactNode[] = [];
@@ -45,4 +44,4 @@ export const Profile = memo(function Profile() {
             options={options}
         />
     ) : null;
-});
+};

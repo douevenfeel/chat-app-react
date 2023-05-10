@@ -1,4 +1,5 @@
-import { memo, useCallback } from 'react';
+import type { FormEvent } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getSearchQ, getSearchSection, searchActions, SearchForm, fetchSearch } from 'entities/Search';
@@ -6,7 +7,7 @@ import { SearchSectionTitle } from 'shared/const/searchSections';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Typography } from 'shared/ui/Typography/Typography';
 
-export const SearchHeader = memo(function SearchHeader() {
+export const SearchHeader = () => {
     const dispatch = useAppDispatch();
     const q = useSelector(getSearchQ);
     const section = useSelector(getSearchSection);
@@ -16,11 +17,15 @@ export const SearchHeader = memo(function SearchHeader() {
         },
         [dispatch]
     );
-    const onSearchClick = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchSearch(null));
-        }
-    }, [dispatch]);
+    const onSubmit = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                dispatch(fetchSearch(null));
+            }
+        },
+        [dispatch]
+    );
 
     return (
         <div>
@@ -38,8 +43,8 @@ export const SearchHeader = memo(function SearchHeader() {
             <SearchForm
                 q={q}
                 onSearchChange={onSearchChange}
-                onSearchClick={onSearchClick}
+                onSubmit={onSubmit}
             />
         </div>
     );
-});
+};

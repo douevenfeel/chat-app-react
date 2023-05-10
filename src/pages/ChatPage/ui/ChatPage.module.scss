@@ -1,0 +1,21 @@
+.chatPage {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    width: 100%;
+    max-width: 608px;
+    min-height: calc(100vh - var(--sidebar-size));
+}
+
+.messages {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .chatPage {
+        max-width: 100vw;
+    }
+}

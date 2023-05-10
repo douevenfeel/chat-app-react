@@ -14,7 +14,7 @@ export default {
     },
 } as ComponentMeta<typeof ProfileUpdateInfoForm>;
 
-const Template: ComponentStory<typeof ProfileUpdateInfoForm> = (args) => <ProfileUpdateInfoForm {...args} />;
+const Template: ComponentStory<typeof ProfileUpdateInfoForm> = () => <ProfileUpdateInfoForm />;
 
 export const Empty = Template.bind({});
 Empty.decorators = [

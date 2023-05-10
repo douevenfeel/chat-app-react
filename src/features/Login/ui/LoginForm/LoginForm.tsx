@@ -1,4 +1,5 @@
-import { memo, useCallback } from 'react';
+import type { FormEvent } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { fetchLogin } from 'features/Login/model/services/fetchLogin/fetchLogin';
@@ -9,17 +10,15 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import { getLoginEmail } from '../../model/selectors/getLoginEmail/getLoginEmail';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { loginActions } from '../../model/slice/loginSlice';
 
 import cls from './LoginForm.module.scss';
 
-export const LoginForm = memo(function LoginForm() {
+export const LoginForm = () => {
     const dispatch = useAppDispatch();
     const email = useSelector(getLoginEmail);
     const password = useSelector(getLoginPassword);
-    const isLoading = useSelector(getLoginIsLoading);
     const error = useSelector(getLoginError);
     const onEmailChange = useCallback(
         (value: string) => {
@@ -34,14 +33,21 @@ export const LoginForm = memo(function LoginForm() {
         [dispatch]
     );
 
-    const onLoginClick = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            email && password && dispatch(fetchLogin({ email, password }));
-        }
-    }, [dispatch, email, password]);
+    const onSubmit = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                email && password && dispatch(fetchLogin({ email, password }));
+            }
+        },
+        [dispatch, email, password]
+    );
 
     return (
-        <div className={cls.loginForm}>
+        <form
+            className={cls.loginForm}
+            onSubmit={onSubmit}
+        >
             <Input
                 autoFocus
                 placeholder='Почта'
@@ -61,8 +67,8 @@ export const LoginForm = memo(function LoginForm() {
             <Button
                 disabled={!email || !password}
                 size='medium'
+                type='submit'
                 variant='primary'
-                onClick={onLoginClick}
             >
                 Войти
             </Button>
@@ -77,6 +83,6 @@ export const LoginForm = memo(function LoginForm() {
                     {error}
                 </Typography>
             )}
-        </div>
+        </form>
     );
-});
+};

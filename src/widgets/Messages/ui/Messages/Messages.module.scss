@@ -1,0 +1,15 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-end;
+
+    min-height: 78vh;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .messages {
+        padding: 0;
+    }
+}

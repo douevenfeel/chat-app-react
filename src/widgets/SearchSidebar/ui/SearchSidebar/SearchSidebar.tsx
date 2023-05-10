@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getSearchSection } from 'entities/Search';
@@ -8,7 +8,7 @@ import { SearchSidebarItem } from '../SearchSidebarItem/SearchSidebarItem';
 
 import cls from './SearchSidebar.module.scss';
 
-export const SearchSidebar = memo(function SearchSidebar() {
+export const SearchSidebar = () => {
     const section = useSelector(getSearchSection);
     const searchSidebarItems = useSelector(getSearchSidebarItems);
     const itemsList = useMemo(
@@ -26,4 +26,4 @@ export const SearchSidebar = memo(function SearchSidebar() {
     );
 
     return <div className={cls.searchSidebar}>{itemsList}</div>;
-});
+};

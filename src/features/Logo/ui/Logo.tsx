@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './Logo.module.scss';
 
-export const Logo = memo(function Logo() {
+export const Logo = () => {
     const id = useSelector(getUserId);
     const navigate = useNavigate();
     const onLogoClick = useCallback(() => {
@@ -37,4 +37,4 @@ export const Logo = memo(function Logo() {
             </Typography>
         </div>
     );
-});
+};

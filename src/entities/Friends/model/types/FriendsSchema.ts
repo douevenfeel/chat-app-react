@@ -8,11 +8,11 @@ export interface OnlineInfo {
 
 export interface FriendsData {
     friends: User[];
-    counts: Counts;
+    counts: FriendsCounts;
     profile: User;
 }
 
-export interface Counts {
+export interface FriendsCounts {
     friends?: number;
     onlineFriends?: number;
     outcomingRequests?: number;
@@ -25,7 +25,7 @@ export type FriendsFriendStatus = Exclude<FriendStatus, 'possibleFriend'>;
 
 export interface FriendsSchema {
     data?: User[];
-    counts?: Counts;
+    counts?: FriendsCounts;
     profile?: User;
     q: string;
     friendStatus?: FriendsFriendStatus;

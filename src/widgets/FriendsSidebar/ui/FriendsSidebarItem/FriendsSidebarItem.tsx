@@ -3,6 +3,7 @@ import { memo, useCallback } from 'react';
 import { friendsActions } from 'entities/Friends';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
+import { Typography } from 'shared/ui/Typography/Typography';
 
 import type { FriendsSidebarSchema } from '../../model/types/FriendsSidebarSchema';
 
@@ -30,8 +31,22 @@ export const FriendsSidebarItem = memo(function FriendsSidebarItem({
             variant={isActive ? 'primary' : 'clean'}
             onClick={onFriendStatusClick}
         >
-            <span>{title}</span>
-            <span>{count}</span>
+            <Typography
+                size='small'
+                tag='p'
+                variant={isActive ? 'primary' : 'secondary'}
+                weight='normal'
+            >
+                {title}
+            </Typography>
+            <Typography
+                size='small'
+                tag='p'
+                variant={isActive ? 'primary' : 'secondary'}
+                weight='normal'
+            >
+                {count}
+            </Typography>
         </Button>
     );
 });

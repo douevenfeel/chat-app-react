@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import { loginReducer } from 'features/Login';
 import { DefaultLayout } from 'layouts/DefaultLayout';
@@ -12,7 +12,7 @@ const initialReducers: ReducersList = {
     login: loginReducer,
 };
 
-const LoginPage = memo(function LoginPage() {
+const LoginPage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
     useEffect(() => {
         document.title = 'Вход';
@@ -23,6 +23,6 @@ const LoginPage = memo(function LoginPage() {
             <LoginCard />
         </DefaultLayout>
     );
-});
+};
 
 export default LoginPage;

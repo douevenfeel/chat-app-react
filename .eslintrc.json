@@ -69,6 +69,12 @@
                     },
                     "FC": {
                         "message": "Don't use FC"
+                    },
+                    "React.FunctionalComponent": {
+                        "message": "Don't use React.FC"
+                    },
+                    "FunctionalComponent": {
+                        "message": "Don't use FC"
                     }
                 }
             }

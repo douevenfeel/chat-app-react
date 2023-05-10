@@ -4,7 +4,7 @@ import { memo } from 'react';
 
 import cls from './Typography.module.scss';
 
-type TypographyTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+type TypographyTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'pre';
 
 type TypographyVariant = 'primary' | 'secondary' | 'error';
 
@@ -22,6 +22,7 @@ interface TypographyProps {
     size?: TypographySize;
     weight?: TypographyWeight;
     align?: TypographyAlign;
+    title?: string;
     'data-testid'?: string;
 }
 
@@ -45,6 +46,7 @@ export const Typography = memo(function Typography({
                 cls[align],
                 size && cls[`${size}Size`],
                 weight && cls[`${weight}Weight`],
+                tag === 'pre' && cls.pre,
                 className
             )}
             {...props}

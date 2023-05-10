@@ -1,11 +1,9 @@
-import { memo } from 'react';
-
 import { LoginForm, LoginInfo } from 'features/Login';
 import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './LoginCard.module.scss';
 
-export const LoginCard = memo(function LoginCard() {
+export const LoginCard = () => {
     return (
         <div className={cls.loginCard}>
             <Typography
@@ -30,4 +28,4 @@ export const LoginCard = memo(function LoginCard() {
             <LoginInfo />
         </div>
     );
-});
+};

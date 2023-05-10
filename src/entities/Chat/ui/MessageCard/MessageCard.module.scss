@@ -1,0 +1,130 @@
+.messageCard {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+
+    max-width: 92%;
+}
+
+.messageContainer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.avatarContainer {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.avatar {
+    z-index: 1;
+    margin-bottom: 1px;
+}
+
+.cornerContainer {
+    position: absolute;
+    right: -12px;
+
+    width: 24px;
+    height: 24px;
+
+    background: var(--color-bg-secondary);
+}
+
+.corner {
+    width: 24px;
+    height: 24px;
+    background: var(--color-bg-primary);
+    border-bottom-right-radius: 50%;
+}
+
+.message {
+    padding: 8px;
+    background: var(--color-bg-secondary);
+    border-radius: 12px;
+}
+
+.first {
+    margin-top: 4px;
+    margin-left: 48px;
+    border-bottom-left-radius: 6px;
+}
+
+.between {
+    margin-left: 48px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.last {
+    margin-left: 12px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 0;
+}
+
+.single {
+    margin-top: 4px;
+    margin-left: 12px;
+    border-bottom-left-radius: 0;
+}
+
+.nameHidden {
+    display: none;
+}
+
+.text {
+    max-width: 388px;
+    word-wrap: break-word;
+}
+
+.createdAt {
+    margin-left: 4px;
+}
+
+.green {
+    color: #34d399;
+}
+
+.teal {
+    color: #2dd4bf;
+}
+
+.blue {
+    color: #60a5fa;
+}
+
+.indigo {
+    color: #818cf8;
+}
+
+.purple {
+    color: #a78bfa;
+}
+
+.pink {
+    color: #f472b6;
+}
+
+.red {
+    color: #f87171;
+}
+
+.orange {
+    color: #fb923c;
+}
+
+.yellow {
+    color: #fbbf24;
+}
+
+@media (max-width: 768px) {
+    .messageCard {
+        max-width: 80vw;
+    }
+
+    .text {
+        max-width: calc(72vw - 40px);
+    }
+}

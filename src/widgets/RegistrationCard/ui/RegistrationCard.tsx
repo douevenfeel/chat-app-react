@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import { RegistrationInfo } from 'features/Registration';
 import { Typography } from 'shared/ui/Typography/Typography';
 
@@ -7,7 +5,7 @@ import { useRegistrationForm } from '../lib/hooks/useRegistrationForm/useRegistr
 
 import cls from './RegistrationCard.module.scss';
 
-export const RegistrationCard = memo(function RegistrationCard() {
+export const RegistrationCard = () => {
     const { form, text } = useRegistrationForm();
 
     return (
@@ -34,4 +32,4 @@ export const RegistrationCard = memo(function RegistrationCard() {
             <RegistrationInfo />
         </div>
     );
-});
+};

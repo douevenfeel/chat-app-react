@@ -1,5 +1,11 @@
 .typography {
+    font-family: var(--font-family);
     color: inherit;
+}
+
+.pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .extraSmallSize {

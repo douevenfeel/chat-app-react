@@ -1,3 +1,4 @@
+import type { FormEvent } from 'react';
 import { memo } from 'react';
 
 import { Button } from 'shared/ui/Button/Button';
@@ -7,13 +8,16 @@ import cls from './SearchForm.module.scss';
 
 interface SearchFormProps {
     q?: string;
+    onSubmit?: (e: FormEvent) => void;
     onSearchChange?: (value: string) => void;
-    onSearchClick?: () => void;
 }
 
-export const SearchForm = memo(function Search({ q, onSearchChange, onSearchClick }: SearchFormProps) {
+export const SearchForm = memo(function Search({ q, onSearchChange, onSubmit }: SearchFormProps) {
     return (
-        <div className={cls.searchForm}>
+        <form
+            className={cls.searchForm}
+            onSubmit={onSubmit}
+        >
             <Input
                 autoFocus
                 placeholder='Введите запрос'
@@ -24,11 +28,11 @@ export const SearchForm = memo(function Search({ q, onSearchChange, onSearchClic
             />
             <Button
                 size='small'
+                type='submit'
                 variant='primary'
-                onClick={onSearchClick}
             >
                 Поиск
             </Button>
-        </div>
+        </form>
     );
 });

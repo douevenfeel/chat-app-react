@@ -1,9 +1,9 @@
+import type { FormEvent } from 'react';
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getRegistrationEmail } from 'features/Registration/model/selectors/getRegistrationEmail/getRegistrationEmail';
 import { getRegistrationError } from 'features/Registration/model/selectors/getRegistrationError/getRegistrationError';
-import { getRegistrationIsLoading } from 'features/Registration/model/selectors/getRegistrationIsLoaing/getRegistrationIsLoading';
 import { fetchRegistrationConfirmEmail } from 'features/Registration/model/services/fetchRegistrationConfirmEmail/fetchRegistrationConfirmEmail';
 import { registrationActions } from 'features/Registration/model/slice/registrationSlice';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -17,26 +17,30 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
     const dispatch = useAppDispatch();
     const email = useSelector(getRegistrationEmail);
     const error = useSelector(getRegistrationError);
-    const isLoading = useSelector(getRegistrationIsLoading);
     const onEmailChange = useCallback(
         (value: string) => {
             dispatch(registrationActions.setEmail(value.trim()));
         },
         [dispatch]
     );
-
-    const onEmailClick = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            email && dispatch(fetchRegistrationConfirmEmail({ email }));
-        }
-    }, [dispatch, email]);
-
+    const onSubmit = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                email && dispatch(fetchRegistrationConfirmEmail({ email }));
+            }
+        },
+        [dispatch, email]
+    );
     useEffect(() => {
         document.title = 'Введите почту';
     }, []);
 
     return (
-        <div className={cls.registrationEmailForm}>
+        <form
+            className={cls.registrationEmailForm}
+            onSubmit={onSubmit}
+        >
             <Input
                 autoFocus
                 placeholder='Почта'
@@ -48,8 +52,8 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
             <Button
                 disabled={!email}
                 size='medium'
+                type='submit'
                 variant='primary'
-                onClick={onEmailClick}
             >
                 Продолжить
             </Button>
@@ -64,6 +68,6 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
                     {error}
                 </Typography>
             )}
-        </div>
+        </form>
     );
 });

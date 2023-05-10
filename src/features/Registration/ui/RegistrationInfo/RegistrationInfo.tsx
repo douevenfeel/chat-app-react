@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getRouteLogin } from 'shared/const/router';
@@ -7,7 +7,7 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './RegistrationInfo.module.scss';
 
-export const RegistrationInfo = memo(function RegistrationInfo() {
+export const RegistrationInfo = () => {
     const navigate = useNavigate();
     const onLoginClick = useCallback(() => {
         navigate(getRouteLogin());
@@ -33,4 +33,4 @@ export const RegistrationInfo = memo(function RegistrationInfo() {
             </Button>
         </div>
     );
-});
+};

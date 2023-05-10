@@ -1,7 +1,7 @@
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { getRouteConversation } from 'shared/const/router';
+import { getRouteChat } from 'shared/const/router';
 import { Button } from 'shared/ui/Button/Button';
 
 interface SendMessageProps {
@@ -11,8 +11,8 @@ interface SendMessageProps {
 
 export const SendMessage = memo(function SendMessage({ className, id }: SendMessageProps) {
     const navigate = useNavigate();
-    const onSendMessage = useCallback(() => {
-        navigate(getRouteConversation(String(id)));
+    const onSendMessageClick = useCallback(() => {
+        navigate(getRouteChat(String(id)));
     }, [id, navigate]);
 
     return (
@@ -20,7 +20,7 @@ export const SendMessage = memo(function SendMessage({ className, id }: SendMess
             className={className}
             size='small'
             variant='primary'
-            onClick={onSendMessage}
+            onClick={onSendMessageClick}
         >
             Сообщение
         </Button>

@@ -1,7 +1,7 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { friendsReducer } from 'entities/Friends';
-import { counts, user as profile } from 'shared/config/storybook/const/data';
+import { friendsCounts, user as profile } from 'shared/config/storybook/const/data';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 import { FriendsSidebar } from './FriendsSidebar';
@@ -18,14 +18,17 @@ const Template: ComponentStory<typeof FriendsSidebar> = (args) => <FriendsSideba
 
 export const Friends = Template.bind({});
 Friends.decorators = [
-    StoreDecorator({ friends: { friendStatus: 'alreadyFriend', counts, profile } }, { friends: friendsReducer }),
+    StoreDecorator(
+        { friends: { friendStatus: 'alreadyFriend', counts: friendsCounts, profile } },
+        { friends: friendsReducer }
+    ),
 ];
 
 export const OutcomingRequests = Template.bind({});
 OutcomingRequests.decorators = [
     StoreDecorator(
         {
-            friends: { friendStatus: 'outcomingRequest', counts, profile },
+            friends: { friendStatus: 'outcomingRequest', counts: friendsCounts, profile },
         },
         { friends: friendsReducer }
     ),
@@ -33,5 +36,8 @@ OutcomingRequests.decorators = [
 
 export const IncomingRequests = Template.bind({});
 IncomingRequests.decorators = [
-    StoreDecorator({ friends: { friendStatus: 'incomingRequest', counts, profile } }, { friends: friendsReducer }),
+    StoreDecorator(
+        { friends: { friendStatus: 'incomingRequest', counts: friendsCounts, profile } },
+        { friends: friendsReducer }
+    ),
 ];

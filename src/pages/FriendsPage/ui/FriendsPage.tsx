@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ const initialReducers: ReducersList = {
     friends: friendsReducer,
 };
 
-const FriendsPage = memo(function FriendsPage() {
+const FriendsPage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
     const dispatch = useAppDispatch();
     const { id } = useParams();
@@ -67,6 +67,6 @@ const FriendsPage = memo(function FriendsPage() {
             <FriendsSidebar />
         </AuthLayout>
     );
-});
+};
 
 export default FriendsPage;

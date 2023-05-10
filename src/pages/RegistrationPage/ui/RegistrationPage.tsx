@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import { registrationReducer } from 'features/Registration';
 import { DefaultLayout } from 'layouts/DefaultLayout';
 import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
@@ -12,7 +10,7 @@ const initialReducers: ReducersList = {
     registration: registrationReducer,
 };
 
-const RegistrationPage = memo(function RegistrationPage() {
+const RegistrationPage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
 
     return (
@@ -20,6 +18,6 @@ const RegistrationPage = memo(function RegistrationPage() {
             <RegistrationCard />
         </DefaultLayout>
     );
-});
+};
 
 export default RegistrationPage;

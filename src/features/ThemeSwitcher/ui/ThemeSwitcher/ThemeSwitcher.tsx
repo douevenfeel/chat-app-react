@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 
 import DarkThemeIcon from 'shared/assets/icons/theme-dark.svg';
 import LightThemeIcon from 'shared/assets/icons/theme-light.svg';
@@ -8,7 +8,7 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './ThemeSwitcher.module.scss';
 
-export const ThemeSwitcher = memo(function ThemeSwitcher() {
+export const ThemeSwitcher = () => {
     const { theme, toggleTheme } = useTheme();
     const setTheme = useCallback(() => {
         theme === 'dark' ? toggleTheme('light') : toggleTheme('dark');
@@ -34,4 +34,4 @@ export const ThemeSwitcher = memo(function ThemeSwitcher() {
             </div>
         </Button>
     );
-});
+};

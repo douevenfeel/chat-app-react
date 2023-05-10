@@ -1,4 +1,5 @@
-import { memo, useCallback } from 'react';
+import type { FormEvent } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './FriendsHeader.module.scss';
 
-export const FriendsHeader = memo(function FriendsHeader() {
+export const FriendsHeader = () => {
     const dispatch = useAppDispatch();
     const q = useSelector(getFriendsQ);
     const friendStatus = useSelector(getFriendsFriendStatus);
@@ -38,11 +39,15 @@ export const FriendsHeader = memo(function FriendsHeader() {
         [dispatch]
     );
 
-    const onSearchClick = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            id && dispatch(fetchFriends(+id));
-        }
-    }, [dispatch, id]);
+    const onSubmitClick = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                id && dispatch(fetchFriends(+id));
+            }
+        },
+        [dispatch, id]
+    );
     let text = '';
     switch (friendStatus) {
         case 'alreadyFriend':
@@ -90,8 +95,8 @@ export const FriendsHeader = memo(function FriendsHeader() {
             <SearchForm
                 q={q}
                 onSearchChange={onSearchChange}
-                onSearchClick={onSearchClick}
+                onSubmit={onSubmitClick}
             />
         </div>
     );
-});
+};

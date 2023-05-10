@@ -1,0 +1,32 @@
+.chatHeader {
+    position: fixed;
+    z-index: 1;
+    top: calc(var(--header-size));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 608px;
+    height: 60px;
+    padding-top: 16px;
+
+    background: var(--color-bg-primary);
+}
+
+.button {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .chatHeader {
+        width: calc(100vw - 32px);
+    }
+
+    .buttonText {
+        display: none;
+    }
+}

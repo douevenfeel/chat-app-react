@@ -1,4 +1,6 @@
+import type { FriendsCounts } from 'entities/Friends';
 import type { AvatarVariant } from 'shared/types/AvatarVariant';
+import type { Message } from 'shared/types/Message';
 import type { User } from 'shared/types/User';
 
 export const id = 1;
@@ -26,4 +28,47 @@ export const user: User = {
     lastName,
     lastSeen: lastSeen(true),
 };
-export const counts = { friends: 16, onlineFriends: 8, incomingRequests: 4, outcomingRequests: 2 };
+export const otherUser: User = {
+    id: 2,
+    avatar: 'red',
+    email: 'test@test.ru',
+    firstName: 'Ivan',
+    lastName: 'Ivanov',
+    lastSeen: lastSeen(true),
+};
+export const friendsCounts: FriendsCounts = {
+    friends: 16,
+    onlineFriends: 8,
+    incomingRequests: 4,
+    outcomingRequests: 2,
+};
+
+export const message = {
+    id: 3,
+    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, voluptates unde! Explicabo quasi veritatis commodi doloribus. Soluta repellendus accusamus magnam.',
+    user,
+    createdAt: new Date(),
+};
+
+export const messages: Message[] = [
+    { id: 1, text: 'Hello world!', user, createdAt: new Date() },
+    { id: 2, text: 'Hello world!', user: otherUser, createdAt: new Date() },
+    {
+        id: 3,
+        text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, voluptates unde! Explicabo quasi veritatis commodi doloribus. Soluta repellendus accusamus magnam.',
+        user: otherUser,
+        createdAt: new Date(),
+    },
+    {
+        id: 4,
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vitae?',
+        user: otherUser,
+        createdAt: new Date(),
+    },
+    {
+        id: 5,
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor repellendus dolorum delectus, quod quam labore officiis praesentium consectetur nihil natus? Pariatur tempora itaque, dolore alias ipsa sed similique ducimus!',
+        user,
+        createdAt: new Date(),
+    },
+];

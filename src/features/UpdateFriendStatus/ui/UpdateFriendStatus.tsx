@@ -28,7 +28,7 @@ export const UpdateFriendStatus = memo(function UpdateFriendStatus({
     const dispatch = useAppDispatch();
     const { pathname } = useLocation();
     const location = pathname.includes('profile') ? 'profile' : 'friends';
-    const onUpdateFriendStatus = useCallback(() => {
+    const onUpdateFriendStatusClick = useCallback(() => {
         if (__PROJECT__ !== 'storybook') {
             dispatch(fetchUpdateFriendStatus({ id, location }));
         }
@@ -40,7 +40,7 @@ export const UpdateFriendStatus = memo(function UpdateFriendStatus({
             className={className}
             size='small'
             variant='primary'
-            onClick={onUpdateFriendStatus}
+            onClick={onUpdateFriendStatusClick}
         >
             {friendStatusTypography[friendStatus]}
         </Button>

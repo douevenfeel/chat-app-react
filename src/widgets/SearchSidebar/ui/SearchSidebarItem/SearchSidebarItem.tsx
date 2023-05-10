@@ -31,24 +31,22 @@ export const SearchSidebarItem = memo(function SearchSidebarItem({
             variant={isActive ? 'primary' : 'clean'}
             onClick={onFriendStatusClick}
         >
-            <>
-                <Typography
-                    size='small'
-                    tag='p'
-                    variant='secondary'
-                    weight='normal'
-                >
-                    {title}
-                </Typography>
-                <Typography
-                    size='small'
-                    tag='p'
-                    variant='secondary'
-                    weight='normal'
-                >
-                    {String(count)}
-                </Typography>
-            </>
+            <Typography
+                size='small'
+                tag='p'
+                variant={isActive ? 'primary' : 'secondary'}
+                weight='normal'
+            >
+                {title}
+            </Typography>
+            <Typography
+                size='small'
+                tag='p'
+                variant={isActive ? 'primary' : 'secondary'}
+                weight='normal'
+            >
+                {count}
+            </Typography>
         </Button>
     );
 });

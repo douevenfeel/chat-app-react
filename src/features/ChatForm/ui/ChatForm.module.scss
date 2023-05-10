@@ -1,0 +1,16 @@
+.chatForm {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.textArea {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .chatForm {
+        margin: 8px 0;
+    }
+}

@@ -1,10 +1,10 @@
+import type { FormEvent } from 'react';
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getRegistrationEmail } from 'features/Registration/model/selectors/getRegistrationEmail/getRegistrationEmail';
 import { getRegistrationError } from 'features/Registration/model/selectors/getRegistrationError/getRegistrationError';
 import { getRegistrationFirstName } from 'features/Registration/model/selectors/getRegistrationFirstName/getRegistrationFirstName';
-import { getRegistrationIsLoading } from 'features/Registration/model/selectors/getRegistrationIsLoaing/getRegistrationIsLoading';
 import { getRegistrationLastName } from 'features/Registration/model/selectors/getRegistrationLastName/getRegistrationLastName';
 import { getRegistrationPassword } from 'features/Registration/model/selectors/getRegistrationPassword/getRegistrationPassword';
 import { fetchRegistration } from 'features/Registration/model/services/fetchRegistration/fetchRegistration';
@@ -23,7 +23,6 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
     const lastName = useSelector(getRegistrationLastName);
     const password = useSelector(getRegistrationPassword);
     const error = useSelector(getRegistrationError);
-    const isLoading = useSelector(getRegistrationIsLoading);
     const onEmailChange = useCallback(
         (value: string) => {
             dispatch(registrationActions.setEmail(value.trim()));
@@ -48,23 +47,28 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
         },
         [dispatch]
     );
-
-    const onRegistrationClick = useCallback(() => {
-        if (__PROJECT__ !== 'storybook') {
-            email &&
-                firstName &&
-                lastName &&
-                password &&
-                dispatch(fetchRegistration({ email, firstName, lastName, password }));
-        }
-    }, [dispatch, email, firstName, lastName, password]);
-
+    const onSubmit = useCallback(
+        (e: FormEvent) => {
+            e.preventDefault();
+            if (__PROJECT__ !== 'storybook') {
+                email &&
+                    firstName &&
+                    lastName &&
+                    password &&
+                    dispatch(fetchRegistration({ email, firstName, lastName, password }));
+            }
+        },
+        [dispatch, email, firstName, lastName, password]
+    );
     useEffect(() => {
         document.title = 'Заполните профиль';
     }, []);
 
     return (
-        <div className={cls.registrationProfileForm}>
+        <form
+            className={cls.registrationProfileForm}
+            onSubmit={onSubmit}
+        >
             <Input
                 placeholder='Почта'
                 size='medium'
@@ -98,8 +102,8 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
             <Button
                 disabled={!email || !firstName || !lastName || !password}
                 size='medium'
+                type='submit'
                 variant='primary'
-                onClick={onRegistrationClick}
             >
                 Зарегистрироваться
             </Button>
@@ -114,6 +118,6 @@ export const RegistrationProfileForm = memo(function RegistrationProfileForm() {
                     {error}
                 </Typography>
             )}
-        </div>
+        </form>
     );
 });

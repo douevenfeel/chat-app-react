@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
-import { memo } from 'react';
+import { useMemo, memo } from 'react';
 
-import { useOnlineStatus } from 'shared/lib/hooks/useOnlineStatus/useOnlineStatus';
+import { getOnlineStatus } from 'shared/lib/getters/getOnlineStatus/getOnlineStatus';
 import type { User } from 'shared/types/User';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Typography } from 'shared/ui/Typography/Typography';
@@ -14,7 +14,8 @@ interface ProfileCardLargeProps {
 }
 
 export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }: ProfileCardLargeProps) {
-    const { online, lastSeen } = useOnlineStatus(data?.lastSeen);
+    const { lastSeenTime } = getOnlineStatus(data?.lastSeen);
+    const optionsList = useMemo(() => options.map((option) => option), [options]);
 
     return (
         <div className={cls.profileCardLarge}>
@@ -24,7 +25,7 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                         avatar={data.avatar}
                         firstName={data.firstName}
                         lastName={data.lastName}
-                        online={online}
+                        lastSeen={data.lastSeen}
                         size='large'
                     />
                     <Typography
@@ -35,17 +36,15 @@ export const ProfileCardLarge = memo(function ProfileCardLarge({ data, options }
                     >
                         {data.firstName} {data.lastName}
                     </Typography>
-                    {lastSeen && (
-                        <Typography
-                            size='small'
-                            tag='p'
-                            variant='secondary'
-                            weight='normal'
-                        >
-                            {lastSeen}
-                        </Typography>
-                    )}
-                    <div className={cls.buttons}>{options?.map((option) => option)}</div>
+                    <Typography
+                        size='small'
+                        tag='p'
+                        variant='secondary'
+                        weight='normal'
+                    >
+                        {lastSeenTime ? lastSeenTime : 'в сети'}
+                    </Typography>
+                    <div className={cls.buttons}>{optionsList}</div>
                 </>
             )}
         </div>

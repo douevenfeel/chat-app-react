@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ import { getProfileError } from '../model/selectors/getProfileError/getProfileEr
 const initialReducers: ReducersList = {
     profile: profileReducer,
 };
-const ProfilePage = memo(function ProfilePage() {
+const ProfilePage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
     const dispatch = useAppDispatch();
     const { id } = useParams();
@@ -43,6 +43,6 @@ const ProfilePage = memo(function ProfilePage() {
     }, [dispatch, id]);
 
     return <AuthLayout>{element}</AuthLayout>;
-});
+};
 
 export default ProfilePage;

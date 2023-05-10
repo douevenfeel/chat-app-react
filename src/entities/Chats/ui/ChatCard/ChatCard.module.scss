@@ -1,0 +1,45 @@
+.chatCard {
+    cursor: pointer;
+
+    display: flex;
+    gap: 16px;
+
+    width: 608px;
+    min-width: 608px;
+    padding: 8px 16px;
+
+    border-radius: var(--border-radius);
+
+    &:hover {
+        background: var(--color-bg-secondary);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: calc(100% - 76px);
+}
+
+.userContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.message {
+    overflow: hidden;
+
+    max-width: 92%;
+    height: 24px;
+    max-height: 24px;
+
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .chatCard {
+        width: 100vw;
+        min-width: 320px;
+        max-width: 100%;
+        padding: 8px 0;
+    }
+}

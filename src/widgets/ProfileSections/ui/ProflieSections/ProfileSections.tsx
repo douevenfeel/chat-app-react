@@ -1,10 +1,10 @@
-import { memo, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getProfileSectionItems } from '../../model/selectors/getProfileSectionItems/getProfileSectionItems';
 import { ProfileSectionItem } from '../ProfileSectionItem/ProfileSectionItem';
 
-export const ProfileSections = memo(function ProfileSections() {
+export const ProfileSections = () => {
     const profileSectionItems = useSelector(getProfileSectionItems);
     const itemsList = useMemo(
         () =>
@@ -19,4 +19,4 @@ export const ProfileSections = memo(function ProfileSections() {
     );
 
     return <div>{itemsList}</div>;
-});
+};

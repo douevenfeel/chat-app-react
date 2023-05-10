@@ -1,4 +1,5 @@
-import { ConversationPage } from 'pages/ConversationPage';
+import { ChatPage } from 'pages/ChatPage';
+import { ChatsPage } from 'pages/ChatsPage';
 import { FriendsPage } from 'pages/FriendsPage';
 import { LoginPage } from 'pages/LoginPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
@@ -6,8 +7,8 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { RegistrationPage } from 'pages/RegistrationPage';
 import { SearchPage } from 'pages/SearchPage';
 import {
-    getRouteConversation,
-    getRouteConversations,
+    getRouteChat,
+    getRouteChats,
     getRouteFriends,
     getRouteLogin,
     getRouteProfile,
@@ -22,8 +23,8 @@ export const routeConfig: AppRoute[] = [
     { path: getRouteRegistration(), element: <RegistrationPage />, auth: false },
     { path: getRouteProfile(':id'), element: <ProfilePage />, auth: true },
     { path: getRouteFriends(':id'), element: <FriendsPage />, auth: true },
-    { path: getRouteConversations(), element: <ConversationPage />, auth: true },
-    { path: getRouteConversation(':id'), element: <ConversationPage />, auth: true },
+    { path: getRouteChats(), element: <ChatsPage />, auth: true },
+    { path: getRouteChat(':id'), element: <ChatPage />, auth: true },
     { path: getRouteSearch(), element: <SearchPage />, auth: true },
     { path: '*', element: <NotFoundPage /> },
 ];

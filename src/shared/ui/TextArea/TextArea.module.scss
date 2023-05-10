@@ -1,0 +1,25 @@
+.textArea {
+    resize: none;
+
+    height: 32px;
+    padding: var(--padding-s);
+
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-s);
+    line-height: var(--font-line-s);
+    color: var(--color-text-primary);
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-bg-secondary);
+    border-radius: 0;
+    outline: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

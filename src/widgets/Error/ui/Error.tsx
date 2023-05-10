@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 
 import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { Button } from 'shared/ui/Button/Button';
@@ -7,18 +7,14 @@ import { Typography } from 'shared/ui/Typography/Typography';
 
 import cls from './Error.module.scss';
 
-interface ErrorProps {
-    className?: string;
-}
-
-const Error = memo(function Error({ className }: ErrorProps) {
+const Error = () => {
     const { theme } = useTheme();
     const onReloadClick = useCallback(() => {
         location.reload();
     }, []);
 
     return (
-        <div className={clsx(cls.error, 'app', `${theme}Theme`, className)}>
+        <div className={clsx(cls.error, 'app', `${theme}Theme`)}>
             <Typography
                 size='medium'
                 tag='p'
@@ -43,6 +39,6 @@ const Error = memo(function Error({ className }: ErrorProps) {
             </Button>
         </div>
     );
-});
+};
 
 export default Error;

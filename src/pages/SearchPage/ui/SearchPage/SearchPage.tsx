@@ -1,4 +1,4 @@
-import { memo, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { fetchSearch, getSearchQ, getSearchSection, searchReducer } from 'entities/Search';
@@ -10,7 +10,7 @@ import { SearchHeader } from 'widgets/SearchHeader';
 import { SearchSidebar } from 'widgets/SearchSidebar';
 
 import { getSearchData } from '../../model/selectors/getSearchData/getSearchData';
-import { useSearchElement } from '../../utils/hooks/useSearchElement/useSearchElement';
+import { getSearchElement } from '../../utils/getSearchElement/getSearchElement';
 
 import cls from './SearchPage.module.scss';
 
@@ -18,13 +18,13 @@ const initialReducers: ReducersList = {
     search: searchReducer,
 };
 
-const SearchPage = memo(function SearchPage() {
+const SearchPage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
     const dispatch = useAppDispatch();
     const q = useSelector(getSearchQ);
     const data = useSelector(getSearchData);
     const section = useSelector(getSearchSection);
-    const element = useSearchElement(data, section);
+    const element = getSearchElement(data, section);
     document.title = 'Поиск';
     useEffect(() => {
         if (__PROJECT__ !== 'storybook') {
@@ -41,6 +41,6 @@ const SearchPage = memo(function SearchPage() {
             <SearchSidebar />
         </AuthLayout>
     );
-});
+};
 
 export default SearchPage;
