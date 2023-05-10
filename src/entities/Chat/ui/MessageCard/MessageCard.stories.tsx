@@ -14,6 +14,14 @@ export default {
 
 const Template: ComponentStory<typeof MessageCard> = (args) => <MessageCard {...args} />;
 
+export const MessageSingle = Template.bind({});
+MessageSingle.args = {
+    id: 1,
+    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repellat esse! Sunt sint eum vitae cumque architecto molestiae culpa qui.',
+    user,
+    variant: 'single',
+};
+
 export const MessageFirst = Template.bind({});
 MessageFirst.args = {
     id: 1,
