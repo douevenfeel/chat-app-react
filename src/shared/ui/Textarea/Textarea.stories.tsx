@@ -1,16 +1,16 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { TextArea } from './TextArea';
+import { Textarea } from './Textarea';
 
 export default {
-    title: 'shared/TextArea',
-    component: TextArea,
+    title: 'shared/Textarea',
+    component: Textarea,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof TextArea>;
+} as ComponentMeta<typeof Textarea>;
 
-const Template: ComponentStory<typeof TextArea> = (args) => <TextArea {...args} />;
+const Template: ComponentStory<typeof Textarea> = (args) => <Textarea {...args} />;
 
 export const Placeholder = Template.bind({});
 Placeholder.args = {

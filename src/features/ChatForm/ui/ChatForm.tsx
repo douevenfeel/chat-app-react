@@ -6,7 +6,7 @@ import { chatActions } from 'entities/Chat';
 import SendIcon from 'shared/assets/icons/send.svg';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
-import { TextArea } from 'shared/ui/TextArea/TextArea';
+import { Textarea } from 'shared/ui/Textarea/Textarea';
 
 import { getChatMessage } from '../model/selectors/getChatMessage/getChatMessage';
 import { fetchNewMessage } from '../model/services/fetchNewMessage/fetchNewMessage';
@@ -62,7 +62,7 @@ export const ChatForm = () => {
             className={cls.chatForm}
             onSubmit={onSubmit}
         >
-            <TextArea
+            <Textarea
                 autoFocus
                 className={cls.textArea}
                 placeholder='Напишите сообщение...'

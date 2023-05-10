@@ -2,17 +2,17 @@ import clsx from 'clsx';
 import type { ChangeEvent, TextareaHTMLAttributes } from 'react';
 import { useCallback, useEffect, useRef } from 'react';
 
-import cls from './TextArea.module.scss';
+import cls from './Textarea.module.scss';
 
-type HTMLTextAreaProps = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'value' | 'onChange'>;
+type HTMLTextareaProps = Omit<TextareaHTMLAttributes<HTMLTextAreaElement>, 'value' | 'onChange'>;
 
-interface TextAreaProps extends HTMLTextAreaProps {
+interface TextareaProps extends HTMLTextareaProps {
     className?: string;
     value?: string;
     onChange?: (value: string) => void;
 }
 
-export const TextArea = ({ className, value, onChange, ...props }: TextAreaProps) => {
+export const Textarea = ({ className, value, onChange, ...props }: TextareaProps) => {
     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
         onChange?.(e.target.value);
     };
@@ -36,7 +36,7 @@ export const TextArea = ({ className, value, onChange, ...props }: TextAreaProps
 
     return (
         <textarea
-            className={clsx(cls.textArea, className)}
+            className={clsx(cls.textarea, className)}
             ref={textareaRef}
             value={value}
             onChange={onChangeHandler}

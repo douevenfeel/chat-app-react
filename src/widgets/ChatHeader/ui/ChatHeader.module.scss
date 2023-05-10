@@ -1,6 +1,6 @@
 .chatHeader {
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     top: calc(var(--header-size));
 
     display: flex;
@@ -23,7 +23,9 @@
 
 @media (max-width: 768px) {
     .chatHeader {
+        top: 0;
         width: calc(100vw - 32px);
+        padding: 0;
     }
 
     .buttonText {
