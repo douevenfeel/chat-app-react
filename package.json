@@ -4,9 +4,9 @@
     "description": "",
     "main": "webpack.config.js",
     "scripts": {
-        "start": "pnpx webpack serve --env port=3000 --env api=http://localhost:5000",
-        "build:development": "pnpx webpack --env mode=development",
-        "build:production": "pnpx webpack --env mode=production",
+        "start": "webpack serve --env port=3000 --env api=http://localhost:5000",
+        "build:development": "webpack --env mode=development",
+        "build:production": "webpack --env mode=production",
         "lint:ts": "pnpx eslint **/*.{ts,tsx}",
         "lint:ts:fix": "pnpx eslint **/*.{ts,tsx} --fix",
         "lint:scss": "pnpx stylelint **/*.scss",

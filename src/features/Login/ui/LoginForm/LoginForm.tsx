@@ -1,5 +1,5 @@
 import type { FormEvent } from 'react';
-import { useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { fetchLogin } from 'features/Login/model/services/fetchLogin/fetchLogin';
@@ -32,16 +32,34 @@ export const LoginForm = () => {
         },
         [dispatch]
     );
+    const handleSubmit = useCallback(() => {
+        if (__PROJECT__ !== 'storybook') {
+            email && password && dispatch(fetchLogin({ email, password }));
+        }
+    }, [dispatch, email, password]);
 
     const onSubmit = useCallback(
         (e: FormEvent) => {
             e.preventDefault();
-            if (__PROJECT__ !== 'storybook') {
-                email && password && dispatch(fetchLogin({ email, password }));
+            handleSubmit();
+        },
+        [handleSubmit]
+    );
+    const handleEnterKey = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
             }
         },
-        [dispatch, email, password]
+        [handleSubmit]
     );
+    useEffect(() => {
+        document.addEventListener('keydown', handleEnterKey);
+
+        return () => {
+            document.removeEventListener('keydown', handleEnterKey);
+        };
+    }, [handleEnterKey]);
 
     return (
         <form

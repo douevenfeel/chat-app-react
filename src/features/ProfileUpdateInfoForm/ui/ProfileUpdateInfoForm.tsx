@@ -1,5 +1,5 @@
 import type { FormEvent } from 'react';
-import { useCallback } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { profileActions } from 'entities/Profile';
@@ -29,18 +29,36 @@ export const ProfileUpdateInfoForm = () => {
         },
         [dispatch]
     );
+    const handleSubmit = useCallback(() => {
+        if (__PROJECT__ !== 'storybook') {
+            firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
+        }
+    }, [dispatch, firstName, lastName]);
     const onSubmit = useCallback(
         (e: FormEvent) => {
             e.preventDefault();
-            if (__PROJECT__ !== 'storybook') {
-                firstName && lastName && dispatch(fetchUpdateProfileInfo({ firstName, lastName }));
-            }
+            handleSubmit();
         },
-        [dispatch, firstName, lastName]
+        [handleSubmit]
     );
     const onCancelClick = useCallback(() => {
         dispatch(profileActions.setIsUpdatingInfo(false));
     }, [dispatch]);
+    const handleEnterKey = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
+            }
+        },
+        [handleSubmit]
+    );
+    useEffect(() => {
+        document.addEventListener('keydown', handleEnterKey);
+
+        return () => {
+            document.removeEventListener('keydown', handleEnterKey);
+        };
+    }, [handleEnterKey]);
 
     return (
         <form

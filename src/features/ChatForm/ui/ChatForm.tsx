@@ -29,7 +29,7 @@ export const ChatForm = () => {
     }, [dispatch, message]);
     const handleEnterKey = useCallback(
         (e: KeyboardEvent) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
+            if (e.key === 'Enter') {
                 onSendClick();
             }
         },
@@ -55,7 +55,7 @@ export const ChatForm = () => {
         return () => {
             document.removeEventListener('keydown', handleEnterKey);
         };
-    }, [handleEnterKey, onSendClick]);
+    }, [handleEnterKey]);
 
     return (
         <form

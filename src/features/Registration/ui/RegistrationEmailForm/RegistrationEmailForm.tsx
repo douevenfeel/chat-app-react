@@ -23,18 +23,34 @@ export const RegistrationEmailForm = memo(function RegistrationEmailForm() {
         },
         [dispatch]
     );
+    const handleSubmit = useCallback(() => {
+        if (__PROJECT__ !== 'storybook') {
+            email && dispatch(fetchRegistrationConfirmEmail({ email }));
+        }
+    }, [dispatch, email]);
     const onSubmit = useCallback(
         (e: FormEvent) => {
             e.preventDefault();
-            if (__PROJECT__ !== 'storybook') {
-                email && dispatch(fetchRegistrationConfirmEmail({ email }));
+            handleSubmit();
+        },
+        [handleSubmit]
+    );
+    const handleEnterKey = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
             }
         },
-        [dispatch, email]
+        [handleSubmit]
     );
     useEffect(() => {
         document.title = 'Введите почту';
-    }, []);
+        document.addEventListener('keydown', handleEnterKey);
+
+        return () => {
+            document.removeEventListener('keydown', handleEnterKey);
+        };
+    }, [handleEnterKey]);
 
     return (
         <form

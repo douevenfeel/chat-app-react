@@ -31,20 +31,34 @@ export const RegistrationCodeForm = () => {
         },
         [dispatch]
     );
-
+    const handleSubmit = useCallback(() => {
+        if (__PROJECT__ !== 'storybook') {
+            email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
+        }
+    }, [confirmCode, dispatch, email]);
     const onSubmit = useCallback(
         (e: FormEvent) => {
             e.preventDefault();
-            if (__PROJECT__ !== 'storybook') {
-                email && confirmCode && dispatch(fetchRegistrationConfirmCode({ email, confirmCode }));
+            handleSubmit();
+        },
+        [handleSubmit]
+    );
+    const handleEnterKey = useCallback(
+        (e: KeyboardEvent) => {
+            if (e.key === 'Enter') {
+                handleSubmit();
             }
         },
-        [confirmCode, dispatch, email]
+        [handleSubmit]
     );
-
     useEffect(() => {
         document.title = 'Введите код подтверждения';
-    }, []);
+        document.addEventListener('keydown', handleEnterKey);
+
+        return () => {
+            document.removeEventListener('keydown', handleEnterKey);
+        };
+    }, [handleEnterKey]);
 
     return (
         <form
