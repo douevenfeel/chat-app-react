@@ -3,9 +3,9 @@ import { memo, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { Typography } from 'shared/ui/Typography/Typography';
-import { getChatsIsLoading } from 'widgets/Chats/model/selectors/getChatsIsLoading/getChatsIsLoading';
 
 import { getChatsData } from '../../model/selectors/getChatsData/getChatsData';
+import { getChatsIsLoading } from '../../model/selectors/getChatsIsLoading/getChatsIsLoading';
 import { ChatItem } from '../ChatItem/ChatItem';
 
 import cls from './Chats.module.scss';
