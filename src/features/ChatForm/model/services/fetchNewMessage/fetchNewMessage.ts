@@ -10,7 +10,6 @@ export const fetchNewMessage = createAsyncThunk<Message, string, ThunkConfig<str
     'chat/fetchNewMessage',
     async (message, { dispatch, rejectWithValue, extra, getState }) => {
         try {
-            console.log(message);
             const id = getChatUserId(getState());
             const response = await extra.api
                 .post<Message>(`/messages/${id}`, { text: message })

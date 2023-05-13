@@ -12,7 +12,6 @@ export const fetchAllChats = createAsyncThunk<Chat[], null, ThunkConfig<string>>
             if (!response) {
                 throw new Error();
             }
-            console.log(response);
 
             return response;
         } catch (error) {

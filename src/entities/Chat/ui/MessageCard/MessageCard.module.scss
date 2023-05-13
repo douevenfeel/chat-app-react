@@ -1,14 +1,5 @@
 .messageCard {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
-    align-items: flex-start;
-
-    max-width: 92%;
-}
-
-.messageContainer {
-    display: flex;
     align-items: flex-end;
 }
 

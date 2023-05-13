@@ -26,52 +26,50 @@ export const MessageCard = memo(function MessageCard({ text, variant, user, crea
 
     return (
         <div className={cls.messageCard}>
-            <div className={cls.messageContainer}>
-                {['last', 'single'].includes(variant) && (
-                    <div className={cls.avatarContainer}>
-                        <Avatar
-                            className={cls.avatar}
-                            size='extraSmall'
-                            {...user}
-                            onClick={onAvatarClick}
-                        />
-                        <div className={cls.cornerContainer}>
-                            <div className={cls.corner} />
-                        </div>
+            {['last', 'single'].includes(variant) && (
+                <div className={cls.avatarContainer}>
+                    <Avatar
+                        className={cls.avatar}
+                        size='extraSmall'
+                        {...user}
+                        onClick={onAvatarClick}
+                    />
+                    <div className={cls.cornerContainer}>
+                        <div className={cls.corner} />
                     </div>
-                )}
-                <div className={clsx(cls.message, cls[variant])}>
-                    <Typography
-                        className={clsx(!['first', 'single'].includes(variant) && cls.nameHidden, cls[user.avatar])}
-                        size='small'
-                        tag='p'
-                        variant='primary'
-                        weight='medium'
-                    >
-                        {user.firstName} {user.lastName}
-                    </Typography>
-                    <Typography
-                        className={cls.text}
-                        size='small'
-                        tag='pre'
-                        variant='primary'
-                        weight='normal'
-                    >
-                        {text}
-                    </Typography>
                 </div>
+            )}
+            <div className={clsx(cls.message, cls[variant])}>
                 <Typography
-                    align='right'
-                    className={cls.createdAt}
-                    size='extraSmall'
+                    className={clsx(!['first', 'single'].includes(variant) && cls.nameHidden, cls[user.avatar])}
+                    size='small'
                     tag='p'
-                    title={date}
-                    variant='secondary'
+                    variant='primary'
+                    weight='medium'
+                >
+                    {user.firstName} {user.lastName}
+                </Typography>
+                <Typography
+                    className={cls.text}
+                    size='small'
+                    tag='pre'
+                    variant='primary'
                     weight='normal'
                 >
-                    {dateCollapsed}
+                    {text}
                 </Typography>
             </div>
+            <Typography
+                align='right'
+                className={cls.createdAt}
+                size='extraSmall'
+                tag='p'
+                title={date}
+                variant='secondary'
+                weight='normal'
+            >
+                {dateCollapsed}
+            </Typography>
         </div>
     );
 });

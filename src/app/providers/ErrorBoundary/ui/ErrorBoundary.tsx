@@ -1,4 +1,4 @@
-import type { ErrorInfo, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { Component, Suspense } from 'react';
 
 import { Error } from 'widgets/Error';
@@ -20,11 +20,6 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
 
     static getDerivedStateFromError() {
         return { hasError: true };
-    }
-
-    componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        // You can also log the error to an error reporting service
-        console.log(error, errorInfo);
     }
 
     render() {

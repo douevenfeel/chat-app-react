@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,6 +24,9 @@ export const ChatHeader = () => {
     const onProfileClick = useCallback(() => {
         navigate(getRouteProfile(String(user?.id)));
     }, [navigate, user?.id]);
+    useEffect(() => {
+        document.title = `${user?.firstName} ${user?.lastName}`;
+    }, [user?.firstName, user?.lastName]);
 
     return (
         <div className={cls.chatHeader}>
