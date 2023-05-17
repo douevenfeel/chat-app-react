@@ -26,6 +26,9 @@ export const App = () => {
             !isChecked && dispatch(fetchCheckout(null));
         }
     }, [dispatch, isChecked]);
+    useEffect(() => {
+        document.body.className = `${theme}Theme`;
+    }, [theme]);
 
-    return <div className={clsx('app', `${theme}Theme`)}>{isChecked && <AppRouter />}</div>;
+    return <div className={clsx('app')}>{isChecked && <AppRouter />}</div>;
 };
