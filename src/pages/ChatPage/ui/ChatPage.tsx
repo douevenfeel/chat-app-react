@@ -1,14 +1,15 @@
 import { useCallback, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { chatReducer } from 'entities/Chat';
-import { fetchChat } from 'entities/Chat/model/services/fetchChat/fetchChat';
+import { chatActions, chatReducer, getChatId, fetchChat } from 'entities/Chat';
 import { ChatForm } from 'features/ChatForm';
 import { AuthLayout } from 'layouts/AuthLayout';
 import { getRouteChats } from 'shared/const/router';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import type { ReducersList } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
 import { useLazyModuleLoading } from 'shared/lib/hooks/useLazyModuleLoading/useLazyModuleLoading';
+import { useSocket } from 'shared/lib/hooks/useSocket/useSocket';
 import { ChatHeader } from 'widgets/ChatHeader';
 import { Messages } from 'widgets/Messages';
 
@@ -20,8 +21,10 @@ const initialReducers: ReducersList = {
 
 const ChatPage = () => {
     useLazyModuleLoading({ reducers: initialReducers });
+    const socket = useSocket();
     const dispatch = useAppDispatch();
     const { id } = useParams();
+    const chatId = useSelector(getChatId);
     const navigate = useNavigate();
     const handleEscKey = useCallback(
         (e: KeyboardEvent) => {
@@ -41,6 +44,18 @@ const ChatPage = () => {
             document.removeEventListener('keydown', handleEscKey);
         };
     }, [dispatch, handleEscKey, id]);
+    useEffect(() => {
+        socket.emit('joinChat', chatId);
+
+        socket.on('message', (message) => {
+            dispatch(chatActions.AddMessage(message));
+        });
+
+        return () => {
+            socket.emit('leaveChat', chatId);
+            socket.removeAllListeners();
+        };
+    }, [chatId, dispatch, socket]);
 
     return (
         <AuthLayout className={cls.chatPage}>
