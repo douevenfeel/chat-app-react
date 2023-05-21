@@ -8,8 +8,8 @@ export const getDateSeparator = (curMessage: Message, nextMessage?: Message) => 
     }
     const curMessageCreatedAt = curMessage?.createdAt;
     const nextMessageCreatedAt = nextMessage?.createdAt;
-    const curDate = dayjs(curMessageCreatedAt).format('DD MM YYYY');
-    const nextDate = dayjs(nextMessageCreatedAt).format('DD MM YYYY');
+    const curDate = dayjs(new Date(+curMessageCreatedAt)).format('DD MM YYYY');
+    const nextDate = dayjs(new Date(+nextMessageCreatedAt)).format('DD MM YYYY');
 
     return nextDate !== curDate;
 };

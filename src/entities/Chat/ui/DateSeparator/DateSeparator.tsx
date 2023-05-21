@@ -7,7 +7,7 @@ import { useDateSeparatorDate } from '../../utils/hooks/useDateSeparatorDate/use
 import cls from './DateSeparator.module.scss';
 
 interface DateSeparatorProps {
-    createdAt: Date;
+    createdAt: string;
 }
 
 export const DateSeparator = memo(function DateSeparator({ createdAt }: DateSeparatorProps) {

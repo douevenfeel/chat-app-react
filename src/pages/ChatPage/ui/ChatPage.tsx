@@ -45,14 +45,14 @@ const ChatPage = () => {
         };
     }, [dispatch, handleEscKey, id]);
     useEffect(() => {
-        socket.emit('joinChat', chatId);
+        chatId && socket.emit('joinChat', chatId);
 
         socket.on('message', (message) => {
             dispatch(chatActions.AddMessage(message));
         });
 
         return () => {
-            socket.emit('leaveChat', chatId);
+            chatId && socket.emit('leaveChat', chatId);
             socket.removeAllListeners();
         };
     }, [chatId, dispatch, socket]);

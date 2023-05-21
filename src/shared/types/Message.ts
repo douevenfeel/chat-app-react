@@ -4,5 +4,5 @@ export interface Message {
     id: number;
     text: string;
     user: User;
-    createdAt: Date;
+    createdAt: string;
 }

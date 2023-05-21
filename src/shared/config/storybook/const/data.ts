@@ -47,28 +47,28 @@ export const message = {
     id: 3,
     text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, voluptates unde! Explicabo quasi veritatis commodi doloribus. Soluta repellendus accusamus magnam.',
     user,
-    createdAt: new Date(),
+    createdAt: String(new Date()),
 };
 
 export const messages: Message[] = [
-    { id: 1, text: 'Hello world!', user, createdAt: new Date() },
-    { id: 2, text: 'Hello world!', user: otherUser, createdAt: new Date() },
+    { id: 1, text: 'Hello world!', user, createdAt: String(new Date()) },
+    { id: 2, text: 'Hello world!', user: otherUser, createdAt: String(new Date()) },
     {
         id: 3,
         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, voluptates unde! Explicabo quasi veritatis commodi doloribus. Soluta repellendus accusamus magnam.',
         user: otherUser,
-        createdAt: new Date(),
+        createdAt: String(new Date()),
     },
     {
         id: 4,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, vitae?',
         user: otherUser,
-        createdAt: new Date(),
+        createdAt: String(new Date()),
     },
     {
         id: 5,
         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae dolor repellendus dolorum delectus, quod quam labore officiis praesentium consectetur nihil natus? Pariatur tempora itaque, dolore alias ipsa sed similique ducimus!',
         user,
-        createdAt: new Date(),
+        createdAt: String(new Date()),
     },
 ];

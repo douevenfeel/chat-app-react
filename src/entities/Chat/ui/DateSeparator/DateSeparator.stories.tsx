@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof DateSeparator> = (args) => <DateSeparator 
 
 export const Default = Template.bind({});
 Default.args = {
-    createdAt: new Date('2023-05-06 13:25:35.623+03'),
+    createdAt: String(new Date('2023-05-06 13:25:35.623+03')),
 };

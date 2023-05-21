@@ -9,7 +9,11 @@ const initialState: ChatsSchema = { isLoading: false };
 export const chatsSlice = createSlice({
     name: 'chats',
     initialState,
-    reducers: {},
+    reducers: {
+        setData: (state, action: PayloadAction<Chat[]>) => {
+            state.data = action.payload;
+        },
+    },
     extraReducers(builder) {
         builder
             .addCase(fetchAllChats.pending, (state) => {

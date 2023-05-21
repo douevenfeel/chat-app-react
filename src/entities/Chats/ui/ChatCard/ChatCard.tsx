@@ -13,6 +13,8 @@ interface ChatCardProps extends Chat {
 }
 
 export const ChatCard = memo(function ChatCard({ user, onClick, message }: ChatCardProps) {
+    const date = dayjs(new Date(+message.createdAt)).format('HH:mm');
+
     return (
         <div
             className={cls.chatCard}
@@ -40,7 +42,7 @@ export const ChatCard = memo(function ChatCard({ user, onClick, message }: ChatC
                         tag='p'
                         variant='secondary'
                     >
-                        {dayjs(message.createdAt).format('HH:mm')}
+                        {date}
                     </Typography>
                 </div>
                 <Typography

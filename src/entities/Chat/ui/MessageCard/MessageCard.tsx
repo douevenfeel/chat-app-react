@@ -18,8 +18,8 @@ interface MessageCardProps extends Message {
 
 export const MessageCard = memo(function MessageCard({ text, variant, user, createdAt }: MessageCardProps) {
     const navigate = useNavigate();
-    const dateCollapsed = dayjs(createdAt).format('HH:mm');
-    const date = dayjs(createdAt).format('D MMMM YYYY HH:mm:ss');
+    const dateCollapsed = dayjs(new Date(+createdAt)).format('HH:mm');
+    const date = dayjs(new Date(+createdAt)).format('D MMMM YYYY HH:mm:ss');
     const onAvatarClick = useCallback(() => {
         navigate(getRouteProfile(String(user.id)));
     }, [navigate, user.id]);

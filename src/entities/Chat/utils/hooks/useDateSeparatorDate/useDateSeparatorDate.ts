@@ -1,8 +1,9 @@
 import dayjs, { locale } from 'dayjs';
 import ru from 'dayjs/locale/ru';
 
-export const useDateSeparatorDate = (createdAt: Date) => {
+export const useDateSeparatorDate = (createdAt: string) => {
     locale(ru);
+    const date = new Date(+createdAt);
 
-    return dayjs(createdAt).format('D MMMM YYYY');
+    return dayjs(date).format('D MMMM YYYY');
 };
